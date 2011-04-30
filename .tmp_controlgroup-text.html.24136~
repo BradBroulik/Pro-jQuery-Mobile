@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Linked In</title> 
+	<link rel="stylesheet" href="jquery.mobile-1.0a3pre.css" />
+	<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+	<script src="jquery.mobile-1.0a3pre.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" class="page" data-theme ="b">
+
+                                                                  <div data-role="header" data-position="fixed" data-nobackbtn="true">
+                                                                        
+                                                                      <h1>controlgroup</h1>
+
+
+                                                                  </div>
+
+                                                                  <div data-role="content" class="ui-content">
+
+                                                                                                      <div data-role="controlgroup" class="center" data-theme="c">
+                                                                              <label for="name3">Text Input:</label>
+                                                                                  <input type="text" name="name" id="name3" value=""  />
+                                                                                  <label for="name4">Text Input 2</label>
+                                                                                  <input type="text" name="name" id="name4" value=""  />
+                                                                                  <label for="name5">Text Input 3</label>
+
+                                                                                  <input type="text" name="name" id="name5" value=""  />
+                                                                                                      </div>
+                                                                                                <form accept-charset="UTF-8" action="/user_session" class="new_user_session" id="new_user_session" method="post" rel="external" target="_self"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XFCV4Cxwx6Kq6XDi2AzKe298RMxl4lzPIdW5o5xbASU=" /></div>
+                                                                                                        
+                                                                                                      <div data-role="controlgroup" class="center" data-theme="c">
+                                                                                                              <input id="user_session_email" name="user_session[email]" placeholder="Email" size="30" type="text" data-theme="c" />
+                                                                                                                  <input id="user_session_password" name="user_session[password]" placeholder="Password" size="30" type="password" data-theme="c" />
+                                                                                                                  <input id="user_session_password" name="user_session[password]" placeholder="another" size="30" type="password" data-theme="c" />
+                                                                                                                    </div>
+                                                                                                      <div data-role="controlgroup" class="center">
+
+                                                                                                          <a href="#" data-role="button">Button 1</a> 
+                                                                                                          <a href="#" data-role="button">Button 2</a> 
+                                                                                                          <a href="#" data-role="button">Button 3</a> 
+                                                                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+
+
+</body>
+</html>
+

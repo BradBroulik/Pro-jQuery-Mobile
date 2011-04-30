@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Page Title</title> 
+	<!-- NOTE: to access non-minified files remove the '.min' from file name. -->	
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" />
+	<script src="http://code.jquery.com/jquery-1.5.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>	
+</head> 
+<body> 
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Page Title</h1>
+	</div>
+
+	<div data-role="content">	
+	
+		<ul data-role="listview" data-inset="true"> 
+			<li><input id="username" name="username" placeholder="Username" type="text" style="-webkit-appearance: none; border: 0;" /></li> 
+			<li><input id="password" name="password" placeholder="Password" type="password" style="-webkit-appearance: none; border: 0;" /></li> 
+		</ul>	
+		
+		<div data-role="controlgroup">
+			<a href="index.html" data-role="button">Yes</a> 
+			<a href="index.html" data-role="button">No</a> 
+			<a href="index.html" data-role="button">Maybe</a>
+		</div>
+		
+		<ul data-role="listview" data-inset="true"> 
+			<li><a href="acura.html">Acura</a></li> 
+			<li><a href="audi.html">Audi</a></li> 
+			<li>
+				<a href="bmw.html">BMW</a>
+			</li>
+		</ul>	
+
+		<div data-role="controlgroup">
+          <input id="username" name="username" placeholder="Username" type="text" />
+          <input id="password" name="password" placeholder="Password" type="password" />
+        </div>
+		
+		<div data-role="controlgroup">
+          <input id="username" name="username" placeholder="Username" type="text" style="border: 0; background-color: #fff;" />
+          <input id="password" name="password" placeholder="Password" type="password" style="border: 0; background-color: #fff;"/>
+        </div>
+		
+		
+		<fieldset data-role="controlgroup">
+          <input id="username" name="username" placeholder="Username" type="text" />
+          <input id="password" name="password" placeholder="Password" type="password" />
+		</fieldset>		
+		
+		<div data-role="fieldcontain">
+		    <label for="password">Password Input:</label>
+		    <input type="password" name="password" id="password" value="" />
+		</div>
+	</div>
+
+		
+	<div data-role="footer" data-id="f1">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+</body>
+</html>
+

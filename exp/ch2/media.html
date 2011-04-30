@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Page Template</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../../jquery.mobile-1.0a4.1.css" />
+	<script src="../../jquery-1.5.2.min.js"></script>
+	<script>
+		//alert('custom scripts here..');
+		$.mobile.addResolutionBreakpoints( 500 );
+		//alert($.mobile.media("screen"));
+	</script>
+	<script src="../../jquery.mobile-1.0a4.1.js"></script>
+	<script>
+		//alert('b');
+		alert('screen: ' + $.mobile.media("screen")); // (L) Landscape, (P) Portrait
+		alert('orientation: ' + $.mobile.media("all and (orientation: portrait)"));
+//		alert('min-width: 320px: ' + $.mobile.media("screen and (min-width: 320px)")); // P, L
+//		alert('min-width: 480px: ' + $.mobile.media("screen and (min-width: 480px)")); // L
+//		alert('min-width: 500px: ' + $.mobile.media("screen and (min-width: 500px)")); 
+//		alert('min-width: 768px: ' + $.mobile.media("screen and (min-width: 768px)"));
+//		alert('min-width: 1024px: ' + $.mobile.media("screen and (min-width: 1024px)"));
+//		alert('max-width: 320px: ' + $.mobile.media("screen and (max-width: 320px)")); // P
+//		alert('max-width: 480px: ' + $.mobile.media("screen and (max-width: 480px)")); // P, L
+//		alert('max-width: 500px: ' + $.mobile.media("screen and (max-width: 500px)"));
+//		alert('max-width: 768px: ' + $.mobile.media("screen and (max-width: 768px)")); // P, L
+//		alert('max-width: 1024px: ' + $.mobile.media("screen and (max-width: 1024px)")); // P, L
+//		alert('retina?: ' + $.mobile.media("screen and (-webkit-min-device-pixel-ratio: 2)"));
+	</script>
+</head> 
+<body> 
+
+<div data-role="page">
+	<div data-role="header">
+		<h1>Page Header</h1>
+	</div>
+
+	<div data-role="content">	
+		<p>Hello jQuery Mobile!</p>
+	</div>
+
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+</body>
+</html>
+
+
