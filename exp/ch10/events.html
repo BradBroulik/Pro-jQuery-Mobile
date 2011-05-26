@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Index</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../../jquery.mobile-min.css" /> 
+	<script type="text/javascript" src="../../jquery-min.js"></script>
+	<script>
+		$(document).bind("mobileinit", function(){
+		  alert('mobileinit');
+		});
+		
+		$( '#home, #contact-i, #external, #hijax' ).live("pagebeforecreate", function(){
+		  alert('pagebeforecreate, page:' + $(this).attr('id') + '. This page was just inserted into the DOM');
+//		  return false;
+		});
+		
+		$('#home, #contact-i, #external, #hijax').live("pagecreate", function(){
+		  alert('pagecreate, page:' + $(this).attr('id') + '. This page was just enhanced by jQuery Mobile');
+		});
+		
+		$('#home, #contact-i, #external, #hijax').live("pagebeforeshow", function(){
+		  alert('pagebeforeshow, page:' + $(this).attr('id') + '. This page was about to be shown');
+		});
+		
+		$( '#home, #contact-i, #external, #hijax' ).live("pageshow", function(){
+		  alert('pageshow, page:' + $(this).attr('id') + '. This page was just shown');
+		});
+		
+		$('#home, #contact-i, #external, #hijax').live("pagebeforehide", function(){
+		  alert('pagebeforehide, page:' + $(this).attr('id') + '. The #home page is about to be hidden.');
+		});
+		
+		$('#home, #contact-i, #external, #hijax').live("pagehide", function(){
+		  alert('pagehide, page:' + $(this).attr('id') + '. The #home page is hidden.');
+		});
+	</script>
+	<script type="text/javascript"src="../../jquery.mobile-min.js"></script>
+</head> 
+<body> 
+
+<!-- First Page -->
+<div data-role="page" id="home" data-title="Welcome">
+	<div data-role="header">
+		<h1>Multi-Page</h1>
+	</div>
+
+	<div data-role="content">
+		<a href="#contact-i" data-role="button">Contact (internal)</a>
+		<a href="events-hijax.html" data-role="button">Contact (hijax)</a>	
+		<a href="events-external.html" data-role="button" rel="external">External</a>
+//mobileinit event
+
+//pagebeforecreate event
+
+$.mobile.initializePage // init.js
+	// load pages
+	// trigger hashchange event
+
+// Trigger window load event	
+$window.load( $.mobile.silentScroll );
+	
+	</div>
+</div>
+
+<!-- Second Page -->
+<div data-role="page" id="contact-i" data-title="Contacts">
+	<div data-role="header">
+		<h1>Contact Us</h1>
+	</div>
+
+	<div data-role="content">	
+		Contact information...
+	</div>
+	<script>alert('hi from events.html#contact-i internal page tag...');</script>
+</div>
+		
+
+</div>
+</body>
+</html>
+
+

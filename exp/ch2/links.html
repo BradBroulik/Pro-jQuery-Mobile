@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Contact</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../../jquery.mobile-min.css" /> 
+	<script type="text/javascript" src="../../jquery-min.js"></script>
+	<script type="text/javascript" src="../../jquery.mobile-min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" >
+	<div data-role="header">
+		<h1>Contact Us</h1>
+	</div>
+
+	<!-- Best practices:
+		 1) Use relative path for assets (js, css, images).  This is easier and their path is never shown anyway.
+		 2) Use absolute path for pages to show a cleaner hash value in the URL w/o "../../" showing in the hash.-->
+
+	<!-- Absolute from context root -->
+	<div data-role="content">	
+		Contact information (external)...
+		<img src="/images/hp-icon.png" alt="Contact Us">
+		<!-- Prefer absolution links like these. www.takemefighing.org did this.  
+		     It's more stable too.  For example, these images wouldn't work if 
+			 were relative "../../images/hp-icon.png".  Relative links look ugly
+			 in the url bar too ie "#/exp/ch2/../../login" -->
+		<a href="#/exp/ch2/multi" data-role="button" rel="external">multi</a>
+		<a href="#/ch2/login" data-role="button">login</a>
+	</div>
+	
+	<!-- Relative 
+	<div data-role="content">	
+		Contact information (external)...
+		<img src="../../images/hp-icon.png" alt="Contact Us">
+		<a href="#multi" data-role="button" rel="external">multi</a>
+		<a href="#../../ch2/login" data-role="button">login</a>
+	</div>-->	
+</div>
+</body>
+</html>
+

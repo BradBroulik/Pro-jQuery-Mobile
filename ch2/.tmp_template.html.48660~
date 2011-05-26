@@ -3,11 +3,11 @@
 	<head> 
 	<meta charset="utf-8">
 	<title>Page Template</title> 
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 	<link rel="stylesheet" type="text/css" href="../jquery.mobile-min.css" /> 
 	<script type="text/javascript" src="../jquery-min.js"></script>
 	<!--<script src="custom-scripts-here.js"></script>-->
-	<script type="text/javascript" src="../jquery.mobile-min.js"></script> 
+	<script type="text/javascript" src="../jquery.mobile-min.js"></script>
 </head> 
 <body> 
 
