@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Tab Bar Example</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../jquery.mobile-min.css" /> 
+	<style>
+		.tabbar .ui-btn .ui-btn-inner { font-size: 11px!important; padding-top: 24px!important; padding-bottom: 0px!important; }
+		.tabbar .ui-btn .ui-icon { width: 30px!important; height: 20px!important; margin-left: -15px!important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: none !important; border-radius: none !important; }
+		#home .ui-icon { background:  url(../images/53-house-w.png) 50% 50% no-repeat; background-size: 22px 20px; }
+		#movies .ui-icon { background:  url(../images/107-widescreen-w.png) 50% 50% no-repeat; background-size: 25px 17px; }
+		#theatres .ui-icon { background:  url(../images/15-tags-w.png) 50% 50% no-repeat; background-size: 20px 20px; }
+		
+		.segmented-control { text-align:center;}
+		.segmented-control .ui-controlgroup { margin: 0.2em; }
+		.ui-control-active, .ui-control-inactive { border-style: solid; border-color: gray; }
+		.ui-control-active { background: #BBB; }
+		.ui-control-inactive { background: #DDD; }
+	</style>		
+	<script type="text/javascript" src="../jquery-min.js"></script>
+	<script type="text/javascript" src="../jquery.mobile-min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page">
+	<div data-role="header" data-theme="b" data-position="fixed">
+		<div data-role="header" data-theme="d" class="segmented-control">
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="#" data-role="button" class="ui-control-active">In Theatres</a>
+				<a href="#" data-role="button" class="ui-control-inactive">Coming Soon</a>
+				<a href="#" data-role="button" class="ui-control-inactive">Top Rated</a>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li>
+			  <a href="#">
+				<img src="../images/kungfupanda2.jpg" />
+				<h3>Kung Fu Panda</h3>
+				<p>Rated: PG</p>
+				<p>Runtime: 95 min.</p>
+			  </a>
+			</li>
+			<li>
+			  <a href="#">
+				<img src="../images/pirates.jpg" />
+				<h3>Pirates</h3>
+				<p>Rated: PG-13</p>
+				<p>Runtime: 137 min.</p>
+			  </a>
+			</li>	
+			<li>
+			  <a href="#">
+				<img src="../images/X-MenFirstClass.jpg" />
+				<h3>X-Men</h3>
+				<p>Rated: PG-13</p>
+				<p>Runtime: 131 min.</p>
+			  </a>
+			</li>	
+			<li>
+			  <a href="#">
+				<img src="../images/kungfupanda2.jpg" />
+				<h3>Kung Fu Panda 3D</h3>
+				<p>Rated: PG</p>
+				<p>Runtime: 95 min.</p>
+			  </a>
+			</li>													
+		</ul>
+	</div>
+			
+	<!-- tab bar with custom icons -->
+	<div data-role="footer" class="tabbar" data-position="fixed">
+		<div data-role="navbar" class="tabbar">
+		<ul>
+			<li><a href="#" id="home" data-icon="custom">Home</a></li>
+			<li><a href="#" id="movies" data-icon="custom" class="ui-btn-active">Movies</a></li>
+			<li><a href="#" id="theatres" data-icon="custom">Theatres</a></li>
+		</ul>
+		</div>
+	</div>		
+</div>
+
+</body>
+</html>
+

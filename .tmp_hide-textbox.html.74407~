@@ -1,0 +1,16 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Page Title</title> 
+<body> 
+Username:
+<input type="text" style="-webkit-appearance: none; border: 0;" /></br>
+
+Username2:
+<input type="text" style="-webkit-appearance: none; border: 0;" /></br>
+
+Password:
+<input type="text" style="-webkit-appearance: none; border: 0;" /></br>
+</body>
+</html>
+

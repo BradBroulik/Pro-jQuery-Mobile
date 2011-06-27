@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Toolbar Example with Icons</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../jquery.mobile-min.css" />
+	<style>
+		/*
+		.ui-footer .ui-btn-left { position: absolute; left: 10px;   }
+		.ui-footer .ui-btn-right {  right: 10px;  }*/
+		.ui-footer-text { width: 200px; background-color:red; }
+		.ui-footer { overflow:auto!important;}
+	</style> 
+	<script type="text/javascript" src="../jquery-min.js"></script>
+	<script type="text/javascript" src="../jquery.mobile-min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page">
+	<div data-role="header">
+		<h1>Header Title</h1>
+	</div>
+	
+	<div data-role="content">
+		Content
+	</div>
+	
+	<!-- toolbar with text and icons -->
+	<div data-role="footer" data-inline="true">
+		<a href="index.html" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-left"></a>
+		<span class="ui-footer-text">Updated</span>
+		<!--<span class="ui-title">Updated</span>-->
+		<a href="index.html" data-role="button" data-icon="arrow-d" data-iconpos="notext" class="ui-btn-right"></a>
+	</div>	
+</div>
+
+</body>
+</html>
+

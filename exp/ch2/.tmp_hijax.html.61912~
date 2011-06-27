@@ -17,7 +17,7 @@
 	</div>
 
 	<div data-role="content" id="hijax">
-		<a href="contact.html" data-transition="none" data-role="button">Contact Us</a>
+		<a href="contact.html" data-role="button">Contact Us</a>
 	</div>
 	<script type="text/javascript">
 		/* Page specific scripts here. */

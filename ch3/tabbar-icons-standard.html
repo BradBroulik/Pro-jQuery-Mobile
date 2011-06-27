@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Tab Bar Example</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../jquery.mobile-min.css" /> 	
+	<script type="text/javascript" src="../jquery-min.js"></script>
+	<script type="text/javascript" src="../jquery.mobile-min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page">
+	<div data-role="header">
+		<h1>Movies</h1>
+	</div>
+	
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li>
+			  <a href="#">
+				<img src="../images/kungfupanda2.jpg" />
+				<h3>Kung Fu Panda</h3>
+				<p>Rated: PG</p>
+				<p>Runtime: 95 min.</p>
+			  </a>
+			</li>
+			<li>
+			  <a href="#">
+				<img src="../images/pirates.jpg" />
+				<h3>Pirates</h3>
+				<p>Rated: PG-13</p>
+				<p>Runtime: 137 min.</p>
+			  </a>
+			</li>	
+			<li>
+			  <a href="#">
+				<img src="../images/X-MenFirstClass.jpg" />
+				<h3>X-Men</h3>
+				<p>Rated: PG-13</p>
+				<p>Runtime: 131 min.</p>
+			  </a>
+			</li>	
+			<li>
+			  <a href="#">
+				<img src="../images/kungfupanda2.jpg" />
+				<h3>Kung Fu Panda 3D</h3>
+				<p>Rated: PG</p>
+				<p>Runtime: 95 min.</p>
+			  </a>
+			</li>													
+		</ul>
+	</div>
+			
+	<!-- tab bar with standard icons -->
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-icon="home">Home</a></li>
+				<li><a href="#" data-icon="star" class="ui-btn-active">Movies</a></li>
+				<li><a href="#" data-icon="grid">Theatres</a></li>
+			</ul>
+		</div>
+	</div>		
+</div>
+
+</body>
+</html>
+
