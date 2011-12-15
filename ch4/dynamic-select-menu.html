@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Forms</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> 
+</head> 
+<body> 
+
+<div data-role="page" data-theme="b">
+	<div data-role="header">
+		<h1>Select Menu</h1>
+	</div>
+
+	<div data-role="content">
+	  <form id="test" id="test" action="#" method="post">	
+		  <a href="#" id="create-select1" data-role="button">Create select1</a>
+		  <a href="#" id="create-select2" data-role="button">Create select2</a>
+		  <br>
+		  
+		  <p style="text-align:center;"><strong>Invoke methods:</strong></p>
+		  <a href="#" id="auto-select1" data-role="button" data-theme="a">Refresh select1</a>
+		  <a href="#" id="disable-select1" data-role="button" data-theme="a">Disable select1</a>
+		  <a href="#" id="enable-select1" data-role="button" data-theme="a">Enable select1</a>
+		  <a href="#" id="open-select2" data-role="button" data-theme="a">Open select2</a>
+		  <a href="#" id="close-select2" data-role="button" data-theme="a">Close select2</a>
+	  </form>			 			 		 			 
+	</div>
+	<script type="text/javascript">
+		$( "#create-select1" ).bind( "click", function() {
+			$( '<select name="select1" id="select1" data-theme="e"><option value="action">Action</option><option value="comedy">Comedy</option><option value="drama">Drama</option><option value="romance">Romance</option></select>' )
+				.insertAfter( "#create-select1" )
+				.selectmenu();
+		});
+		
+		$( "#create-select2" ).bind( "click", function() {
+			$( '<select name="select2" id="select2"><option value="">Select one...</option><option value="action">Action</option><option value="comedy">Comedy</option><option value="drama">Drama</option><option value="romance">Romance</option></select>' )
+				.insertAfter( "#create-select2" )
+				.selectmenu({
+					corners: true,
+					disabled: false,
+					hidePlaceholderMenuItems: true,
+					icon: "plus",
+					iconpos: "right",
+					iconshadow: true,
+					inline: true,
+					menuPageTheme: "a", // Not working
+					nativeMenu: false,
+					overlayTheme: "c", // Not working
+					shadow: false,
+					theme: "e",
+					create: function(event) { 
+						console.log( "Creating select control..." );
+						for (prop in event) {
+							console.log(prop + ' = ' + event[prop]);
+						}
+					}
+				});
+		});			
+		
+		$( "#auto-select1" ).bind( "click", function() {
+			var myselect = $( "select#select1" );
+			myselect[0].selectedIndex = 2;
+			myselect.selectmenu( "refresh", true );
+		});
+		
+		$( "#disable-select1" ).bind( "click", function() {
+			$("select#select1").selectmenu( "disable" );
+		});
+
+		$( "#enable-select1" ).bind( "click", function() {
+			$( "select#select1" ).selectmenu( "enable" );
+		});		
+		
+		$( "#open-select2" ).bind( "click", function() {
+			$( "select#select2" ).selectmenu( "open" );
+		});	
+		
+		$( "#close-select2" ).bind( "click", function() {
+			$( "select#select2" ).selectmenu( "close" );
+		});							
+	</script>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="utf-8">
+		<title>Action Sheet Example #2</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	</head> 
+<body> 
+
+<!-- First Page -->
+<div data-role="page" id="home">
+	<div data-role="header">
+		<h1>Button Swatches</h1>
+	</div>
+
+	<div data-role="content">
+		<a href="#logout" data-transition="slidedown">View dialog with themed buttons</a>  	
+	</div>
+</div>
+
+<div data-role="dialog" id="logout">
+	<div data-role="content" data-theme="c">
+		<span class="title"><strong>Button Swatches:</strong></span>
+
+		<a href="#home" data-role="button" data-theme="a">data-theme="a"</a>
+		<a href="#home" data-role="button" data-theme="b">data-theme="b"</a>
+		<a href="#home" data-role="button" data-theme="c">data-theme="c"</a>
+		<a href="#home" data-role="button" data-theme="d">data-theme="d"</a>
+		<a href="#home" data-role="button" data-theme="e" data-rel="back">data-theme="e"</a>
+	</div>
+	<style>
+		span.title { display:block; text-align:center; margin-top:10px; margin-bottom:20px; }
+	</style>
+</div>
+</body>
+</html>
+

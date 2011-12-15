@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Forms</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<style>
+		.ui-controlgroup-horizontal .ui-radio label {
+			/* Reduce font size to prevent horizontal buttons from wrapping */
+		    font-size: 13px !important;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> 
+</head> 
+<body> 
+
+<div data-role="page">
+	<div data-role="header">
+		<h1>Radio Buttons</h1>
+	</div>
+
+	<div data-role="content">
+	  <form id="test" id="test" action="#" method="post">	
+
+		<fieldset data-role="controlgroup">
+    		<legend>Map view:</legend>
+  			<input type="radio" name="map" id="map1" value="Map" checked="checked" />
+         	<label for="map1" data-theme="b">Map</label>
+
+         	<input type="radio" name="map" id="map2" value="Satellite"  />
+         	<label for="map2" data-theme="b">Satellite</label>
+
+         	<input type="radio" name="map" id="map3" value="Hybrid"  />
+         	<label for="map3" data-theme="b">Hybrid</label>
+	    </fieldset>
+
+	    <fieldset data-role="controlgroup" data-type="horizontal">
+    		<legend>Map view:</legend>
+  			<input type="radio" name="map" id="map1" value="Map" checked="checked" />
+         	<label for="map1">Map</label>
+
+         	<input type="radio" name="map" id="map2" value="Satellite" />
+         	<label for="map2">Satellite</label>
+
+         	<input type="radio" name="map" id="map3" value="Hybrid"  />
+         	<label for="map3">Hybrid</label>
+	    </fieldset>
+		
+	  </form>			 			 		 			 
+	</div>
+</div>
+
+</body>
+</html>
+

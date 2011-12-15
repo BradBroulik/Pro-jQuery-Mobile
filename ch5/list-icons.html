@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta charset="utf-8">
+	<title>List Example</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<style>
+		.ui-li-heading { overflow: visible; }
+		.ui-li-thumb { top: 1em; }
+		.ui-li-rating { font-size: 32px; }
+	</style>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" data-theme="b">
+	<div data-role="header">
+		<h1>Reviews</h1>
+		<a href="#" data-icon="plus" data-iconpos="notext" class="ui-btn-right"></a>
+	</div>
+	
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true" data-theme="e">
+			<li data-role="list-divider">Average Review</li>
+			<li>
+				<img src="../images/X-MenFirstClass.jpg">
+				<h3>X-Men</h3>
+				<p><span class="ui-li-rating">90%</span><strong> liked it!</strong></p>
+				<p>User Ratings: <em>1,588</em></p>
+			</li>
+		</ul>
+		
+		<ul data-role="listview" data-inset="true" data-theme="d">
+			<li data-role="list-divider">User Reviews</li>
+			<li>
+			  <a href="#">
+				<img src="../images/111-user.png" class="ui-li-icon">
+				<p><strong>Go See It!</strong></p>
+				<p>This movie had a strong script and powerful performances from its well-rounded cast.  X-Men is a welcome return to form for the franchise.</p>
+			  </a>
+			</li>
+			<li>
+			  <a href="#">
+				<img src="../images/111-user.png" class="ui-li-icon">
+				<p><strong>Go See It!</strong></p>
+				<p>Best X-Men movie of the series.</p>
+			  </a>
+			</li>	
+			<li>
+			  <a href="#">
+				<img src="../images/111-user.png" class="ui-li-icon">
+				<p><strong>Go See It!</strong></p>
+				<p>The special effects were as awesome as the new CSS3 gradients.</p>
+		      </a>
+			</li>	
+			<li>
+				<p><a href="#">Show More Reviews...</a></p>
+				<p>1-3 of 15 total</p>
+			</li>							
+		</ul>				
+	</div>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>jMovies</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<style>
+		/* center icons */
+		.ui-grid-a { text-align: center; }
+		
+		/* set row height */
+		.ui-block-a, .ui-block-b { height: 100px; position: relative; }
+		
+		/* set label size and color */
+		.icon-label { color: #FFF; display: block; font-size:12px; }
+		
+		/* position the icons at the bottom of the block to adjust for uneven icon heights */
+		.icon-springboard { position: absolute; bottom: 0; width: 100%; }
+		
+		a:link,	a:visited, a:hover, a:active { text-decoration:none; }
+	</style>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="home" style="background:grey;">
+	<div data-role="header" data-theme="b">
+		<h1>jMovies</h1>
+	</div>
+
+	<div data-role="content" >
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
+			  	<div class="icon-springboard">
+			   		<a href="#">
+				  		<img src="../images/45-movie-1-lg.png" alt="Now Playing">
+				  		<span class="icon-label">Now Playing</span>
+			    	</a>
+			  	</div>
+			</div>	
+			
+			<div class="ui-block-b">
+			   	<div class="icon-springboard">	
+				 	<a href="#">
+				  		<img src="../images/12-eye-lg.png" alt="Coming Soon">
+						<span class="icon-label">Coming Soon</span>
+				  	</a>
+			  	</div>
+			</div>
+			
+			<div class="ui-block-a">
+			  	<div style="position: absolute; bottom: 0; width:100%;">
+			  		<a href="#">
+						<img src="../images/15-tags-lg.png" alt="Tickets">
+						<span class="icon-label">Tickets</span>
+			  		</a>	
+			  	</div>
+			</div>	
+			
+			<div class="ui-block-b">
+			  	<div style="position: absolute; bottom: 0; width:100%;">
+			  		<a href="../ch4/contact-us.html">
+						<img src="../images/112-group-lg.png" alt="Contact Us">
+						<span class="icon-label">Contact Us</span>
+			  		</a>
+			  	</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+

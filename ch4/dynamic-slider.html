@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Forms</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> 
+</head> 
+<body> 
+
+<div data-role="page" data-theme="b">
+	<div data-role="header">
+		<h1>Slider</h1>
+	</div>
+
+	<div data-role="content">
+	  <form id="test" id="test" action="#" method="post">	
+		  <a href="#" id="create-s1" data-role="button">Create slider1</a>
+		  <a href="#" id="create-s2" data-role="button">Create slider2</a>
+		  <br>
+		
+		  <p style="text-align:center;"><strong>Invoke methods:</strong></p>
+		  <a href="#" id="auto" data-role="button" data-theme="a">Set Brightness to 100%</a>
+		  <a href="#" id="disable" data-role="button" data-theme="a">Disable Brightness</a>
+		  <a href="#" id="enable" data-role="button" data-theme="a">Enable Brightness</a>
+	  </form>			 			 		 			 
+	</div>
+	<script type="text/javascript">
+		$( "#create-s1" ).bind( "click", function() {
+			$( '<label for="brightness1">Brightness1:</label><input type="range" name="brightness1" id="brightness1" min="0" max="10" data-track-theme="a" data-theme="d" />' )
+				.insertAfter( "#create-s1" );
+			$( "#brightness1" ).slider().textinput();
+		});
+		
+		$( "#create-s2" ).bind( "click", function() {
+			$( '<label for="brightness2">Brightness2:</label><input type="range" name="brightness2" id="brightness2" min="0" max="10" />' )
+				.insertAfter( "#create-s2" );
+			$( "#brightness2" ).slider({
+					theme: "d",
+					trackTheme: "a",
+					disabled: false,
+					create: function(event) { 
+						console.log( "Creating slider control..." );
+					}
+				}).textinput();
+		});
+		
+		$( "#auto" ).bind( "click", function() {
+			$( "#brightness1" ).val( 10 ).slider( "refresh" );
+		});
+		
+		$( "#disable" ).bind( "click", function() {
+			$( "#brightness1" ).slider( "disable" );
+		});
+
+		$( "#enable" ).bind( "click", function() {
+			$( "#brightness1" ).slider( "enable" );
+		});	
+	</script>
+</div>
+
+</body>
+</html>
+

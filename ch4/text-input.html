@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Forms</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<style>
+		label {
+            float: left;
+            width: 5em;
+        }
+		input.ui-input-text {
+    		display: inline !important;
+		    width: 12em !important;
+		}
+		form p {
+			clear:left;
+			margin:1px;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> 
+</head> 
+<body> 
+
+<div data-role="page" data-theme="b">
+	<div data-role="header">
+		<h1>Text Inputs</h1>
+	</div>
+
+	<div data-role="content">
+	  <form id="test" id="test" action="#" method="post">
+	  	<p style="margin-bottom:8px;">
+		<label for="search" class="ui-hidden-accessible">Search</label>
+    	<input type="search" name="search" id="search" value="" placeholder="Search" data-theme="d" />
+		</p>
+		<p>	
+	    <label for="text">Text:</label>
+	    <input type="text" name="text" id="text" value="" placeholder="Text" data-theme="d"/>
+	    </p>
+		<p>   
+		<label for="number">Number:</label>
+        <input type="number" name="number" id="number" value="" placeholder="Number" data-theme="d" />
+		</p> 
+		<p>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" value="" placeholder="Email" data-theme="d" />
+		</p> 
+		<p> 
+        <label for="url">Url:</label>
+        <input type="url" name="url" id="url" value="" placeholder="URL" data-theme="d" />	
+		</p>
+		<p>
+        <label for="tel">Tel:</label>
+        <input type="tel" name="tel" id="tel" value="" placeholder="Telephone" data-theme="d" />
+		</p>
+    	
+		<!-- Future: http://www.w3.org/2011/02/mobile-web-app-state.html -->
+        <!-- 
+		<p>
+        <label for="date">date:</label>
+        <input type="date" name="date" id="date" value="" placeholder="Date" data-theme="d" />
+        <p>
+		-->
+
+		<p>				 
+		<label for="textarea">Textarea:</label>
+		<textarea cols="40" rows="8" name="textarea" id="textarea" placeholder="Textarea" data-theme="d"></textarea>	
+		</p>			
+	  </form>	
+	</div>
+</div>
+
+</body>
+</html>
+

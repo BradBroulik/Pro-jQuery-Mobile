@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Register</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="register.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="register.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="registrationPage" data-theme="d">
+	<div data-role="header">
+		<h1>Registration</h1>
+	</div>
+	
+	<div data-role="content">
+		<form id="register" method="post">
+			<p>	  	
+		    <label for="email">Email:</label>
+		    <input type="email" name="email" id="email" value="" placeholder="Email" required />
+			</p>
+			<!-- Tip: 'required' will halt submit unless field has value: http://www.quirksmode.org/html5/inputs_mobile.html -->
+			<input type="submit" id="submit" value="Register" data-theme="b"/>
+	  </form>	
+	</div>			
+</div>
+
+</body>
+</html>
+

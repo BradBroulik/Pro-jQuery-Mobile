@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Footer with Segmented Control Example</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<style>
+		.segmented-control { text-align:center;}
+		.segmented-control .ui-controlgroup { margin: 0.2em; }
+		.ui-control-active, .ui-control-inactive { border-style: solid; border-color: gray; }
+		.ui-control-active { background: #BBB; }
+		.ui-control-inactive { background: #DDD; }
+	</style>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page">
+	<div data-role="header">
+		<h1>Calendar</h1>
+	</div>
+	
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li data-role="list-divider">Mon <p class="ui-li-aside"><strong>Feb 6 2012</strong></p></li>
+			<li><a href="#"><p><strong>6</strong> PM<span class="ui-li-aside"><strong>Birthday Party</strong></span></p></a></li>
+			<li data-role="list-divider">Wed <p class="ui-li-aside"><strong>Feb 8 2012</strong></p></li>
+			<li><a href="#"><p><strong>6</strong> PM<span class="ui-li-aside"><strong>User Group Meeting</strong></span></p></a></li>
+			<li data-role="list-divider">Fri <p class="ui-li-aside"><strong>Feb 10 2012</strong></p></li>
+			<li><a href="#"><p><strong>2</strong> PM<span class="ui-li-aside"><strong>Skiing Lessons</strong></span></p></a></li>				
+			<li><a href="#"><p><strong>5</strong> PM<span class="ui-li-aside"><strong>Team Celebration!</strong></span></p></a></li>	
+		</ul>
+	</div>
+			
+	<!-- Toolbar with a segmented control -->
+	<div data-role="footer" data-position="fixed" data-theme="d" class="segmented-control">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#" data-role="button" class="ui-control-active">List</a>
+			<a href="#" data-role="button" class="ui-control-inactive">Day</a>
+			<a href="#" data-role="button" class="ui-control-inactive">Month</a>
+		</div>
+	</div>	
+</div>
+
+</body>
+</html>
+

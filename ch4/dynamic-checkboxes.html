@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Forms</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> 
+</head> 
+<body> 
+
+<div data-role="page" data-theme="b">
+	<div data-role="header">
+		<h1>Checkboxes</h1>
+	</div>
+
+	<div data-role="content">
+	  <form id="test" id="test" action="#" method="post">	
+		  <a href="#" id="create-cb1" data-role="button">Create checkbox1</a>
+		  <a href="#" id="create-cb2" data-role="button">Create checkbox2</a>
+		  <br>
+		  
+		  <p style="text-align:center;"><strong>Invoke methods:</strong></p>
+		  <a href="#" id="auto" data-role="button" data-theme="a">Select Comedy</a>
+		  <a href="#" id="disable" data-role="button" data-theme="a">Disable Comedy</a>
+		  <a href="#" id="enable" data-role="button" data-theme="a">Enable Comedy</a>
+	  </form>			 			 		 			 
+	</div>
+	<script type="text/javascript">
+		$( "#create-cb1" ).bind( "click", function() {
+			$( '<fieldset data-role="controlgroup"><legend>Genre:</legend><input type="checkbox" name="genre" id="c1" /><label for="c1" data-theme="c">Action</label><input type="checkbox" name="genre" id="c2" /><label for="c2" data-theme="c">Comedy</label></fieldset>' )
+				.insertAfter( "#create-cb1" );
+			$.mobile.pageContainer.trigger( "create" );
+		});
+		
+		$( "#create-cb2" ).bind( "click", function() {
+			$( '<fieldset data-role="controlgroup"><legend>Genre:</legend><input type="checkbox" name="genre" id="c3" /><label for="c3">Action</label><input type="checkbox" name="genre" id="c4" /><label for="c4">Comedy</label></fieldset>' )
+				.insertAfter( "#create-cb2" );
+			$( '#c3' )
+				.checkboxradio({
+					theme: "e",
+					create: function(event) { 
+						console.log( "Creating checkbox1..." );
+					}
+				});
+			$( '#c4' )
+				.checkboxradio({
+					theme: "e",
+					create: function(event) { 
+						console.log( "Creating checkbox2..." );
+					}
+				});		
+			$.mobile.pageContainer.trigger( "create" );	
+		});			
+		
+		$( "#auto" ).bind( "click", function() {
+			$( "#c2" ).attr( "checked", true ).checkboxradio( "refresh" );
+		});
+		
+		$( "#disable" ).bind( "click", function() {
+			$("#c2").checkboxradio( "disable" );
+		});
+
+		$( "#enable" ).bind( "click", function() {
+			$( "#c2" ).checkboxradio( "enable" );
+		});								
+	</script>
+</div>
+
+</body>
+</html>
+

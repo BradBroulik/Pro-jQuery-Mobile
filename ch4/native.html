@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Forms</title>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+        <style>
+            label {
+                float: left;
+                width: 7em;
+            }
+            form p {
+                clear: left;
+                margin: 10px;
+            }
+        </style>
+        <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page" data-theme="b">
+            <div data-role="header">
+                <h1>Native Forms</h1>
+            </div>
+            <div data-role="content">
+                <form id="test" id="test" action="#" method="post">
+                    <p>
+                        <label for="name">
+                            Text Input:
+                        </label>
+                        <input type="text" name="name" id="name" value="" data-role="none" />
+                    </p>
+                    <p>
+                        <label for="slider2">
+                            Flip switch:
+                        </label>
+                        <select name="slider2" id="slider2" data-role="none">
+                            <option value="off">Off</option>
+                            <option value="on">On</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="slider">
+                            Slider:
+                        </label>
+                        <input type="range" name="slider" id="slider" value="0" min="0" max="100" data-role="none" />
+                    </p>
+                    <p>
+                        <label for="select-choice-1" class="select">
+                            Select:
+                        </label>
+                        <select name="genre" id="genre" data-native-menu="false" data-theme="a" data-role="none">
+                            <option value="null" data-placeholder="true">Select one...</option>
+                            <option value="action">Action</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="drama">Drama</option>
+                            <option value="romance">Romance</option>
+                        </select>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="genre" id="c2" data-role="none" />
+                        <label for="c2" data-theme="c">
+                            Checkbox:
+                        </label>
+                    </p>
+                    <p>
+                    <input type="radio" name="map" id="map1" value="Map" checked="checked" data-role="none" />
+                    <label for="c2" data-theme="c">
+                        Radio Button:
+                    </label>
+                    </fieldset>
+                </p>
+                <p>
+                    <label for="textarea">
+                        Textarea:
+                    </label>
+                    <textarea cols="40" rows="5" name="textarea" id="textarea" placeholder="Native" data-role="none">
+                    </textarea>
+                </p>
+                <p>
+                    <button data-role="none">
+                        Button
+                    </button>
+                </p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

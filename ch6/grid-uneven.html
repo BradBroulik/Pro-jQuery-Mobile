@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Grid Example</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<style>
+		/* Original 2-column grid set to 50/50% 
+		.ui-grid-a .ui-block-a, .ui-grid-a .ui-block-b {
+		    width: 50%;
+		}*/
+		
+		/* Set 2-column grid to 25/75% */
+		.ui-grid-a .ui-block-a {
+		    width: 25%;
+		}
+		.ui-grid-a .ui-block-b {
+		    width: 75%;
+		}
+		
+		/* Set 3-column grid to 25/50/25% */
+		.ui-grid-b .ui-block-a {
+		    width: 25%;
+		}
+		.ui-grid-b .ui-block-b {
+		    width: 50%;
+		}
+		.ui-grid-b .ui-block-c {
+		    width: 25%;
+		}									
+	</style>	
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="home">
+	<div data-role="header">
+		<h1>Uneven Grids</h1>
+	</div>
+
+	<div data-role="content" >
+		<div class="ui-grid-a"> 
+			<div class="ui-block-a">
+				<div class="ui-bar ui-bar-e" style="text-align:center; height:100px;">25%</div>
+			</div>
+			<div class="ui-block-b">
+				<div class="ui-bar ui-bar-e" style="text-align:center; height:100px;">75%</div>
+			</div>
+		</div>
+		<div class="ui-grid-b"> 
+			<div class="ui-block-a">
+				<div class="ui-bar ui-bar-e" style="text-align:center; height:100px;">25%</div>
+			</div>
+			<div class="ui-block-b">
+				<div class="ui-bar ui-bar-e" style="text-align:center; height:100px;">50%</div>
+			</div>
+			<div class="ui-block-c">
+				<div class="ui-bar ui-bar-e" style="text-align:center; height:100px;">25%</div>
+			</div>		
+		</div>		
+	</div>
+</div>
+</body>
+</html>
+

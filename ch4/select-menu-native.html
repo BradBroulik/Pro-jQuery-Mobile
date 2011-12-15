@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Forms</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> 
+</head> 
+<body> 
+
+<div data-role="page" data-theme="b">
+	<div data-role="header">
+		<h1>Select Menu</h1>
+	</div>
+
+	<div data-role="content">
+	  <form id="test" id="test" action="#" method="post">	
+	  
+		<p>
+			<label for="genre">Genre:</label>
+			<select name="genre" id="genre" multiple="multiple">
+				<option value="action">Action</option>
+				<option value="comedy">Comedy</option>
+				<option value="drama">Drama</option>
+				<option value="romance">Romance</option>
+			</select>
+	 	</p>	
+		<p>	
+			<label for="delivery">Ticket delivery:</label>
+			<select name="delivery" id="delivery">
+				<optgroup label="Digital">
+					<option value="barcode">E-Ticket</option>
+					<option value="nfc">NFC</option>
+				</optgroup>			
+				<optgroup label="FedEx">
+					<option value="overnight">Overnight</option>
+					<option value="express">Express</option>
+					<option value="ground">Ground</option>
+				</optgroup>
+				<optgroup label="US Mail">
+					<option value="overnight">Overnight</option>
+					<option value="express">Express</option>
+					<option value="standard">Standard</option>
+				</optgroup>			
+			</select>	
+		</p>		 
+	  </form>			 			 		 			 
+	</div>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Dynamic Page Example</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="home" data-title="Welcome">
+	<div data-role="header">
+		<h1>Dynamic Page</h1>
+	</div>
+
+	<div data-role="content">
+		<input type=button id="changePage" value="Open dynamic page">	
+	</div>
+	<script>
+		$( "#changePage" ).bind( "click", function() {
+			// Create page markup
+			var newPage = $("<div data-role=page data-url=hi><div data-role=header><h1>Hi</h1></div><div data-role=content>Hello Again!</div></div>");
+			
+			// Add page to page container
+			newPage.appendTo( $.mobile.pageContainer );
+			
+			// Enhance and open new page
+			$.mobile.changePage( newPage );
+		});		
+	</script>
+</div>
+
+</div>
+</body>
+</html>
+

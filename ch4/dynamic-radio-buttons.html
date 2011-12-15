@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta charset="utf-8">
+	<title>Forms</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> 
+</head> 
+<body> 
+
+<div data-role="page" data-theme="b">
+	<div data-role="header">
+		<h1>Radio Buttons</h1>
+	</div>
+
+	<div data-role="content">
+	  <form id="test" id="test" action="#" method="post">	
+		  <a href="#" id="create-radio1" data-role="button">Create radio1</a>
+		  <a href="#" id="create-radio2" data-role="button">Create radio2</a>
+		  <br>
+		  
+		  <p style="text-align:center;"><strong>Invoke methods:</strong></p>
+		  <a href="#" id="auto" data-role="button" data-theme="a">Select Satellite</a>
+		  <a href="#" id="disable" data-role="button" data-theme="a">Disable Satellite</a>
+		  <a href="#" id="enable" data-role="button" data-theme="a">Enable Satellite</a>
+	  </form>			 			 		 			 
+	</div>
+	<script type="text/javascript">
+		$( "#create-radio1" ).bind( "click", function() {
+			$( '<fieldset data-role="controlgroup"><legend>Map view:</legend><input type="radio" name="map" id="map1" value="Map" /><label for="map1" data-theme="c">Map</label><input type="radio" name="map" id="map2" value="Satellite"  /><label for="map2" data-theme="c">Satellite</label></fieldset>' )
+				.insertAfter( "#create-radio1" );
+			$.mobile.pageContainer.trigger( "create" );
+		});
+		
+		$( "#create-radio2" ).bind( "click", function() {
+			$( '<fieldset data-role="controlgroup"><legend>Map view:</legend><input type="radio" name="map" id="m1" value="Map" checked="checked" /><label for="m1">Map</label><input type="radio" name="map" id="m2" value="Satellite"  /><label for="m2">Satellite</label></fieldset>' )
+				.insertAfter( "#create-radio2" );
+			$( "#m1" )
+				.checkboxradio({
+					theme: "e",
+					create: function(event) { 
+						console.log( "Creating radio buttons..." );
+					}
+				});
+			$( "#m2" )
+				.checkboxradio({
+					theme: "e",
+					create: function(event) { 
+						console.log( "Creating radio buttons..." );
+					}
+				});		
+			$.mobile.pageContainer.trigger( "create" );	
+		});			
+		
+		$( "#auto" ).bind( "click", function() {
+			$( "#map2" ).attr( "checked", true ).checkboxradio( "refresh" );
+		});
+		
+		$( "#disable" ).bind( "click", function() {
+			$("#map2").checkboxradio( "disable" );
+		});
+
+		$( "#enable" ).bind( "click", function() {
+			$( "#map2" ).checkboxradio( "enable" );
+		});								
+	</script>
+</div>
+
+</body>
+</html>
+

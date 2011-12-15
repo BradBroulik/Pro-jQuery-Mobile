@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Forms</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<style>
+		div.ui-slider { 
+			width: 45%; 
+		}
+		label.ui-slider { 
+			margin-top: 10px;
+			float: left;
+            width: 5em; 
+		}
+		form p {
+			clear:left;
+			margin:1px;
+		}
+	</style>	
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> 
+</head> 
+<body> 
+
+<div data-role="page" data-theme="b">
+	<div data-role="header">
+		<h1>Switch Control</h1>
+	</div>
+
+	<div data-role="content">
+	  <form id="test" id="test" action="#" method="post">	
+		  <p>
+		    <label for="sound">Sound:</label>
+			<select name="slider" id="sound" data-role="slider">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		  </p>	
+		  <p>
+		    <label for="alerts">Alerts:</label>
+			<select name="slider" id="alerts" data-role="slider" data-track-theme="c" data-theme="b">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		  </p>	
+		</div>
+	  </form>			 			 		 			 
+	</div>
+	<script type="text/javascript">
+		var alertSwitch = $("select#alerts");
+
+		// Set alert switch to 'on'
+		alertSwitch[0].selectedIndex = 1;
+		alertSwitch .slider("refresh");
+	</script>
+</div>
+
+</body>
+</html>
+

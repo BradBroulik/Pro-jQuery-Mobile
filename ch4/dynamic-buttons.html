@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Buttons</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> 
+</head> 
+<body> 
+
+<div data-role="page" data-theme="b">
+	<div data-role="header">
+		<h1>Dynamic Buttons</h1>
+	</div>
+
+	<div data-role="content">	
+		<a href="#" data-role="button" id="create-button1">Create Button1</a>
+		<a href="#" data-role="button" id="create-button2">Create Button2</a>
+		
+		<br><br>
+		<a href="#" data-role="button" id="create-multiple-buttons">Create Multiple Buttons</a>
+		<a href="#" data-role="button" id="create-button5">Create Button5</a>
+		<a href="#" data-role="button" id="create-button6">Create Button6</a>
+		<a href="#" data-role="button" id="disable-button3" data-theme="d">Disable Button3</a>
+		<a href="#" data-role="button" id="enable-button3" data-theme="d">Enable Button3</a>
+	</div>
+	
+	<script type="text/javascript"><!--
+		$( "#create-button1" ).bind( "click", function() {
+			$( '<a href="http://jquerymobile.com" id="button1" data-role="button" data-icon="star" data-inline="true" data-theme="a">Button1</a>' )
+				.appendTo( ".ui-content" )
+				.button();
+		});
+				
+		$( "#create-button2" ).bind( "click", function() {
+			$( '<a href="http://jquerymobile.com" id="button2">Button2</a>' )
+				.insertAfter( "#create-button2" )
+				.button({
+					corners: true,
+					icon: "home",
+					inline: true,
+					shadow: true,
+					theme: 'a',
+					create: function(event) { 
+						console.log( "Creating button..." );
+						for (prop in event) {
+							console.log(prop + ' = ' + event[prop]);
+						}
+					}
+				})
+		});
+		
+		$( "#create-button5" ).bind( "click", function() {
+			$( '<input type="submit" id="button5" value="Button5" data-theme="a" />' )
+				.insertAfter( "#create-button5" )
+				.button();
+		});
+		
+		$( "#create-button6" ).bind( "click", function() {
+			$( '<input type="submit" id="button6" value="Button6" />' )
+				.insertAfter( "#create-button6" )
+				.button({
+					'icon': "home",
+					'inline': true,
+					'shadow': true,
+					'theme': 'a'
+				})
+		});
+				
+		$( "#create-multiple-buttons" ).bind( "click", function() {
+			$( '<button id="button3" data-theme="a">Button3</button>' ).insertAfter( "#create-multiple-buttons" );
+			$( '<button id="button4" data-theme="a">Button4</button>' ).insertAfter( "#button3" );
+			$.mobile.pageContainer.trigger( "create" );
+		});
+		
+		$( "#disable-button3" ).bind( "click", function() {
+			$( "#button3" ).button( "disable" );
+		});	
+			
+		$( "#enable-button3" ).bind( "click", function() {
+			$( "#button3" ).button( "enable" );
+		});			
+	--></script>
+</div>
+
+</body>
+</html>
+

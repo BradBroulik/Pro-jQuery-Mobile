@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Themes</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<style>
+		label {
+            float: left;
+            width: 5em;
+        }
+		input.ui-input-text {
+    		display: inline !important;
+		    width: 10em !important;
+		}
+		form p {
+			clear:left;
+			margin:1px;
+		}		
+	</style>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	</head> 
+<body> 
+
+<div data-role="page">
+	<div data-role="header">
+		<h1>default = "a"</h1>
+	</div>
+
+	<div data-role="content" style="text-align:center; margin-top:5px;">
+		default = "c"
+
+		<ul data-role="listview" data-inset="true">
+			<li data-role="list-divider">default = "b"</li>
+			<li>default = "c"</li>
+			<li>default = "c"</li>
+		</ul>
+
+		<form id="test" id="test" action="#" method="post">
+			<p>	
+		    	<label for="text">inherits "c":</label>
+		    	<input type="text" name="text" id="text" value="" placeholder="Text input"/>
+		    </p>
+			<p>
+			    <label for="sound">inherits "c":</label>
+				<select name="slider" id="sound" data-role="slider">
+					<option value="off">Off</option>
+					<option value="on">On</option>
+				</select>
+			</p>		  
+			  
+			<a href="#" data-role="button">Button (inherits "c")</a>
+		</form>
+	</div>	
+	
+	<div data-role="footer" data-position="fixed">
+		<h3>default = "a"</h3>
+	</div>		
+</div>
+</body>
+</html>
+

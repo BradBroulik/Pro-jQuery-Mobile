@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Forms</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> 
+</head> 
+<body> 
+
+<div data-role="page" data-theme="b">
+	<div data-role="header">
+		<h1>Text Inputs</h1>
+	</div>
+
+	<div data-role="content">
+	  <form id="test" action="#" method="post">		  	
+		<a href="#" data-role="button" id="create-text1">Create text input1</a>
+		<a href="#" data-role="button" id="create-text2">Create text input2</a>
+		<br><br>
+		<a href="#" data-role="button" id="disable-text1" data-theme="a">Disable text input1</a>
+		<a href="#" data-role="button" id="enable-text1" data-theme="a">Enable text input1</a>
+	  </form>			 			 		 			 
+	</div>
+		<script type="text/javascript">		
+		$( "#create-text1" ).bind( "click", function() {
+			$( '<input type="text" name="text1" id="text1" value="" placeholder="text1" data-theme="c" />' )
+				.insertAfter( "#create-text1" )
+				.textinput();
+		});
+		
+		$( "#create-text2" ).bind( "click", function() {
+			$( '<input type="text" name="text2" id="text2" value="" placeholder="text2" />' )
+				.insertAfter( "#create-text2" )
+				.textinput({
+					theme: 'c',
+					create: function(event) { 
+						console.log( "Creating text input..." );
+						for (prop in event) {
+							console.log(prop + ' = ' + event[prop]);
+						}
+					}
+				});
+		});
+		
+		$( "#disable-text1" ).bind( "click", function() {
+			$( "#text1").textinput( "disable" );
+		});		
+		
+		$( "#enable-text1" ).bind( "click", function() {
+			$( "#text1" ).textinput( "enable" );
+		});	
+		</script>
+</div>
+
+</body>
+</html>
+

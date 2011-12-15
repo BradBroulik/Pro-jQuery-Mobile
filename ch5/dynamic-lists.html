@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Lists</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> 
+</head> 
+<body> 
+
+<div data-role="page" data-theme="b">
+	<div data-role="header">
+		<h1>Dynamic Lists</h1>
+	</div>
+
+	<div data-role="content">
+		  <a href="#" id="create-list1" data-role="button">Create list1</a>
+		  <a href="#" id="create-list2" data-role="button">Create list2</a>
+		  <br>
+		  <a href="#" id="update-list1" data-role="button" data-theme="a">Update list1</a>
+	</div>
+	<script type="text/javascript">
+		$( "#create-list1" ).bind( "click", function() {
+			$( '<ul data-inset="true" id="list1"><li data-role="list-divider">Genres</li><li><a href="#">Action</a></li><li><a href="#">Comedy</a></li></ul>' )
+				.insertAfter( "#create-list1" )
+				.listview();
+		});
+		
+		$( "#create-list2" ).bind( "click", function() {
+			$( '<ul><li data-role="list-divider">Genres</li><li><a href="#">Action</a></li><li><a href="#">Comedy</a></li></ul>' )
+				.insertAfter( "#create-list2" )
+				.listview({
+					theme: "d",
+					dividerTheme: "a",
+					inset: true,
+					create: function(event) { 
+						console.log( "Creating list..." );
+						for (prop in event) {
+							console.log(prop + ' = ' + event[prop]);
+						}
+					}
+				});
+		});
+		
+		$( "#update-list1" ).bind( "click", function() {
+			$( "#list1" )
+				.append('<li><a href="#">Drama</a></li>')
+				.listview('refresh');
+		});
+		
+	</script>
+</div>
+
+</body>
+</html>
+

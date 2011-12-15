@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="utf-8">
+		<title>Alert Example</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<style>
+		.ui-header .ui-title, .ui-footer .ui-title { margin-right: 0 !important; margin-left: 0 !important; }
+	</style>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	</head> 
+<body> 
+
+<!-- First Page -->
+<div data-role="page" id="home">
+	<div data-role="header">
+		<h1>Alert Example</h1>
+	</div>
+
+	<div data-role="content">
+		<a href="#alert" data-transition="slidedown">Alert</a>  	
+	</div>
+</div>
+
+<!-- Second Page/Dialog -->
+<div data-role="dialog" id="alert">
+	<div data-role="header">
+		<h1>Connection Required</h1>
+	</div>
+	
+	<div data-role="content" data-theme="b">	
+		A network connection is required to sync your data.
+		<br><br>
+
+		<a href="#home" data-role="button" data-theme="c" data-rel="back">OK</a>
+	</div>
+</div>
+</body>
+</html>
+

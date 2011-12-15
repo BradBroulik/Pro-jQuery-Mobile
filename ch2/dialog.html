@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="utf-8">
+		<title>Multi Page Example</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<style>
+		.ui-header .ui-title, .ui-footer .ui-title { margin-right: 0 !important; margin-left: 0 !important; }
+	</style>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	</head> 
+<body> 
+
+<!-- First Page -->
+<div data-role="page" id="home">
+	<div data-role="header">
+		<h1>Dialog Example</h1>
+	</div>
+
+	<div data-role="content">
+		<a href="#terms" data-transition="slidedown">Terms and Conditions</a>  	
+	</div>
+</div>
+
+<!-- Second Page/Dialog -->
+<div data-role="dialog" id="terms">
+	<div data-role="header">
+		<h1>Terms and Conditions</h1>
+	</div>
+	
+	<div data-role="content" data-theme="c">	
+		Do you agree to these terms?
+		<br><br>
+		<a href="#home" data-role="button" data-inline="true" data-rel="back" data-theme="a">Disagree</a>		
+		<a href="javascript:agree();" data-role="button" data-inline="true">Agree</a>
+	</div>
+	<script>
+		function agree() {
+			// process dialog...
+			
+			// close dialog
+			$('.ui-dialog').dialog('close');
+		}
+	</script>
+</div>
+</body>
+</html>
+

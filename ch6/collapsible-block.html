@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Collapsible Block Example</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 	
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="home" data-theme="b">
+	<div data-role="header" data-theme="a">
+		<h1>Settings</h1>
+	</div>
+
+	<div data-role="content">
+		
+		<div data-role="collapsible" data-collapsed="true" data-theme="a" data-content-theme="b">
+			<h3>Wireless</h3>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#">&#xe117; Notifications</a></li>
+				<li><a href="#">&#xe01d; Location Services</a></li>
+			</ul>
+		</div>
+		
+		<div data-role="collapsible" data-theme="a" data-content-theme="b">
+			<h3>Applications</h3>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#">&#xe001; Faceoff</a></li>
+				<li><a href="#">&#xe428; LinkedOut</a></li>	
+				<li><a href="#">&#xe03d; Netflicks</a></li>	
+			</ul>
+		</div>	
+	
+		<div data-role="collapsible" data-collapsed="true" data-theme="a" data-content-theme="b">
+			<h3>Display</h3>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#">Brightness</a></li>
+				<li><a href="#">Auto-rotate screen</a></li>
+			</ul>
+		</div>	
+		
+		<div data-role="collapsible" data-collapsed="true" data-theme="a" data-content-theme="b">
+			<h3>Sound</h3>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#">Sound profile</a></li>
+				<li><a href="#">Volume</a></li>
+			</ul>
+		</div>	
+
+		<div data-role="collapsible" data-collapsed="true" data-theme="a" data-content-theme="b">
+			<h3>Security</h3>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#">Set up screen lock</a></li>
+				<li><a href="#">Visible passwords</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+

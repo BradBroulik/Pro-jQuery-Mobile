@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Forms</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> 
+</head> 
+<body> 
+
+<div data-role="page" data-theme="b">
+	<div data-role="header">
+		<h1>Switch Control</h1>
+	</div>
+
+	<div data-role="content">
+	  <form id="test" id="test" action="#" method="post">	
+		  <a href="#" id="create-switch1" data-role="button">Create switch1</a>
+		  <a href="#" id="create-switch2" data-role="button">Create switch2</a>
+		  <br>
+		  <a href="#" id="toggle-switch1-on" data-role="button" data-theme="a">Toggle switch1 on</a>
+	  </form>			 			 		 			 
+	</div>
+	<script type="text/javascript">
+		$( "#create-switch1" ).bind( "click", function() {
+			$( '<select name="switch1" id="switch1" data-role="slider" data-theme="c"><option value="off">Off</option><option value="on">On</option></select>' )
+				.insertAfter( "#create-switch1" )
+				.slider();
+		});
+		
+		$( "#create-switch2" ).bind( "click", function() {
+			$( '<select name="switch2" id="switch2"><option value="off">Off</option><option value="on">On</option></select>' )
+				.insertAfter( "#create-switch2" )
+				.slider({
+					theme: "b",
+					trackTheme: "c",
+					disabled: false,
+					create: function(event) { 
+						console.log( "Creating switch control..." );
+						for (prop in event) {
+							console.log(prop + ' = ' + event[prop]);
+						}
+					}
+				});
+		});			
+		
+		$( "#toggle-switch1-on" ).bind( "click", function() {
+			var switch1 = $( "select#switch1" );
+			// Set switch1 to 'on'
+			switch1[0].selectedIndex = 1;
+			switch1.slider( "refresh" );
+		});
+		
+	</script>
+</div>
+
+</body>
+</html>
+

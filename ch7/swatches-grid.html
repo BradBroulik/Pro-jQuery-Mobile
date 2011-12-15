@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Theme Example</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<style>
+		/* Remove borders */
+		.ui-bar-a, .ui-bar-b, .ui-bar-c, .ui-bar-d, .ui-bar-e { border:0px; }
+		.ui-bar { font-size: 16px; font-weight: bold; margin: 0px; padding: 8px; padding-top: 12px; }
+		
+		/* Configure grid as 28/44/28% */
+		.ui-grid-b .ui-block-a {
+		    width: 26%;
+		}
+		.ui-grid-b .ui-block-b {
+		    width: 48%;
+		}
+		.ui-grid-b .ui-block-c {
+		    width: 26%;
+		}		
+	</style>	
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="home">
+	<div data-role="header">
+		<h1>Swatches</h1>
+	</div>
+		
+	<div data-role="content">
+		
+		<div class="ui-grid-b"> 
+			<div class="ui-block-a">
+				<div class="ui-bar ui-bar-a" style="height:50px;"><a href="#" data-role="button" data-theme="a" data-icon-pos="notext" data-icon="arrow-l">"a"</a></div>
+			</div>
+			<div class="ui-block-b">
+				<div class="ui-bar ui-bar-a" style="text-align:center; height:50px;">data-theme="a"</div>
+			</div>
+			<div class="ui-block-c">
+				<div class="ui-bar ui-bar-a" style="height:50px;"><a href="#" data-role="button" data-theme="a" data-icon-pos="notext" data-icon="arrow-r">"a"</a></div>
+			</div>	
+			
+			<div class="ui-block-a">
+				<div class="ui-bar ui-bar-b" style="height:50px;"><a href="#" data-role="button" data-theme="b" data-icon-pos="notext" data-icon="arrow-l">"b"</a></div>
+			</div>
+			<div class="ui-block-b">
+				<div class="ui-bar ui-bar-b" style="text-align:center; height:50px;">data-theme="b"</div>
+			</div>
+			<div class="ui-block-c">
+				<div class="ui-bar ui-bar-b" style="height:50px;"><a href="#" data-role="button" data-theme="b" data-icon-pos="notext" data-icon="arrow-r">"b"</a></div>
+			</div>	
+				
+			<div class="ui-block-a">
+				<div class="ui-bar ui-bar-c" style="height:50px;"><a href="#" data-role="button" data-theme="c" data-icon-pos="notext" data-icon="arrow-l">"c"</a></div>
+			</div>
+			<div class="ui-block-b">
+				<div class="ui-bar ui-bar-c" style="text-align:center; height:50px;">data-theme="c"</div>
+			</div>
+			<div class="ui-block-c">
+				<div class="ui-bar ui-bar-c" style="height:50px;"><a href="#" data-role="button" data-theme="c" data-icon-pos="notext" data-icon="arrow-r">"c"</a></div>
+			</div>
+			
+			<div class="ui-block-a">
+				<div class="ui-bar ui-bar-d" style="height:50px;"><a href="#" data-role="button" data-theme="d" data-icon-pos="notext" data-icon="arrow-l">"d"</a></div>
+			</div>
+			<div class="ui-block-b">
+				<div class="ui-bar ui-bar-d" style="text-align:center; height:50px;">data-theme="d"</div>
+			</div>
+			<div class="ui-block-c">
+				<div class="ui-bar ui-bar-d" style="height:50px;"><a href="#" data-role="button" data-theme="d" data-icon-pos="notext" data-icon="arrow-r">"d"</a></div>
+			</div>
+			
+			<div class="ui-block-a">
+				<div class="ui-bar ui-bar-e" style="height:50px;"><a href="#" data-role="button" data-theme="e" data-icon-pos="notext" data-icon="arrow-l">"e"</a></div>
+			</div>
+			<div class="ui-block-b">
+				<div class="ui-bar ui-bar-e" style="text-align:center; height:50px;">data-theme="e"</div>
+			</div>
+			<div class="ui-block-c">
+				<div class="ui-bar ui-bar-e" style="height:50px;"><a href="#" data-role="button" data-theme="e" data-icon-pos="notext" data-icon="arrow-r">"e"</a></div>
+			</div>						
+									
+		</div>
+	</div>
+</div>
+</body>
+</html>
+

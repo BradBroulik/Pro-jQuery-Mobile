@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>List with Badges</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<style>
+		/* wrap the text for the movie review */
+		.ui-li-desc { white-space: normal; margin-right: 20px; }
+	</style> 
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page">
+	<div data-role="header">
+		<h1>Movie Review</h1>
+	</div>
+	
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true" data-theme="e">
+			<li data-role="list-divider">X-Men<p class="ui-li-aside">Ratings: <em>1,588</em></p></li>
+			<li>
+				<img src="../images/thumbs-up.png" class="ui-li-icon">
+				<p>Go see it!  This movie was well cast and the special effects were incredible.  Worth the price of admission.</p>
+			</li>			
+		</ul>	
+		
+		<ul data-role="listview" data-inset="true" data-theme="e" data-count-theme="e">
+			<li data-role="list-divider">Comments</p></li>
+			<li>
+				<img src="../images/111-user.png" class="ui-li-icon">
+				<p>Thanks for the review.  I plan to check it out this weekend.</p>
+				<span class="ui-li-count">1 day</span>
+			</li>	
+			<li>
+				<img src="../images/111-user.png" class="ui-li-icon">
+				<p>Your review was helpful but I'm saving my money for the next Harry Potter movie!</p>
+				<span class="ui-li-count">3 days</span>
+			</li>						
+		</ul>				
+	</div>
+	
+	<!-- toolbar with icons -->
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-icon="arrow-l"></a></li>
+				<li><a href="#" data-icon="back"></a></li>
+				<li><a href="#" data-icon="star"></a></li>
+				<li><a href="#" data-icon="plus"></a></li>
+				<li><a href="#" data-icon="arrow-r"></a></li>
+			</ul>		
+		</div>
+	</div>		
+</div>
+
+</body>
+</html>
+

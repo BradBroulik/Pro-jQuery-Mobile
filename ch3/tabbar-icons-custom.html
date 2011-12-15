@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Tab Bar Example</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<style>
+		.ui-navbar-custom .ui-btn .ui-btn-inner { font-size: 11px!important; padding-top: 24px!important; padding-bottom: 0px!important; }
+		.ui-navbar-custom .ui-btn .ui-icon { width: 30px!important; height: 20px!important; margin-left: -15px!important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: none !important; border-radius: none !important; }
+		#home .ui-icon { background:  url(../images/53-house-w.png) 50% 50% no-repeat; background-size: 22px 20px; }
+		#movies .ui-icon { background:  url(../images/107-widescreen-w.png) 50% 50% no-repeat; background-size: 25px 17px; }
+		#theatres .ui-icon { background:  url(../images/15-tags-w.png) 50% 50% no-repeat; background-size: 20px 20px; }
+	</style>	
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page">
+	<div data-role="header">
+		<h1>Movies</h1>
+	</div>
+	
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li>
+			  <a href="#">
+				<img src="../images/kungfupanda2.jpg" />
+				<h3>Kung Fu Panda</h3>
+				<p>Rated: PG</p>
+				<p>Runtime: 95 min.</p>
+			  </a>
+			</li>
+			<li>
+			  <a href="#">
+				<img src="../images/pirates.jpg" />
+				<h3>Pirates</h3>
+				<p>Rated: PG-13</p>
+				<p>Runtime: 137 min.</p>
+			  </a>
+			</li>	
+			<li>
+			  <a href="#">
+				<img src="../images/X-MenFirstClass.jpg" />
+				<h3>X-Men</h3>
+				<p>Rated: PG-13</p>
+				<p>Runtime: 131 min.</p>
+			  </a>
+			</li>	
+			<li>
+			  <a href="#">
+				<img src="../images/kungfupanda2.jpg" />
+				<h3>Kung Fu Panda 3D</h3>
+				<p>Rated: PG</p>
+				<p>Runtime: 95 min.</p>
+			  </a>
+			</li>																		
+		</ul>
+	</div>
+			
+	<!-- tab bar with custom icons -->
+	<div data-role="footer" class="ui-navbar-custom" data-position="fixed">
+		<div data-role="navbar" class="ui-navbar-custom">
+			<ul>
+				<li><a href="#" id="home" data-icon="custom">Home</a></li>
+				<li><a href="#" id="movies" data-icon="custom" class="ui-btn-active">Movies</a></li>
+				<li><a href="#" id="theatres" data-icon="custom">Theatres</a></li>
+			</ul>		
+		</div>
+	</div>		
+</div>
+
+</body>
+</html>
+

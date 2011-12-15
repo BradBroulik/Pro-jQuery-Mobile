@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="utf-8">
+		<title>Segmented Control Example</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+		<link rel="stylesheet" type="text/css" href="../custom.css" />
+		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	    <script type="text/javascript" src="../custom.js"></script>
+		<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	</head> 
+<body> 
+
+<div data-role="page">
+	<div data-role="header" data-position="fixed">
+		<a href="../index.html" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right"></a>
+		<h1>Movies</h1>
+		<div class="segmented-control ui-bar-d">
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="now-playing.html" data-role="button" data-transition="none" class="ui-control-active">Now Playing</a>
+				<a href="coming-soon.html" data-role="button" data-transition="none" class="ui-control-inactive">Coming Soon</a>
+				<a href="top-rated.html" data-role="button" data-transition="none" class="ui-control-inactive">Top Rated</a>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li>
+                <a href="#">
+                    <img src="../images/X-MenFirstClass.jpg" />
+                    <h3>X-Men</h3>
+                    <p>Rated: PG-13</p>
+                    <p>Runtime: 131 min.</p>
+                </a>
+			</li>	
+			<li>
+                <a href="#">
+                    <img src="../images/kungfupanda2.jpg" />
+                    <h3>Kung Fu Panda</h3>
+                    <p>Rated: PG</p>
+                    <p>Runtime: 95 min.</p>
+                </a>
+			</li>            
+			</li>
+			<li>
+			  <a href="#">
+				<img src="../images/pirates.jpg" />
+				<h3>Pirates of the Caribbean</h3>
+				<p>Rated: PG-13</p>
+				<p>Runtime: 137 min.</p>
+			  </a>
+			</li>	
+			<li>
+			  <a href="#">
+				<img src="../images/X-MenFirstClass.jpg" />
+                  <h3>X-Men 3D</h3>
+				<p>Rated: PG-13</p>
+				<p>Runtime: 131 min.</p>
+			  </a>
+			</li>	
+			<li>
+			  <a href="#">
+				<img src="../images/kungfupanda2.jpg" />
+				<h3>Kung Fu Panda 3D</h3>
+				<p>Rated: PG</p>
+				<p>Runtime: 95 min.</p>
+			  </a>
+			</li>													
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>
+

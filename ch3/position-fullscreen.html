@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Fullscreen Example</title> 
+	<meta name="viewport" content="width=device-width, maximum-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<style>
+		.detailimage { width: 100%; text-align: center; margin-right: 0; margin-left: 0; }
+		.detailimage img { width: 100%; }
+	</style>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" data-fullscreen="true">
+	<div data-role="header" data-position="fixed">
+		<h6>4 of 10</h6>
+	</div>
+	
+	<div data-role="content">	
+		<div class="detailimage"><img src="../images/fullscreen.jpg" /></div>
+	</div>
+
+	<!-- toolbar with icons -->
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-icon="forward"></a></li>
+				<li><a href="#" data-icon="arrow-l"></a></li>
+				<li><a href="#" data-icon="arrow-r"></a></li>
+				<li><a href="#" data-icon="delete"></a></li>
+			</ul>		
+		</div>
+	</div>	
+</div>
+
+</body>
+</html>
+

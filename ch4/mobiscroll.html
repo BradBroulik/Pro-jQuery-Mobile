@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
+    <meta name="HandheldFriendly" content="true" />
+    <title>MobiScroll Date Picker</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<script type="text/javascript" src="jquery.scroller-1.0.2.js"></script>
+    <link  rel="stylesheet" type="text/css" href="jquery.scroller-1.0.2.css" />
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $( "#date1" ).scroller();
+            $(" #date2" ).scroller({ preset: 'time' });
+            $( "#date3" ).scroller({ preset: 'datetime',
+                seconds: true,
+                ampm : false,
+                dateOrder: 'dMyy',
+                theme: 'sense-ui'
+            });
+            
+			wheels = [];
+			wheels[0] = { 'Hours': {} };
+            wheels[1] = { 'Minutes': {} };
+            for (var i = 0; i < 60; i++) {
+                if (i < 16) wheels[0]['Hours'][i] = (i < 10) ? ('0' + i) : i;
+                wheels[1]['Minutes'][i] = (i < 10) ? ('0' + i) : i;
+            }
+			
+            $( "#custom" ).scroller({
+                width: 90,
+                wheels: wheels,
+                formatResult: function (d) {
+                    return ((d[0] - 0) + ((d[1] - 0) / 60)).toFixed(1);
+                },
+                parseValue: function (s) {
+                    var d = s.split('.');
+                    d[0] = d[0] - 0;
+                    d[1] = d[1] ? ((('0.' + d[1]) - 0) * 60) : 0;
+                    return d;
+                }
+            });
+			$( "#custom-movie" ).scroller({ 
+				setText: 'Search',
+                theme: 'sense-ui',
+				wheels: [{ 
+					'Rating': { '5-star': '*****', '4-star': '****', '3-star': '***' }, 
+					'Genre': { 'action': 'Action', 'comedy': 'Comedy', 'drama': 'Drama' }, 
+					'Screen': { '3d': '3D', 'imax': 'IMAX', 'wide': 'Wide' } 
+				}]
+            });
+
+            $(" #get" ).click(function() {
+                alert($('#date2').scroller('getDate'));
+                return false;
+            });
+
+            $( "#set" ).click(function() {
+                $('#date2').scroller('setDate', new Date(), true);
+                return false;
+            });
+        });
+    </script>
+
+<body>
+    <div data-role="page" data-theme="b">
+        <div data-role="header" data-theme="a">
+            <h1>Mobiscroll</h1>
+        </div>
+
+        <div data-role="content" data-theme="d">
+            <form id="testform">
+            	<p>
+	                <label for="date1">Date</label>
+	                <input type="text" name="date1" id="date1" class="genField textEntry date" readonly="readonly" value="1/01/2012" />
+				</p>
+				<p>
+	                <label for="date2">Time</label>
+	                <input type="text" name="date2" id="date2" class="genField textEntry date" value="11:23 AM" />
+				</p>
+				<p>	
+                	<label for="date3">Datetime</label>
+                	<input type="text" name="date3" id="date3" class="genField textEntry date" />
+				</p>
+				<p>
+                	<label for="custom-movie">Movie</label>
+                	<input type="text" name="custom-movie" id="custom-movie" class="genField textEntry" value="" />
+				</p>				
+				<p>
+                	<label for="custom">Custom</label>
+                	<input type="text" name="custom" id="custom" class="genField textEntry date" value="" />
+				</p>				
+            </form>
+        </div>
+    </div>
+</body>
+</html>
