@@ -55,10 +55,14 @@
 		});			
 		
 		$( "#auto" ).bind( "click", function() {
+				
 			$( "#map2" ).attr( "checked", true ).checkboxradio( "refresh" );
+			//here refreshing of map1 is needed if incase map1 was checked beforehand.
+			$( "#map1" ).checkboxradio( "refresh" );
 		});
 		
 		$( "#disable" ).bind( "click", function() {
+
 			$("#map2").checkboxradio( "disable" );
 		});
 
