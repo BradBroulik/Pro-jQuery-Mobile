@@ -1,0 +1,29 @@
+/* jQuery Mobile overrides */
+/* Set header to 'VAG Rounded Bold': */
+.ui-bar-a,
+.ui-bar-a input,
+.ui-bar-a select,
+.ui-bar-a textarea,
+.ui-bar-a button {
+	font-family: 'VAG Rounded Bold', Helvetica, Arial;
+}
+
+/* Set list items to 'MetaPlus-Book' font: */
+.ui-btn-up-c, .ui-btn-hover-c, .ui-btn-down-c {
+    font-family: 'MetaPlus-Book', Helvetica, Arial;
+}
+
+/* Custom Fonts
+/* Performance tip: load 'woff' fonts 1st as they are nearly 50% faster to load */ 
+@font-face { font-family:'MetaPlus-Book'; src:url('MetaPlus-Book.woff') format('woff'), url('MetaPlus-Book.ttf') format('truetype'); }
+@font-face { font-family:'VAG Rounded Bold'; src: url('vagroundedstd-bold-webfont.woff') format('woff'), url('/mobile/assets/fonts/vagroundedstd-bold-webfont.ttf') format('truetype'); }
+@font-face { font-family:'OSP-DIN'; src: url('osp-din-webfont.woff') format('woff'), url('osp-din-webfont.ttf') format('truetype'); }
+
+/* ***Custom font documentation***
+	   Web font formats and browser support: 
+       http://www.adobe.com/devnet/html5/articles/web-typography-and-css-font-face.html
+        
+	   Steve Souders: "My first piece of advice is to avoid using @font-face unless it's critical to the page.":  
+       http://www.stevesouders.com/blog/2009/10/13/font-face-and-performance/  '        
+*/
+	 

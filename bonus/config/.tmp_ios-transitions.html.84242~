@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="utf-8">
+		<title>Transitions</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript">
+			// jQuery Mobile Configuration Settings
+			$(document).bind("mobileinit", function(){
+				/* Show transitions for iOS only */
+				var platform = navigator.platform;
+				if (platform.indexOf("iPhone") > -1 || platform.indexOf("iPad") > -1 || platform.indexOf("iPod") > -1) {
+					$.mobile.defaultPageTransition = "none";
+					$.mobile.defaultDialogTransition = "none";
+				} else {
+					/* Transitions on iOS are fast.  Android and other browsers aren't as smooth so you may want to 
+					 * consider disabling ajax/transitions for non-iOS operating systems. */
+					$.mobile.ajaxEnabled = false;
+				}
+			});
+		</script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>	
+	</head>
+<body>
+<div data-role="page" data-theme="b">
+	<div data-role="header">
+		<h1>Transitions</h1>
+	</div>
+ 
+	<div data-role="content">
+		<a href="contact.html" data-role="button" data-transition="slide" data-mini="true">slide</a>
+		<a href="dialog.html" data-role="button" data-transition="slideup" data-rel="dialog" data-mini="true">slide up</a>
+		<a href="dialog.html" data-role="button" data-transition="slidedown" data-rel="dialog" data-mini="true">slide down</a>
+		<a href="contact.html" data-role="button" data-transition="pop" data-mini="true">pop</a>
+		<a href="contact.html" data-role="button" data-transition="fade" data-mini="true">fade</a>
+		<a href="contact.html" data-role="button" data-transition="slidefade" data-mini="true">slidefade</a>
+		<a href="contact.html" data-role="button" data-transition="flip" data-mini="true">flip</a>
+		<a href="contact.html" data-role="button" data-transition="turn" data-mini="true">turn</a>
+		<a href="contact.html" data-role="button" data-transition="flow" data-mini="true">flow</a>
+		<a href="contact.html" data-role="button" data-transition="none" data-mini="true">none</a>
+	</div>
+</div>
+</body>
+</html>
+

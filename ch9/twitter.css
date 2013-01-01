@@ -1,0 +1,9 @@
+.ui-li-desc { white-space: normal; margin-right: 20px; }
+.from { font-weight: bold; }
+.profile { width:28px; height:28px; }	
+
+.ui-li-heading { overflow: visible; }
+.ui-li-thumb { top: 1em; }
+.ui-li-rating { font-size: 32px; }
+		
+#twitterBtn .ui-icon { background: url(../images/twitterIcon.png) 50% 50% no-repeat; background-size: 22px 22px; }

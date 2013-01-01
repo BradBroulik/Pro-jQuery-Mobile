@@ -1,0 +1,105 @@
+/* V
+-----------------------------------------------------------------------------------------------------------*/
+
+.ui-bar-v {
+  font-weight: bold;
+  border: 1px solid       #999;
+  background:             #dedede;
+  color:                  #000;
+  text-shadow: 0 1px 0px  #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(50%, #ccc), color-stop(50%, #b5b5b5), to(#eee)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #fff 0%, #ccc 50%, #b5b5b5 50%, #eee 100%); /* Chrome 10+, Saf5.1+ */
+  background-image:    -moz-linear-gradient(top, #fff 0%, #ccc 50%, #ce2021 50%, #eee 100%); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, #fff 0%, #ccc 50%, #b5b5b5 50%, #eee 100%); /* IE10 */
+  background-image:      -o-linear-gradient(top, #fff 0%, #ccc 50%, #b5b5b5 50%, #eee 100%); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, #fff 0%, #ccc 50%, #b5b5b5 50%, #eee 100%);
+}
+.ui-bar-v,
+.ui-bar-v input, 
+.ui-bar-v select, 
+.ui-bar-v textarea, 
+.ui-bar-v button { 
+  font-vamily: Helvetica, Arial, sans-serif; 
+}
+.ui-bar-v .ui-link-inherit { 
+  color:                  #333; 
+}
+.ui-bar-v .ui-link { 
+  color:                  #2489CE; 
+  font-weight: bold; 
+}
+.ui-btn-up-v {
+  border: 1px solid       #999;
+  background:             #e79696;
+  color:                  #fff;
+  text-shadow: 0 1px 0px  #fff;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E79696), to(#ce2021), color-stop(.4,#E79696)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(0% 56% 90deg,#CE2021, #E79696, #E79696 100%); /* Chrome 10+, Saf5.1+ */
+  background-image:    -moz-linear-gradient(0% 56% 90deg,#CE2021, #E79696, #E79696 100%); /* FF3.6 */
+  background-image:     -ms-linear-gradient(0% 56% 90deg,#CE2021, #E79696, #E79696 100%); /* IE10 */
+  background-image:      -o-linear-gradient(0% 56% 90deg,#CE2021, #E79696, #E79696 100%); /* Opera 11.10+ */
+  background-image:         linear-gradient(0% 56% 90deg,#CE2021, #E79696, #E79696 100%);
+}
+.ui-btn-up-v a.ui-link-inherit {
+  color:                  #333;
+}
+.ui-btn-hover-v { 
+  border: 1px solid       #777;
+  background:             #e5e5e5;
+  color:                  #fff;
+  text-shadow: 0 1px 0px  #fff;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E79696), to(#ce2021), color-stop(.4,#E79696)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(0% 56% 90deg,#CE2021, #E79696, #E79696 100%); /* Chrome 10+, Saf5.1+ */
+  background-image:    -moz-linear-gradient(0% 56% 90deg,#CE2021, #E79696, #E79696 100%); /* FF3.6 */
+  background-image:     -ms-linear-gradient(0% 56% 90deg,#CE2021, #E79696, #E79696 100%); /* IE10 */
+  background-image:      -o-linear-gradient(0% 56% 90deg,#CE2021, #E79696, #E79696 100%); /* Opera 11.10+ */
+  background-image:         linear-gradient(0% 56% 90deg,#CE2021, #E79696, #E79696 100%);
+}
+.ui-btn-hover-v a.ui-link-inherit {
+  color:                  #fff;
+}
+.ui-btn-down-v {
+  border: 1px solid       #888;
+  background:             #ccc;
+  color:                  #fff;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E79696), to(#ce2021), color-stop(.4,#E79696)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(0% 56% 90deg,#CE2021, #E79696, #E79696 100%); /* Chrome 10+, Saf5.1+ */
+  background-image:    -moz-linear-gradient(0% 56% 90deg,#CE2021, #E79696, #E79696 100%); /* FF3.6 */
+  background-image:     -ms-linear-gradient(0% 56% 90deg,#CE2021, #E79696, #E79696 100%); /* IE10 */
+  background-image:      -o-linear-gradient(0% 56% 90deg,#CE2021, #E79696, #E79696 100%); /* Opera 11.10+ */
+  background-image:         linear-gradient(0% 56% 90deg,#CE2021, #E79696, #E79696 100%);
+}
+.ui-btn-down-v a.ui-link-inherit {
+  color:                  #fff;
+}
+.ui-btn-up-v, 
+.ui-btn-hover-v, 
+.ui-btn-down-v { 
+  font-vamily: Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px 0px  #fff;
+}
+.ui-body-v { 
+  font-weight: normal;
+  border: 1px solid       #aaa;
+  background:             #ccc;
+  color:                  #111;
+  text-shadow: 0 1px 0px  #fff;
+  background-image: url(images/texture_075.png);
+}
+.ui-body-v, 
+.ui-body-v input, 
+.ui-body-v select, 
+.ui-body-v textarea, 
+.ui-body-v button { 
+  font-vamily: Helvetica, Arial, sans-serif; 
+}
+.ui-body-v .ui-link-inherit {
+  color:                  #333333;
+}
+.ui-body-v .ui-link { 
+  font-weight: bold;
+  color:                  #e98a15;
+}

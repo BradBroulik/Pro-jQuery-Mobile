@@ -4,33 +4,30 @@
 		<meta charset="utf-8">
 		<title>Action Sheet Example #1</title> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../jquery.mobile-min.css" /> 
-	<script type="text/javascript" src="../jquery-min.js"></script>
-	<script type="text/javascript" src="../jquery.mobile-min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 	</head> 
 <body> 
 
-<!-- First Page -->
 <div data-role="page" id="home">
 	<div data-role="header">
 		<h1>Action Sheet</h1>
 	</div>
 
 	<div data-role="content">
-		<a href="#logout" data-transition="slidedown">Logout</a>  	
+		<a href="#logout" data-rel="popup" data-transition="slidedown">Logout</a>  	
 	</div>
-</div>
-
-<div data-role="dialog" id="logout">
-	<div data-role="content">
-		<span class="title">Are you sure?</span>
-
-		<a href="#home" data-role="button" data-theme="b">Yes, I'm Sure!</a>
-		<a href="#home" data-role="button" data-theme="c" data-rel="back">No Way!</a>
-	</div>
-	<style>
-		span.title { display:block; text-align:center; margin-top:10px; margin-bottom:20px; }
-	</style>
+	
+	<div data-role="popup" id="logout" data-overlay-theme="d" data-theme="c" style="min-width:275px;" class="ui-corner-all">
+		<div data-role="header" data-theme="a" class="ui-corner-top">
+			<h1>Are you sure?</h1>
+		</div>
+		<div data-role="content" data-theme="d" style="padding:15px;" class="ui-corner-bottom">
+			<a href="#home" data-role="button" data-theme="b">Yes, I'm Sure!</a>
+			<a href="#home" data-role="button" data-theme="c" data-rel="back">No Way!</a>  
+		</div>
+	</div>	
 </div>
 </body>
 </html>

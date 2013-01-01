@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Tab Bar Example</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../jquery.mobile-min.css" /> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" /> 
 	<style>
 		.tabbar .ui-btn .ui-btn-inner { font-size: 11px!important; padding-top: 24px!important; padding-bottom: 0px!important; }
 		.tabbar .ui-btn .ui-icon { width: 30px!important; height: 20px!important; margin-left: -15px!important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: none !important; border-radius: none !important; }
@@ -18,14 +18,14 @@
 		.ui-control-active { background: #BBB; }
 		.ui-control-inactive { background: #DDD; }
 	</style>		
-	<script type="text/javascript" src="../jquery-min.js"></script>
-	<script type="text/javascript" src="../jquery.mobile-min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 </head> 
 <body> 
 
 <div data-role="page">
 	<div data-role="header" data-theme="b" data-position="fixed">
-		<div data-role="header" data-theme="d" class="segmented-control">
+		<div class="segmented-control ui-bar-d">
 			<div data-role="controlgroup" data-type="horizontal">
 				<a href="#" data-role="button" class="ui-control-active">In Theatres</a>
 				<a href="#" data-role="button" class="ui-control-inactive">Coming Soon</a>
@@ -67,7 +67,15 @@
 				<p>Rated: PG</p>
 				<p>Runtime: 95 min.</p>
 			  </a>
-			</li>													
+			</li>
+			<li>
+			  <a href="#">
+				<img src="../images/X-MenFirstClass.jpg" />
+				<h3>X-Men 3D</h3>
+				<p>Rated: PG-13</p>
+				<p>Runtime: 131 min.</p>
+			  </a>
+			</li>																
 		</ul>
 	</div>
 			

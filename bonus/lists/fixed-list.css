@@ -1,0 +1,20 @@
+.ui-content-fixed .ui-li { background:#fff; max-height:50px!important; }
+.ui-content-fixed li a img { height:50px; width:65px; }
+.ui-content-fixed .ui-li-aside { font-size:11px; width:78px; margin-top:8px; margin-right:-30px; }
+.ui-content-fixed .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit { min-height: 30px!important; }
+.ui-content-fixed .ui-li-thumb { left:0; }
+.ui-content-fixed .ui-icon-arrow-r { display:none; }
+.ui-content-fixed .ui-btn-inner { border:0; }
+.ui-content-fixed .ui-li-heading { line-height:1; white-space:normal; }
+.ui-content-fixed .ui-li-heading-wrapper {
+	display:table;
+	position:absolute;
+	height:50px;
+	left:66px;
+  	width:50%;
+  	top:0px;
+}
+.ui-content-fixed .ui-li-heading-wrapper h1 {
+  display: table-cell;
+  vertical-align: middle; 
+}

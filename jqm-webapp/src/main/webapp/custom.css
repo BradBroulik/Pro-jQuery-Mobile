@@ -1,0 +1,51 @@
+
+a:link,	a:visited, a:hover, a:active { text-decoration:none; }
+.ui-block-a, .ui-block-b { height: 100px; position: relative; }
+.ui-grid-a { text-align: center; }
+.icon-label { color: #FFF; display: block; font-size:12px; }
+.icon-springboard { position: absolute; bottom: 0; width: 100%; }
+
+.background-gradient {
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.22, rgb(92,92,92)),
+	    color-stop(0.57, rgb(158,153,158)),
+	    color-stop(0.84, rgb(92,92,92))
+	);
+	background-image: -moz-linear-gradient(90deg, rgb(92,92,92), rgb(158,153,158), rgb(92,92,92));
+}
+
+.header-gradient {
+  background-image:
+    -webkit-gradient(
+      linear, 
+      left top,
+      left bottom,
+      from( rgba( 068,213,254,0 )),
+      color-stop(.43, rgba( 068,213,254,0 )),
+      to( rgba( 068,213,254,1 ))),
+    -webkit-gradient(
+	  radial,
+      50% 700, 690,
+      50% 700, 689,
+            from( rgba( 049,123,220,0 )),
+              to( rgba( 049,123,220,1 ))),
+    -webkit-gradient(
+      radial,
+      20 -43, 60,
+      20 -43, 40,
+      from( rgba( 125,170,231,1 )),
+      to( rgba( 230,238,250,1 )));
+}
+
+.segmented-control { text-align:center;}
+.segmented-control .ui-controlgroup { margin: 0.2em; }
+.ui-control-active, .ui-control-inactive { border-style: solid; border-color: gray; }
+.ui-control-active { background: #BBB; }
+.ui-control-inactive { background: #DDD; }
+		
+.thanks { margin-top: 25px; text-align: center; }
+.thanks img { width:100px; height:100px; }
+.email { font-style:italic; }
