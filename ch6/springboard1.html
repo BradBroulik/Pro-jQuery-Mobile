@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Springboard Example</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> 
+	<style>
+		/* center icons */
+		.ui-grid-a { text-align: center; }
+		
+		/* set row height */
+		.ui-block-a, .ui-block-b { height: 100px; }
+		
+		/* set label color, size */
+		.icon-label { color: #000; display: block; font-size:12px; }
+		a:link,	a:visited, a:hover, a:active { text-decoration:none; }
+		
+		.background-gradient {
+			background-image: -webkit-linear-gradient(top, #3c3c3c, #111); /* Chrome 10+, Saf5.1+ */
+			background-image:    -moz-linear-gradient(top, #3c3c3c, #111); /* FF3.6 */
+			background-image:     -ms-linear-gradient(top, #3c3c3c, #111); /* IE10 */
+			background-image:      -o-linear-gradient(top, #3c3c3c, #111); /* Opera 11.10+ */
+			background-image:         linear-gradient(top, #3c3c3c, #111); /* Standard, non-prefixed */
+		}		
+	</style>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="home" data-theme="d" class="background-gradient">
+	<div data-role="header" data-theme="b">
+		<h1>Springboard</h1>
+	</div>
+
+	<div data-role="content">
+		<div class="ui-grid-a"> 
+			<div class="ui-block-a">
+		   		<a href="#">
+			  		<img src="../images/cloud-default.png" height="57" width="57">
+			  		<span class="icon-label">App A</span>
+		    	</a>
+			</div>
+			<div class="ui-block-b">
+		   		<a href="#">
+			  		<img src="../images/cloud-bright.png" height="57" width="57">
+			  		<span class="icon-label">App B</span>
+		    	</a>
+			</div>
+			<div class="ui-block-a">
+		   		<a href="#">
+			  		<img src="../images/cloud-ripple.png" height="57" width="57">
+			  		<span class="icon-label">App C</span>
+		    	</a>
+			</div>	
+			<div class="ui-block-b">
+		   		<a href="#">
+			  		<img src="../images/cloud-sparkle.png" height="57" width="57">
+			  		<span class="icon-label">App D</span>
+		    	</a>
+			</div>	
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
