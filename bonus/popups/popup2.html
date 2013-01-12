@@ -12,7 +12,7 @@
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script type="text/javascript">
 		$("#moviesPage").live( "pageinit", function(e) {
-			$( "#movie1" ).bind( "click", function() {
+			$( "#movie1, #movie2, #movie3, #movie4" ).bind( "click", function() {
 				// Dynamically open popup
 				$('#popupWarning').popup( "open" );
 			});
@@ -39,7 +39,7 @@
 			  </a>
 			</li>
 			<li>
-			  <a href="#">
+			  <a href="#" id="movie2">
 				<img src="../../images/pirates.jpg" />
 				<h3>Pirates of the Caribbean</h3>
 				<p>Rated: PG-13</p>
@@ -47,7 +47,7 @@
 			  </a>
 			</li>	
 			<li>
-			  <a href="#">
+			  <a href="#" id="movie3">
 				<img src="../../images/X-MenFirstClass.jpg" />
 				<h3>X-Men</h3>
 				<p>Rated: PG-13</p>
@@ -55,7 +55,7 @@
 			  </a>
 			</li>
 			<li>
-			  <a href="#">
+			  <a href="#" id="movie4">
 				<img src="../../images/kungfupanda2.jpg" />
 				<h3>Kung Fu Panda 3D</h3>
 				<p>Rated: PG</p>
