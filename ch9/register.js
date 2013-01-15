@@ -1,5 +1,5 @@
 
-$( "#registrationPage" ).live( "pageinit", function(){
+$( document ).on("pageinit", "#registrationPage", function() {
 
 	$( "form" ).submit(function () {
 		$.mobile.loading( 'show' );
@@ -24,7 +24,7 @@ $( "#registrationPage" ).live( "pageinit", function(){
 });
 
 
-$( "#thanksPage" ).live( "pagebeforecreate", function(){
+$( document ).on("pagebeforecreate", "#thanksPage", function() {
 	var email = getParameterByName( "email", $( this ).jqmData( "url" ));
 	$( ".email" ).append(email);
 });

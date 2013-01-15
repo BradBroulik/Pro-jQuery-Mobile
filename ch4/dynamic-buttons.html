@@ -28,13 +28,13 @@
 	</div>
 	
 	<script type="text/javascript"><!--
-		$( "#create-button1" ).bind( "click", function() {
+		$( "#create-button1" ).on( "click", function() {
 			$( '<a href="http://jquerymobile.com" id="button1" data-role="button" data-icon="star" data-inline="true" data-theme="a">Button1</a>' )
 				.appendTo( ".ui-content" )
 				.button();
 		});
 				
-		$( "#create-button2" ).bind( "click", function() {
+		$( "#create-button2" ).on( "click", function() {
 			$( '<a href="http://jquerymobile.com" id="button2">Button2</a>' )
 				.insertAfter( "#create-button2" )
 				.button({
@@ -52,13 +52,13 @@
 				})
 		});
 		
-		$( "#create-button5" ).bind( "click", function() {
+		$( "#create-button5" ).on( "click", function() {
 			$( '<input type="submit" id="button5" value="Button5" data-theme="a" />' )
 				.insertAfter( "#create-button5" )
 				.button();
 		});
 		
-		$( "#create-button6" ).bind( "click", function() {
+		$( "#create-button6" ).on( "click", function() {
 			$( '<input type="submit" id="button6" value="Button6" />' )
 				.insertAfter( "#create-button6" )
 				.button({
@@ -69,17 +69,17 @@
 				})
 		});
 				
-		$( "#create-multiple-buttons" ).bind( "click", function() {
+		$( "#create-multiple-buttons" ).on( "click", function() {
 			$( '<button id="button3" data-theme="a">Button3</button>' ).insertAfter( "#create-multiple-buttons" );
 			$( '<button id="button4" data-theme="a">Button4</button>' ).insertAfter( "#button3" );
 			$.mobile.pageContainer.trigger( "create" );
 		});
 		
-		$( "#disable-button3" ).bind( "click", function() {
+		$( "#disable-button3" ).on( "click", function() {
 			$( "#button3" ).button( "disable" );
 		});	
 			
-		$( "#enable-button3" ).bind( "click", function() {
+		$( "#enable-button3" ).on( "click", function() {
 			$( "#button3" ).button( "enable" );
 		});			
 	--></script>

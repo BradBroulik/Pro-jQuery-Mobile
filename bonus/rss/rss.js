@@ -1,8 +1,7 @@
 /** YQL: http://developer.yahoo.com/yql/console/ */
 /** MN Twins RSS Feed: http://partner.mlb.com/partnerxml/gen/news/rss/min.xml  */
  
-$( "#rssPage" ).live( "pagebeforecreate", function(e){
-
+$( document ).on("pagebeforecreate", "#rssPage", function() {
 	$.ajax({
 		url: "http://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20feed%20WHERE%20url%3D%22http%3A%2F%2Fpartner.mlb.com%2Fpartnerxml%2Fgen%2Fnews%2Frss%2Fmin.xml%22&format=json&diagnostics=true", // NOTE: Remove 'callback' query param from YQL generated restful URL
 		dataType: "json",

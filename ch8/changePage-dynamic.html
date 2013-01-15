@@ -19,7 +19,7 @@
 		<input type=button id="changePage" value="Open dynamic page">	
 	</div>
 	<script>
-		$( "#changePage" ).bind( "click", function() {
+		$( "#changePage" ).on( "click", function() {
 			// Create page markup
 			var newPage = $("<div data-role=page data-url=hi><div data-role=header><h1>Hi</h1></div><div data-role=content>Hello Again!</div></div>");
 			

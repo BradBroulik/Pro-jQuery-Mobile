@@ -30,13 +30,13 @@
 	  </form>			 			 		 			 
 	</div>
 	<script type="text/javascript">
-		$( "#create-select1" ).bind( "click", function() {
+		$( "#create-select1" ).on( "click", function() {
 			$( '<select name="select1" id="select1" data-theme="e"><option value="action">Action</option><option value="comedy">Comedy</option><option value="drama">Drama</option><option value="romance">Romance</option></select>' )
 				.insertAfter( "#create-select1" )
 				.selectmenu();
 		});
 		
-		$( "#create-select2" ).bind( "click", function() {
+		$( "#create-select2" ).on( "click", function() {
 			$( '<select name="select2" id="select2"><option value="">Select one...</option><option value="action">Action</option><option value="comedy">Comedy</option><option value="drama">Drama</option><option value="romance">Romance</option></select>' )
 				.insertAfter( "#create-select2" )
 				.selectmenu({
@@ -61,25 +61,25 @@
 				});
 		});			
 		
-		$( "#auto-select1" ).bind( "click", function() {
+		$( "#auto-select1" ).on( "click", function() {
 			var myselect = $( "select#select1" );
 			myselect[0].selectedIndex = 2;
 			myselect.selectmenu( "refresh", true );
 		});
 		
-		$( "#disable-select1" ).bind( "click", function() {
+		$( "#disable-select1" ).on( "click", function() {
 			$("select#select1").selectmenu( "disable" );
 		});
 
-		$( "#enable-select1" ).bind( "click", function() {
+		$( "#enable-select1" ).on( "click", function() {
 			$( "select#select1" ).selectmenu( "enable" );
 		});		
 		
-		$( "#open-select2" ).bind( "click", function() {
+		$( "#open-select2" ).on( "click", function() {
 			$( "select#select2" ).selectmenu( "open" );
 		});	
 		
-		$( "#close-select2" ).bind( "click", function() {
+		$( "#close-select2" ).on( "click", function() {
 			$( "select#select2" ).selectmenu( "close" );
 		});							
 	</script>

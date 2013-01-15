@@ -1,8 +1,7 @@
-	$( "#reviewsPage" ).live( "pageinit", function(){
-		
+	$( document ).on("pageinit", "#reviewsPage", function() {
 		// When the twitter button is clicked, load our twitter results page.
 		// The twitter results will get loaded in #twitterPage's "pagebeforecreate" event.
-		$( "#twitterBtn" ).bind( "click", function(e) {
+		$( "#twitterBtn" ).on( "click", function(e) {
 			$.mobile.loading( 'show' );
 			$.mobile.loadPage("twitter.html", { reloadPage: true }); // Reload page even if it's already in the DOM
 			return false;  // Prevent default click behavior
@@ -10,8 +9,7 @@
 
 	});
 
-	$( "#twitterPage" ).live( "pagebeforecreate", function(e){
-		
+	$( document ).on("pagebeforecreate", "#twitterPage", function() {
 		$.ajax({
 		  	url: "http://search.twitter.com/search.json?q=xmen",  // Twitter rest API: https://dev.twitter.com/docs/api/1/get/search
 		  	dataType: "jsonp",

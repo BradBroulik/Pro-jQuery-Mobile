@@ -28,13 +28,13 @@
 	  </form>			 			 		 			 
 	</div>
 	<script type="text/javascript">
-		$( "#create-radio1" ).bind( "click", function() {
+		$( "#create-radio1" ).on( "click", function() {
 			$( '<fieldset data-role="controlgroup"><legend>Map view:</legend><input type="radio" name="map" id="map1" value="Map" /><label for="map1" data-theme="c">Map</label><input type="radio" name="map" id="map2" value="Satellite"  /><label for="map2" data-theme="c">Satellite</label></fieldset>' )
 				.insertAfter( "#create-radio1" );
 			$.mobile.pageContainer.trigger( "create" );
 		});
 		
-		$( "#create-radio2" ).bind( "click", function() {
+		$( "#create-radio2" ).on( "click", function() {
 			$( '<fieldset data-role="controlgroup"><legend>Map view:</legend><input type="radio" name="map" id="m1" value="Map" checked="checked" /><label for="m1">Map</label><input type="radio" name="map" id="m2" value="Satellite"  /><label for="m2">Satellite</label></fieldset>' )
 				.insertAfter( "#create-radio2" );
 			$( "#m1" )
@@ -54,19 +54,19 @@
 			$.mobile.pageContainer.trigger( "create" );	
 		});			
 		
-		$( "#auto" ).bind( "click", function() {
+		$( "#auto" ).on( "click", function() {
 				
 			$( "#map2" ).attr( "checked", true ).checkboxradio( "refresh" );
 			//here refreshing of map1 is needed if incase map1 was checked beforehand.
 			$( "#map1" ).checkboxradio( "refresh" );
 		});
 		
-		$( "#disable" ).bind( "click", function() {
+		$( "#disable" ).on( "click", function() {
 
 			$("#map2").checkboxradio( "disable" );
 		});
 
-		$( "#enable" ).bind( "click", function() {
+		$( "#enable" ).on( "click", function() {
 			$( "#map2" ).checkboxradio( "enable" );
 		});								
 	</script>

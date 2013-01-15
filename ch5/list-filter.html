@@ -14,7 +14,7 @@
 	</style>
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script>
-		$(document).bind('mobileinit',function(){ 
+		$( document ).on( "mobileinit", function() {
 		 	// Globally configure search filter placeholder text
 			//$.mobile.listview.prototype.options.filterPlaceholder = "Search me..."; 
 			
@@ -27,7 +27,7 @@
 		
 		// When the page loads configure a custom search
 		/*
-		$('#calendar-page').live("pagebeforeshow", function(){
+		$( document ).on("pagebeforeshow", "#calendar-page", function() {
 		  $("#calendar-list").listview('option', 'filterCallback', 
 				function( text, searchValue ){
 					// New "Starts With" search, return false when there's a match

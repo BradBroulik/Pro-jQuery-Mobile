@@ -8,7 +8,7 @@
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 		<script type="text/javascript">
 			// jQuery Mobile Configuration Settings
-			$(document).bind("mobileinit", function(){
+			$( document ).on( "mobileinit", function() {
 				/* Show transitions for iOS only */
 				var platform = navigator.platform;
 				if (platform.indexOf("iPhone") > -1 || platform.indexOf("iPad") > -1 || platform.indexOf("iPod") > -1) {

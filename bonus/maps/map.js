@@ -1,4 +1,4 @@
-$( "#map-page" ).live( "pageinit", function(){
+$( document ).on("pageinit", "#map-page", function() {
 	var $mapSwitch = $( "#map-switch" ),
 	    $listSwitch = $( "#list-switch" ),
 		$map = $("#map-canvas"),
@@ -20,7 +20,7 @@ $( "#map-page" ).live( "pageinit", function(){
     	return location;
     };
 		
-    $("#show-more a").on( 'click', function(e){
+    $("#show-more a").on( "click", function(e){
     	var location = initLocation();
     	location.coords.latitude = $.urlParam("lat");
     	location.coords.longitude = $.urlParam("lon");

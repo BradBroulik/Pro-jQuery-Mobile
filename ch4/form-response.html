@@ -12,7 +12,7 @@
 				return (results !== null) ? results[1] : 0;  
 			}
 			
-			$( "#response-page" ).live( "pageinit", function(){
+			$( document ).on("pageinit", "#response-page", function() {
 				var email = $.urlParam("email");
 				var decodedEmail = decodeURIComponent(email.replace(/\+/g, ' '));
 				$( ".email" ).append(decodedEmail);

@@ -1,8 +1,8 @@
-$(document).bind("mobileinit", function(){
+$( document ).on( "mobileinit", function() {
 	$.mobile.allowCrossDomainPages = true;
     $.mobile.page.prototype.options.addBackBtn = true;
 });
 
-$(document).bind("deviceready", function(){
+$(document).on("deviceready", function(){
     navigator.notification.alert("PhoneGap is initialized...");
 });

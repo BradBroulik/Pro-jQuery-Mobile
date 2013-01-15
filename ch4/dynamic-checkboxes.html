@@ -28,13 +28,13 @@
 	  </form>			 			 		 			 
 	</div>
 	<script type="text/javascript">
-		$( "#create-cb1" ).bind( "click", function() {
+		$( "#create-cb1" ).on( "click", function() {
 			$( '<fieldset data-role="controlgroup"><legend>Genre:</legend><input type="checkbox" name="genre" id="c1" /><label for="c1" data-theme="c">Action</label><input type="checkbox" name="genre" id="c2" /><label for="c2" data-theme="c">Comedy</label></fieldset>' )
 				.insertAfter( "#create-cb1" );
 			$.mobile.pageContainer.trigger( "create" );
 		});
 		
-		$( "#create-cb2" ).bind( "click", function() {
+		$( "#create-cb2" ).on( "click", function() {
 			$( '<fieldset data-role="controlgroup"><legend>Genre:</legend><input type="checkbox" name="genre" id="c3" /><label for="c3">Action</label><input type="checkbox" name="genre" id="c4" /><label for="c4">Comedy</label></fieldset>' )
 				.insertAfter( "#create-cb2" );
 			$( '#c3' )
@@ -54,15 +54,15 @@
 			$.mobile.pageContainer.trigger( "create" );	
 		});			
 		
-		$( "#auto" ).bind( "click", function() {
+		$( "#auto" ).on( "click", function() {
 			$( "#c2" ).attr( "checked", true ).checkboxradio( "refresh" );
 		});
 		
-		$( "#disable" ).bind( "click", function() {
+		$( "#disable" ).on( "click", function() {
 			$("#c2").checkboxradio( "disable" );
 		});
 
-		$( "#enable" ).bind( "click", function() {
+		$( "#enable" ).on( "click", function() {
 			$( "#c2" ).checkboxradio( "enable" );
 		});								
 	</script>

@@ -25,13 +25,13 @@
 	  </form>			 			 		 			 
 	</div>
 		<script type="text/javascript">		
-		$( "#create-text1" ).bind( "click", function() {
+		$( "#create-text1" ).on( "click", function() {
 			$( '<input type="text" name="text1" id="text1" value="" placeholder="text1" data-theme="c" />' )
 				.insertAfter( "#create-text1" )
 				.textinput();
 		});
 		
-		$( "#create-text2" ).bind( "click", function() {
+		$( "#create-text2" ).on( "click", function() {
 			$( '<input type="text" name="text2" id="text2" value="" placeholder="text2" />' )
 				.insertAfter( "#create-text2" )
 				.textinput({
@@ -45,11 +45,11 @@
 				});
 		});
 		
-		$( "#disable-text1" ).bind( "click", function() {
+		$( "#disable-text1" ).on( "click", function() {
 			$( "#text1").textinput( "disable" );
 		});		
 		
-		$( "#enable-text1" ).bind( "click", function() {
+		$( "#enable-text1" ).on( "click", function() {
 			$( "#text1" ).textinput( "enable" );
 		});	
 		</script>

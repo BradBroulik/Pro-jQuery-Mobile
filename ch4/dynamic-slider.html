@@ -28,13 +28,13 @@
 	  </form>			 			 		 			 
 	</div>
 	<script type="text/javascript">
-		$( "#create-s1" ).bind( "click", function() {
+		$( "#create-s1" ).on( "click", function() {
 			$( '<label for="brightness1">Brightness1:</label><input type="range" name="brightness1" id="brightness1" min="0" max="10" data-track-theme="a" data-theme="d" class="ui-hidden-accessible" />' )
 				.insertAfter( "#create-s1" );
 			$( "#brightness1" ).slider().textinput();
 		});
 		
-		$( "#create-s2" ).bind( "click", function() {
+		$( "#create-s2" ).on( "click", function() {
 			$( '<label for="brightness2">Brightness2:</label><input type="range" name="brightness2" id="brightness2" min="0" max="10" class="ui-hidden-accessible" />' )
 				.insertAfter( "#create-s2" );
 			$( "#brightness2" ).slider({
@@ -47,15 +47,15 @@
 				}).textinput();
 		});
 		
-		$( "#auto" ).bind( "click", function() {
+		$( "#auto" ).on( "click", function() {
 			$( "#brightness1" ).val( 10 ).slider( "refresh" );
 		});
 		
-		$( "#disable" ).bind( "click", function() {
+		$( "#disable" ).on( "click", function() {
 			$( "#brightness1" ).slider( "disable" );
 		});
 
-		$( "#enable" ).bind( "click", function() {
+		$( "#enable" ).on( "click", function() {
 			$( "#brightness1" ).slider( "enable" );
 		});	
 	</script>

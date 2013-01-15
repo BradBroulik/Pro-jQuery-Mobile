@@ -22,13 +22,13 @@
 		  <a href="#" id="update-list1" data-role="button" data-theme="a">Update list1</a>
 	</div>
 	<script type="text/javascript">
-		$( "#create-list1" ).bind( "click", function() {
+		$( "#create-list1" ).on( "click", function() {
 			$( '<ul data-inset="true" id="list1"><li data-role="list-divider">Genres</li><li><a href="#">Action</a></li><li><a href="#">Comedy</a></li></ul>' )
 				.insertAfter( "#create-list1" )
 				.listview();
 		});
 		
-		$( "#create-list2" ).bind( "click", function() {
+		$( "#create-list2" ).on( "click", function() {
 			$( '<ul><li data-role="list-divider">Genres</li><li><a href="#">Action</a></li><li><a href="#">Comedy</a></li></ul>' )
 				.insertAfter( "#create-list2" )
 				.listview({
@@ -44,7 +44,7 @@
 				});
 		});
 		
-		$( "#update-list1" ).bind( "click", function() {
+		$( "#update-list1" ).on( "click", function() {
 			$( "#list1" )
 				.append('<li><a href="#">Drama</a></li>')
 				.listview('refresh');

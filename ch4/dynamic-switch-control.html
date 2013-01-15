@@ -24,13 +24,13 @@
 	  </form>			 			 		 			 
 	</div>
 	<script type="text/javascript">
-		$( "#create-switch1" ).bind( "click", function() {
+		$( "#create-switch1" ).on( "click", function() {
 			$( '<select name="switch1" id="switch1" data-role="slider" data-theme="c"><option value="off">Off</option><option value="on">On</option></select>' )
 				.insertAfter( "#create-switch1" )
 				.slider();
 		});
 		
-		$( "#create-switch2" ).bind( "click", function() {
+		$( "#create-switch2" ).on( "click", function() {
 			$( '<select name="switch2" id="switch2"><option value="off">Off</option><option value="on">On</option></select>' )
 				.insertAfter( "#create-switch2" )
 				.slider({
@@ -46,7 +46,7 @@
 				});
 		});			
 		
-		$( "#toggle-switch1-on" ).bind( "click", function() {
+		$( "#toggle-switch1-on" ).on( "click", function() {
 			var switch1 = $( "select#switch1" );
 			// Set switch1 to 'on'
 			switch1[0].selectedIndex = 1;
