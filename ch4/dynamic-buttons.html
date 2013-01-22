@@ -31,13 +31,13 @@
 		$( "#create-button1" ).on( "click", function() {
 			$( '<a href="http://jquerymobile.com" id="button1" data-role="button" data-icon="star" data-inline="true" data-theme="a">Button1</a>' )
 				.appendTo( ".ui-content" )
-				.button();
+				.buttonMarkup();
 		});
 				
 		$( "#create-button2" ).on( "click", function() {
 			$( '<a href="http://jquerymobile.com" id="button2">Button2</a>' )
 				.insertAfter( "#create-button2" )
-				.button({
+				.buttonMarkup({
 					corners: true,
 					icon: "home",
 					inline: true,
@@ -55,13 +55,13 @@
 		$( "#create-button5" ).on( "click", function() {
 			$( '<input type="submit" id="button5" value="Button5" data-theme="a" />' )
 				.insertAfter( "#create-button5" )
-				.button();
+				.buttonMarkup();
 		});
 		
 		$( "#create-button6" ).on( "click", function() {
 			$( '<input type="submit" id="button6" value="Button6" />' )
 				.insertAfter( "#create-button6" )
-				.button({
+				.buttonMarkup({
 					'icon': "home",
 					'inline': true,
 					'shadow': true,
