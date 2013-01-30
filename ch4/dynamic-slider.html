@@ -31,7 +31,7 @@
 		$( "#create-s1" ).on( "click", function() {
 			$( '<label for="brightness1">Brightness1:</label><input type="range" name="brightness1" id="brightness1" min="0" max="10" data-track-theme="a" data-theme="d" class="ui-hidden-accessible" />' )
 				.insertAfter( "#create-s1" );
-			$( "#brightness1" ).slider().textinput();
+			$( "#brightness1" ).slider();
 		});
 		
 		$( "#create-s2" ).on( "click", function() {
@@ -44,7 +44,7 @@
 					create: function(event) { 
 						console.log( "Creating slider control..." );
 					}
-				}).textinput();
+				});
 		});
 		
 		$( "#auto" ).on( "click", function() {
