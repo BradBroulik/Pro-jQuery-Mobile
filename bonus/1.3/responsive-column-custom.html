@@ -20,13 +20,29 @@
 	     display: table-cell;
 	   }
 	}
+	
+	/* Show priority 3 at 32em or 512px (32em x 16px) */ 
+	@media screen and (min-width: 32em) {
+	   .my-custom-class  th.ui-table-priority-3,
+	   .my-custom-class td.ui-table-priority-3 {
+	     display: table-cell;
+	   }
+	}	
 
-	/* Manually hidden */ 
+	/* Show priority 4 at 42em or 672px (42em x 16px) */ 
+	@media screen and (min-width: 42em) {
+	   .my-custom-class  th.ui-table-priority-4,
+	   .my-custom-class td.ui-table-priority-4 {
+	     display: table-cell;
+	   }
+	}	
+	
+	/* Manually hidden */
 	.my-custom-class th.ui-table-cell-hidden,
 	.my-custom-class td.ui-table-cell-hidden {
 	  display: none;
 	}
-	
+
 	/* Manually shown */
 	.my-custom-class th.ui-table-cell-visible,
 	.my-custom-class td.ui-table-cell-visible {
@@ -45,14 +61,14 @@
 
 	<div data-role="content">
 
-        <table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="my-custom-class">
+        <table data-role="table" id="table-column-toggle" data-mode="columntoggle" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a" class="ui-body-d ui-shadow table-stripe my-custom-class">
               <thead>
                 <tr>
                   <th data-priority="2">Rank</th>
                   <th data-priority="critical">Movie Title</th>
                   <th data-priority="3">Year</th>
                   <th data-priority="1"><abbr title="Rotten Tomato Rating">Rating</abbr></th>
-                  <th data-priority="5">Reviews</th>
+                  <th data-priority="4">Reviews</th>
                 </tr>
               </thead>
               <tbody>
