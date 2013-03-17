@@ -16,12 +16,11 @@
 					html = "";
 				$ul.html( "" );
 				if ( value && value.length > 2 ) {
-					$ul.listview( "refresh" );
 					$.ajax({
 						url: "http://gd.geobytes.com/AutoCompleteCity",
 						dataType: "jsonp",
 						data: {
-							q: $input.val()
+							q: value
 						},
 						success: function(response){
 							$.each( response, function ( i, val ) {
