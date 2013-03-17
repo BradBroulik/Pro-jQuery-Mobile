@@ -8,44 +8,44 @@
 	<style>
 	/* Show priority 1 above 25em or 400px (25em x 16px) */		
 	@media screen and (min-width: 25em) {
-	   .my-custom-class th.ui-table-priority-1,
-	   .my-custom-class td.ui-table-priority-1 {
+	   .my-custom-breakpoint th.ui-table-priority-1,
+	   .my-custom-breakpoint td.ui-table-priority-1 {
 	     display: table-cell;
 	   }
 	}
 	/* Show priority 2 above 28em or 448px (28em x 16px) */ 
 	@media screen and (min-width: 28em) {
-	   .my-custom-class  th.ui-table-priority-2,
-	   .my-custom-class td.ui-table-priority-2 {
+	   .my-custom-breakpoint  th.ui-table-priority-2,
+	   .my-custom-breakpoint td.ui-table-priority-2 {
 	     display: table-cell;
 	   }
 	}
 	
 	/* Show priority 3 above 32em or 512px (32em x 16px) */ 
 	@media screen and (min-width: 32em) {
-	   .my-custom-class  th.ui-table-priority-3,
-	   .my-custom-class td.ui-table-priority-3 {
+	   .my-custom-breakpoint  th.ui-table-priority-3,
+	   .my-custom-breakpoint td.ui-table-priority-3 {
 	     display: table-cell;
 	   }
 	}	
 
 	/* Show priority 4 above 42em or 672px (42em x 16px) */ 
 	@media screen and (min-width: 42em) {
-	   .my-custom-class  th.ui-table-priority-4,
-	   .my-custom-class td.ui-table-priority-4 {
+	   .my-custom-breakpoint  th.ui-table-priority-4,
+	   .my-custom-breakpoint td.ui-table-priority-4 {
 	     display: table-cell;
 	   }
 	}	
 	
 	/* Manually hidden */
-	.my-custom-class th.ui-table-cell-hidden,
-	.my-custom-class td.ui-table-cell-hidden {
+	.my-custom-breakpoint th.ui-table-cell-hidden,
+	.my-custom-breakpoint td.ui-table-cell-hidden {
 	  display: none;
 	}
 
 	/* Manually shown */
-	.my-custom-class th.ui-table-cell-visible,
-	.my-custom-class td.ui-table-cell-visible {
+	.my-custom-breakpoint th.ui-table-cell-visible,
+	.my-custom-breakpoint td.ui-table-cell-visible {
 	   display: table-cell;
 	}		
 	</style>
@@ -61,7 +61,7 @@
 
 	<div data-role="content">
 
-        <table data-role="table" id="table-column-toggle" data-mode="columntoggle" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a" class="ui-body-d ui-shadow table-stripe my-custom-class">
+        <table data-role="table" id="table-column-toggle" data-mode="columntoggle" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a" class="ui-body-d ui-shadow table-stripe my-custom-breakpoint">
               <thead>
                 <tr>
                   <th data-priority="2">Rank</th>

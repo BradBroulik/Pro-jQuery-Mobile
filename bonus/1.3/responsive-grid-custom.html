@@ -8,21 +8,21 @@
 	<style>
 		/* Stack the grid when below 50em (800px) */
 		@media all and (max-width: 50em) {
-			.my-breakpoint .ui-block-a, 
-			.my-breakpoint .ui-block-b,
-			.my-breakpoint .ui-block-c,
-			.my-breakpoint .ui-block-d,
-			.my-breakpoint .ui-block-e { 
+			.my-custom-breakpoint .ui-block-a, 
+			.my-custom-breakpoint .ui-block-b,
+			.my-custom-breakpoint .ui-block-c,
+			.my-custom-breakpoint .ui-block-d,
+			.my-custom-breakpoint .ui-block-e { 
 				width: 100%;
 				float:none;
 			}
 		}
 		/* Stretch column 1 to 49% width when above 65em (1040px) */
 		@media all and (min-width: 65em) {
-			.my-breakpoint.ui-grid-b .ui-block-a { width: 49.95%; }
-			.my-breakpoint.ui-grid-b .ui-block-b, 
-			.my-breakpoint.ui-grid-b .ui-block-c { width: 24.925%; }
-			.my-breakpoint.ui-grid-b .ui-block-a { clear: left; }
+			.my-custom-breakpoint.ui-grid-b .ui-block-a { width: 49.95%; }
+			.my-custom-breakpoint.ui-grid-b .ui-block-b, 
+			.my-custom-breakpoint.ui-grid-b .ui-block-c { width: 24.925%; }
+			.my-custom-breakpoint.ui-grid-b .ui-block-a { clear: left; }
 			}
 		}
 	</style>
@@ -37,7 +37,7 @@
 	</div>
 
 	<div data-role="content">
-		<div class="ui-grid-b my-breakpoint">
+		<div class="ui-grid-b my-custom-breakpoint">
 			<div class="ui-block-a">
 				<div class="ui-bar ui-bar-e">Block A</div>
 			</div>
