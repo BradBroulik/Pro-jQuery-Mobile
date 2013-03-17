@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" />
 		<style>
 			/* Override the default day height/width buttons so they are more touch friendly */
-			.ui-datebox-container {width:auto;}
+			.ui-datebox-container {width:310px;}
 			.ui-datebox-griddate {width:40px; height:40px; line-height:40px;}
 		</style>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -26,7 +26,7 @@
 	<div data-role="content">
 		<div data-role="fieldcontain">
 			<label for="mydate">My Date</label>
-			<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode":"calbox", "themeDateToday":"a", "themeDatePick":"b", "useFocus":true, "afterToday":true, "maxDays":365}'>
+			<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode":"calbox", "themeDateToday":"a", "themeDatePick":"b", "useFocus":true, "afterToday":true, "maxDays":365, "centerHoriz":true, "centerVert":true}'>
 		</div>
 	</div>
 </div>
