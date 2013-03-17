@@ -11,10 +11,8 @@
 		$( document ).on( "pageinit", "#cityPage", function() {
 			$( "#autocomplete" ).on( "listviewbeforefilter", function ( e, data ) {
 				var $ul = $( this ),
-					$input = $( data.input ),
-					value = $input.val(),
+					value = $( data.input ).val(),
 					html = "";
-				$ul.html( "" );
 				if ( value && value.length > 2 ) {
 					$.ajax({
 						url: "http://gd.geobytes.com/AutoCompleteCity",
