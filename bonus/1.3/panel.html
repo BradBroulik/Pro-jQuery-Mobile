@@ -21,7 +21,7 @@
 				<p>Since the panel links are in the top bar, there really isn't a need for the fixed positioning feature on the panel since you will always be scrolled to the top of the page. The fixed positioning impacts animation smoothness so it's off in this demo (<code>data-position-fixed="false"</code>) and the panel will scroll with the page.</p>
 				<p>To make this responsive, the left panel stays open and causes the page to re-flow at wider widths. This allows both the menu and page to be used together when more space is available. This behavior is controlled by CSS media queries. You can create a custom one for a specific breakpoint or use the breakpoint preset by adding the <code> class="ui-responsive-panel"</code> to the page container.</p>
 			</div>
-				<div data-role="panel" data-position="left" data-position-fixed="false" data-display="reveal" id="nav-panel" data-theme="a">
+				<div data-role="panel" data-position="left" data-display="reveal" id="nav-panel" data-theme="a">
 
 					<ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
 						<li data-icon="delete" style="background-color:#111;">
@@ -76,7 +76,7 @@
 					.ui-grid-a { margin-top:1em; padding-top:.8em; margin-top:1.4em; border-top:1px solid rgba(0,0,0,.1); }
                 </style>
 
-				<div data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" id="add-form" data-theme="b">
+				<div data-role="panel" data-position="right" data-display="overlay" id="add-form" data-theme="b">
 
 					<form class="userform">
 						<h2>Add review</h2>
