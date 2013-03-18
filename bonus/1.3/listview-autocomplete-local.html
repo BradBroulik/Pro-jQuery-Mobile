@@ -6,10 +6,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+		$( document ).on( "pageinit", "#contactsPage", function() {
+			$( "#contacts" ).on( "click", "li", function() {
+				$( ".ui-input-text" ).val( $( this ).text() );
+				$("ul li").addClass("ui-screen-hidden");
+			});
+		});
+    </script>
 	<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script> 
 </head> 
 <body>
-		<div data-role="page">
+		<div data-role="page" id="contactsPage">
 			<div data-role="header">
 				<h1>Contacts</h1>
 			</div>
