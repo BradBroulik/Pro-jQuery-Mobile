@@ -122,7 +122,7 @@
 	                width: "220px",
 	                padding: "5px"
 	            }
-	            ,closeBoxURL: "close.jpg"
+				,closeBoxURL: "http://maps.google.com/mapfiles/close.gif"
 			});
 
 			// TODO: make lat/lng dynamic?
@@ -130,7 +130,7 @@
 			var lon = "-93.16";	//$.urlParam("lon");
 			if (lat && lon) {
 				var myLocation = new google.maps.LatLng(lat, lon);
-				new google.maps.Marker({ map:map, position:myLocation, icon:"map-my-location.png" });
+				new google.maps.Marker({ map:map, position:myLocation, icon:"http://maps.gstatic.com/mapfiles/ridefinder-images/mm_20_green.png" });
 				bounds.extend(myLocation);
 			}
 

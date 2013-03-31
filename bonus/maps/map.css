@@ -2,13 +2,15 @@
 .segmented-control .ui-controlgroup { display:inline; margin:.2em 0px; }
 
 #map-page { width:100%; height:100%; }
-.ui-gmap-canvas { width:100%; height:100%; }
 #map-canvas { width:100%; height:100%; margin-top:-30px; padding:0px!important; }
 #gmap-marker-link { color:#00a0df; text-decoration:none; }
+
+.ui-gmap-canvas { width:100%; height:100%; }
 .ui-gmap-infobox { display:none; }
 
 #show-more .ui-li-heading { text-align:center; }
 #show-more .ui-icon { visibility:hidden; }
 
-.ui-li-aside { width:55px; }
+.ui-li-has-count .ui-li-count { border-color:transparent; }
+
 .wrap { white-space:normal; }
