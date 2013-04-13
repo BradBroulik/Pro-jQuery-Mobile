@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html class="ui-mobile-rendering"> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Backbone</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="//ajax.aspnetcdn.com/ajax/jquery.mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/twitter.css" />
+	<script src="//ajax.cdnjs.com/ajax/libs/require.js/2.1.4/require.min.js" data-main="js/mobile"></script>
+</head>
+<body>
+
+<div data-role="page" id="homePage">
+	<div data-role="header">
+		<h1>Backbone</h1>
+		<a href="#page?twitter" id="twitterBtn" class="ui-btn-right" data-icon="custom" data-iconpos="notext"></a>
+	</div>
+	
+	<div data-role="content">
+		<p>In this demo we show you how to:</p>
+	    <ul>
+	    	<li>Use backbone and require.js for client-side MVC integration.</li>
+	        <li>How to use the multi-page template to load all pages in a single request.</li>
+	        <li>How to load data from Twitter's Restful API.</li>
+	        <li>How to cache the Twitter resultset in localStorage.</li>
+	        <li>To get started, click the Twitter icon.</li>
+	    </ul>		
+	</div>
+</div>
+
+<div data-role="page" id="twitterPage">
+	<div data-role="header">
+		<a href="" data-icon="home" data-iconpos="notext"></a>
+		<h1>X-Men</h1>
+	</div>
+	
+	<div data-role="content">
+		<ul id="tweet-list" data-role="listview" data-inset="true" data-theme="d"></ul>
+	</div>
+</div>
+
+<!-- Underscore Template that is used to display all of the Models -->
+<script id="tweetItems" type="text/template">
+	  <li data-role="list-divider">Tweets</li>
+      <% _.each( collection.toJSON(), function( result, id ) { %>
+	      <li class="ui-li ui-li-static ui-btn-up-d ui-li-has-icon ui-body-c ui-corner-top">
+            <img src="<%=result.profile_image_url%>" class="ui-li-icon profile"><p class="from"><%= result.from_user %></p><p class="tweet"><%= result.text %></p>
+		  </li>
+      <% }); %>
+</script>
+
+</body>
+</html>
