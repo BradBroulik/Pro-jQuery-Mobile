@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="utf-8">
+		<title>Ajax-Include</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+		$( document ).on("pageinit", "#ajax-include-page", function(){
+   			$( "[data-replace],[data-after]" ).ajaxInclude( {}, function() { 
+				$.mobile.pageContainer.trigger( "create" );
+			});
+		});
+		</script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+		<!--<script type="text/javascript" src="libs/matchmedia.js"></script>-->
+		<script type="text/javascript" src="libs/ajaxInclude.js"></script>
+	</head>
+<body>
+
+<div data-role="page" id="ajax-include-page">
+	<div data-role="header">
+		<h1>Ajax-Include</h1>
+	</div>
+	<div data-role="content">
+		<p></p>
+		<h3>Modular content with <a href="http://filamentgroup.com/lab/ajax_includes_modular_content/" target="_blank">Ajax-Include pattern</a></h3>
+        <p>In this demo we show you how to:</p>
+        <ul>
+            <li>Use Ajax-Include to load non-essential content after page load</li>
+            <li>Load content based on media query rules</li>
+        </ul>
+
+		<!-- Load essential content first -->
+		<ul data-role="listview" data-inset="true" data-divider-theme="a">
+			<li data-role="list-divider">News</li>
+			<li>News article #1...</li>
+			<li>News article #2...</li>
+			<li>News article #3...</li>
+			<li>News article #4...</li>
+		</ul>
+
+		<ul data-role="listview" data-inset="true" data-divider-theme="a">
+			<li data-role="list-divider">Weather</li>
+			<li>Weather article #1...</li>
+			<li>Weather article #2...</li>
+			<li>Weather article #3...</li>
+		</ul>
+
+		<ul data-role="listview" data-inset="true" data-divider-theme="a">
+			<li data-role="list-divider">Sports</li>
+			<li>Sports article #1...</li>
+			<li>Sports article #2...</li>
+			<li>Sports article #3...</li>
+		</ul>
+
+		<!-- Load non-essectial content after page load -->
+		<p data-replace="includes/entertainment.html"></p>
+		<p data-replace="includes/technology.html" data-media="(min-width: 30em)"><em>Technology module is only loaded when > 30em</em></p>
+	</div>
+</div>
+</body>
+</html>

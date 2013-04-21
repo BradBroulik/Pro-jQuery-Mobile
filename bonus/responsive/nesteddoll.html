@@ -1,0 +1,173 @@
+<!-- This example uses a 2-column grid to reposition the dynamic content -->
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="utf-8">
+		<title>Bento box</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+		<style>
+#small-target {
+  display: block; /* Content must start in this container */
+}
+#large-target  {
+  display: none;
+}
+#large-view {
+  display: none;
+}
+
+@media (min-width: 35em){
+	.ui-content { padding:0; }
+	.ui-content .ui-listview { padding-top:8px; }
+    .ui-bar h1 { margin:.6em 0!important; }
+	.ui-page, .ui-content, .ui-panel-content-wrap, .bento-box-grid, .bento-box-grid > .ui-block-a, .bento-box-grid > .ui-block-a .ui-bar { height:100%; } /* Left column 100% */
+
+	#small-target {
+	  display: none;	
+	}
+	#large-target {
+	  display: block; 
+	}
+	#large-view {
+	  display: block; 
+	}
+
+	.bento-box-grid > .ui-block-a { 
+	    float: left;
+	    width: 20em; /* left block is fixed */
+	    overflow: hidden;
+	    min-height: 100px;
+	}
+	.bento-box-grid > .ui-block-b {
+		background: #fff;
+	    display: block;
+	    float: none;
+	    min-height: 100%;
+	    padding: 6px 10px 10px 21em;
+	    width:auto; /* right block is fluid */
+	}	
+}
+		</style>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="libs/matchmedia.js"></script>
+		<script type="text/javascript" src="libs/appendAround.js"></script>
+		<script type="text/javascript">
+		$(document).on("pageinit", "#bento-page", function() {
+			$( "#source" ).appendAround();
+
+			$("#nav-panel a").on("click", function(e) {
+				$( "#nav-panel" ).panel( "close" );
+			});	
+
+			$("#source a").on("click", function(e) {
+				$.mobile.loading( 'show' );
+				var mailId = $( this ).jqmData( "mail-id" );
+
+				if (matchMedia('(min-width: 35em)').matches) {
+					$.ajax({
+					  	url: "includes/mail-detail"+mailId+".html",  
+					  	success: function( response ) {
+							$( "#mail-target" ).html(response);
+							$.mobile.loading( 'hide' );
+					  	},
+					  	timeout: 2000,
+						error: function(jqXHR, textStatus, errorThrown) {
+							$.mobile.loading( 'hide' );
+							$( "#mail-target" ).html("");
+						}
+					});
+					e.preventDefault();
+				} else {
+					$.mobile.changePage("includes/mail-page"+mailId+".html");
+					e.preventDefault();
+				}
+			});
+
+			/*
+			var mql = matchMedia('(min-width: 35em)');
+			mql.addListener(handleOrientationChange);
+			handleOrientationChange(mql); 
+
+			function handleOrientationChange(mql) {
+			  if (mql.matches) {
+			  	// handle dynamic changes for min-width: 35em
+			  } else {
+			  }
+			}
+			*/		
+		});
+		</script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	</head>
+<body>
+<div data-role="page" id="bento-page" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<h1>Inbox</h1>
+	</div>
+	<div id="small-target" data-role="content" data-set="target">
+	  <div id="source">
+		<ul data-role="listview" data-count-theme="b">		
+			<li>
+				<a href="#" data-mail-id="1">
+					<h1>Jon Snow</h1>
+					<p>Your new Apple TV is ready for pickup</p>
+				</a>
+				<span class="ui-li-count">&nbsp;</span>
+			</li>
+			<li>
+				<a href="#" data-mail-id="2">
+					<h1>Brandon Stark</h1>
+					<p>Hello</p>
+				</a>
+				<span class="ui-li-count">&nbsp;</span>
+			</li>
+			<li>
+				<a href="#" data-mail-id="3">
+					<h1>Tyrion Lannister</h1>
+					<p>Subject text...</p>
+				</a>
+			</li>
+			<li>
+				<a href="#" data-mail-id="4">
+					<h1>Jaime Lannister</h1>
+					<p>Subject text...</p>
+				</a>
+			</li>
+			<li>
+				<a href="#" data-mail-id="5">
+					<h1>Robb Stark</h1>
+					<p>Subject text...</p>
+				</a>
+			</li>
+			<li>
+				<a href="#" data-mail-id="6">
+					<h1>Ned Stark</h1>
+					<p>Subject text...</p>
+				</a>
+			</li>
+		</ul>
+	  </div>
+	</div>
+	<div id="large-view" data-role="content">
+		<div class="ui-grid-a bento-box-grid"> 
+			<div class="ui-block-a">
+				<div id="large-target" data-set="target" class="ui-bar ui-bar-c"></div>
+			</div>
+			<div id="mail-target" class="ui-block-b"></div>
+		</div>
+	</div>
+	<div data-role="panel" data-position="left" data-display="reveal" id="nav-panel" data-theme="a">
+		<ul data-role="listview" data-theme="a" data-filter="true" data-filter-placeholder="Search..." data-filter-theme="a" data-divider-theme="a" style="margin-top:-16px;" data-count-theme="b">
+			<li><a href="#">Inbox</a><span class="ui-li-count">2</span></li>
+			<li><a href="#">Drafts</a></li>
+			<li><a href="#">Sent</a></li>
+			<li><a href="#">Junk</a></li>
+			<li><a href="#">Trash</a></li>
+			<li><a href="#">Archive</a></li>
+		</ul>
+	</div>	
+</div>
+</body>
+</html>
