@@ -5,6 +5,7 @@ how-to:
 	3. Place your appendAround content in one of the potential containers
 	4. Call appendAround() on that element when the DOM is ready
 */
+<!-- CUSTOM: Replaced getComputedStyle with jQuery -->
 (function( $ ){
 	$.fn.appendAround = function(){
 	  return this.each(function(){

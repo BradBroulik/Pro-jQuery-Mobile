@@ -1,17 +1,17 @@
 <!-- This example uses a 2-column grid to reposition the dynamic content -->
-<!DOCTYPE html> 
-<html> 
-	<head> 
+<!DOCTYPE html>
+<html>
+	<head>
 		<meta charset="utf-8">
-		<title>Wellness</title> 
+		<title>Wellbeing</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 		<style>
 			.bar {
-			    background-image: url("images/green-pattern.png");
+			    background-image: url("green-pattern.png");
 			    background-repeat: no-repeat;
 			    background-size: 60%;
-			}		
+			}
 			.bar-primary { margin:0; padding:0; }
 			.ui-li-aside { font-size: 1em; font-weight: bold; margin-top:0; color: #365E05; }
 			.ui-li .ui-li-heading { font-size:14px; margin:0; }
@@ -33,7 +33,7 @@
 			  display: none;
 			}
 
-			@media (min-width: 50em){
+			@media (min-width: 48em){
 				.activity-header { margin-top:-7px!important; }
 				.bar-header-item { font-weight:normal; margin-bottom:9px; }
 				.ui-content { padding:0; }
@@ -44,18 +44,18 @@
 				.pic-container { text-align:center; }
 
 				#small-target {
-				  display: none;	
+				  display: none;
 				}
 				#large-target {
-				  display: block; 
+				  display: block;
 				}
 				#large-view {
-				  display: block; 
+				  display: block;
 				}
 
-				.bento-box-grid > .ui-block-a { 
+				.bento-box-grid > .ui-block-a {
 				    float: left;
-				    width: 24em; /* left block is fixed */
+				    width: 22em; /* left block is fixed */
 				    overflow: hidden;
 				    min-height: 100%;
 				}
@@ -64,7 +64,7 @@
 				    display: block;
 				    float: none;
 				    min-height: 100%;
-				    padding: 8px;
+				    padding: 2px;
 				    width:auto; /* right block is fluid */
 				}
 			}
@@ -78,7 +78,7 @@
 
 			$("#nav-panel a").on("click", function(e) {
 				$( "#nav-panel" ).panel( "close" );
-			});			
+			});
 		});
 		</script>
 		<script type="text/javascript" src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
@@ -87,14 +87,14 @@
 <div data-role="page" id="wellbeing-page" data-theme="c">
 	<div data-role="header" data-theme="a">
 		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
-		<h1>Wellness</h1>
+		<h1>Wellbeing</h1>
 	</div>
 	<div id="small-target" data-role="content" data-set="target" data-theme="c">
 	  <div id="source">
 		<ul data-role="listview" data-divider-theme="c" class="activity-header">
 			<li data-role="list-divider"><h1>my Steps</h1></li>
 		</ul>
-		<div class="ui-grid-a"> 
+		<div class="ui-grid-a">
 			<div class="ui-block-a">
 				<input id="track" type="number" value="" />
 			</div>
@@ -121,17 +121,17 @@
 	  </div>
 	</div>
 	<div id="large-view" data-role="content" data-theme="c">
-		<div class="ui-grid-a bento-box-grid"> 
+		<div class="ui-grid-a bento-box-grid">
 			<div class="ui-block-a">
 				<div id="large-target" data-set="target" class="ui-bar ui-bar-c"></div>
 			</div>
 			<div class="ui-block-b">
-				
-				<div data-picture data-alt="my Steps" class="pic-container">
-			        <div data-src="//chart.googleapis.com/chart?chxl=0:|Jan|Feb|Mar|Apr|May|1:|0|100|200|300|400|500&chxr=0,-5,500|1,6.667,500&chxs=0,000000,14,0.5,l,676767|1,676767,14,0,lt,676767&chxt=x,y&chs=400x300&cht=lc&chco=008000&chds=0,903&chd=t:100,300,344,455,644,566,644,488,666,777,844,776,777,677,877,877,888&chdl=my+Steps&chg=24,20&chls=3,7,5&chma=|2,4&chtt=my+Steps&chts=000000,16" data-media="(min-width: 50em)"></div>
 
-			        <div data-src="//chart.googleapis.com/chart?chxl=0:|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Oct|Nov|Dec|1:|0|100|200|300|400|500&chxr=0,-5,500|1,6.667,500&chxs=0,000000,14,0.5,l,676767|1,676767,14,0,lt,676767&chxt=x,y&chs=650x450&cht=lc&chco=008000&chds=0,903&chd=t:100,300,344,455,644,566,644,488,666,777,794,776,677,547,677,577,508&chdl=my+Steps&chg=9,20&chls=3,7,5&chma=|2,4&chtt=my+Steps&chts=000000,16" data-media="(min-width: 66em)"></div>
-				
+				<div data-picture data-alt="my Steps" class="pic-container">
+			        <div data-src="//chart.googleapis.com/chart?chxl=0:|Jan|Feb|Mar|Apr|May|1:|0|100|200|300|400|500&chxr=0,-5,500|1,6.667,500&chxs=0,000000,14,0.5,l,676767|1,676767,14,0,lt,676767&chxt=x,y&chs=384x300&cht=lc&chco=008000&chds=0,903&chd=t:100,300,344,455,644,566,644,488,666,777,844,776,777,677,877,877,888&chdl=my+Steps&chg=24,20&chls=3,7,5&chma=|2,4&chtt=my+Steps&chts=000000,16" data-media="(min-width: 48em)"></div>
+
+			        <div data-src="//chart.googleapis.com/chart?chxl=0:|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Oct|Nov|Dec|1:|0|100|200|300|400|500&chxr=0,-5,500|1,6.667,500&chxs=0,000000,14,0.5,l,676767|1,676767,14,0,lt,676767&chxt=x,y&chs=540x450&cht=lc&chco=008000&chds=0,903&chd=t:100,300,344,455,644,566,644,488,666,777,794,776,677,547,677,577,508&chdl=my+Steps&chg=9,20&chls=3,7,5&chma=|2,4&chtt=my+Steps&chts=000000,16" data-media="(min-width: 58em)"></div>
+
 			        <!-- Load an HD (retina) image when supported
 			        <div data-src="images/large_x2.jpg"   data-media="(min-width: 800px) and (min-device-pixel-ratio: 2.0)"></div>
 			    	-->
