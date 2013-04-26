@@ -6,60 +6,53 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 		<style>
-#small-target {
-  display: block; /* Content must start in this container */
-}
-#large-target  {
-  display: none;
-}
-#large-view {
-  display: none;
-}
+		/* Mobile first display */
+		.ui-content-small {
+		  display: block; /* Appendable content initially loads in this container */
+		}
+		.ui-content-large, .ui-content-large .ui-grid-a .ui-box-a .ui-bar {
+		  display: none;
+		}
 
-@media (min-width: 35em){
-	.ui-content { padding:0; }
-	.ui-content .ui-listview { padding-top:8px; }
-    .ui-bar h1 { margin:.6em 0!important; }
-	.ui-page, .ui-content, .ui-panel-content-wrap, .bento-box-grid, .bento-box-grid > .ui-block-a, .bento-box-grid > .ui-block-a .ui-bar { height:100%; } /* Left column 100% */
+		@media (min-width: 35em) {
+			.ui-content-small {
+			  display: none;	
+			}
+			.ui-content-large, .ui-content-large .ui-grid-a .ui-box-a .ui-bar {
+			  display: block;
+			  height: 100%;
+			}
 
-	#small-target {
-	  display: none;	
-	}
-	#large-target {
-	  display: block; 
-	}
-	#large-view {
-	  display: block; 
-	}
+			.ui-content { padding:0; }
+			.ui-content .ui-listview { padding-top:8px; }
+		    .ui-bar h1 { margin:.6em 0!important; }
+			.ui-page, .ui-content, .ui-panel-content-wrap, .ui-content-large .ui-grid-a { height:100%; } /* Left column 100% */
 
-	.bento-box-grid > .ui-block-a { 
-	    float: left;
-	    width: 20em; /* left block is fixed */
-	    overflow: hidden;
-	    min-height: 100px;
-	}
-	.bento-box-grid > .ui-block-b {
-		background: #fff;
-	    display: block;
-	    float: none;
-	    min-height: 100%;
-	    padding: 6px 10px 10px 21em;
-	    width:auto; /* right block is fluid */
-	}
-}
+			.ui-content-large .ui-grid-a .ui-box-a { 
+			    float: left;
+			    height: 100%;
+			    width: 20em; /* left block is fixed */
+			    overflow: hidden;
+			    min-height: 100px;
+			}
+			.ui-content-large .ui-grid-a .ui-box-b {
+				background: #fff;
+			    display: block;
+			    float: none;
+			    min-height: 100%;
+			    padding: 6px 10px 10px 21em;
+			    width:auto; /* right block is fluid */
+			}
+		}
 		</style>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="libs/matchmedia.js"></script>
 		<script type="text/javascript" src="libs/appendAround.js"></script>
 		<script type="text/javascript">
 		$(document).on("pageinit", "#nested-doll-page", function() {
-			$( "#source" ).appendAround();
+			$( "#appendable" ).appendAround();
 
-			$("#nav-panel a").on("click", function(e) {
-				$( "#nav-panel" ).panel( "close" );
-			});	
-
-			$("#source a").on("click", function(e) {
+			$("#appendable a").on("click", function(e) {
 				$.mobile.loading( 'show' );
 				var mailId = $( this ).jqmData( "mail-id" );
 
@@ -67,13 +60,13 @@
 					$.ajax({
 					  	url: "includes/mail-detail"+mailId+".html",  
 					  	success: function( response ) {
-							$( "#mail-target" ).html(response);
+							$( ".ui-content-large .ui-grid-a .ui-box-b" ).html(response);
 							$.mobile.loading( 'hide' );
 					  	},
 					  	timeout: 2000,
 						error: function(jqXHR, textStatus, errorThrown) {
 							$.mobile.loading( 'hide' );
-							$( "#mail-target" ).html("");
+							$( ".ui-content-large .ui-grid-a .ui-box-b" ).html("");
 						}
 					});
 					e.preventDefault();
@@ -81,6 +74,10 @@
 					$.mobile.changePage("includes/mail-page"+mailId+".html");
 					e.preventDefault();
 				}
+
+				$("#nav-panel a").on("click", function(e) {
+					$( "#nav-panel" ).panel( "close" );
+				});	
 			});
 
 			/*
@@ -105,8 +102,8 @@
 		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
 		<h1>Inbox</h1>
 	</div>
-	<div id="small-target" data-role="content" data-set="target">
-	  <div id="source">
+	<div class="ui-content-small" data-role="content" data-set="target">
+	  <div id="appendable">
 		<ul data-role="listview" data-count-theme="b">		
 			<li>
 				<a href="#" data-mail-id="1">
@@ -149,12 +146,12 @@
 		</ul>
 	  </div>
 	</div>
-	<div id="large-view" data-role="content">
-		<div class="ui-grid-a bento-box-grid"> 
-			<div class="ui-block-a">
-				<div id="large-target" data-set="target" class="ui-bar ui-bar-c"></div>
+	<div class="ui-content-large" data-role="content">
+		<div class="ui-grid-a"> 
+			<div class="ui-block-a ui-box-a">
+				<div data-set="target" class="ui-bar ui-bar-c"></div>
 			</div>
-			<div id="mail-target" class="ui-block-b"></div>
+			<div class="ui-block-b ui-box-b"></div>
 		</div>
 	</div>
 	<div data-role="panel" data-position="left" data-display="reveal" id="nav-panel" data-theme="a">

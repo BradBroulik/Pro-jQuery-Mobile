@@ -6,6 +6,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 		<style>
+			/* Mobile first display */
+			.ui-content-small {
+			  display: block; /* Appendable content initially loads in this container */
+			}
+			.ui-content-large, .ui-content-large .ui-grid-a .ui-box-a .ui-bar {
+			  display: none;
+			}
+
 			.bar {
 			    background-image: url("images/green-pattern.png");
 			    background-repeat: no-repeat;
@@ -14,51 +22,39 @@
 			.bar-primary { margin:0; padding:0; }
 			.ui-li-aside { font-size: 1em; font-weight: bold; margin-top:0; color: #365E05; }
 			.ui-li .ui-li-heading { font-size:14px; margin:0; }
-			.bar-grid > .ui-block-a {width:75%;}
-			.bar-grid > .ui-block-b { text-align:right; width:25%; }
+			.bar-grid .ui-block-a {width:75%;}
+			.bar-grid .ui-block-b { text-align:right; width:25%; }
 			.bar-header-item { margin-bottom:3px; }
 			.ui-content .ui-listview-inset { margin: 0; }
 			.activity-header li { margin-bottom:16px; text-align:center; }
 			.ui-ul-history { margin-top: 20px!important; }
 
-			/* Mobile first display */
-			#small-target {
-			  display: block; /* Content must load in this container */
-			}
-			#large-target  {
-			  display: none;
-			}
-			#large-view {
-			  display: none;
-			}
-
-			@media (min-width: 48em){
-				#small-target {
-				  display: none;
+			@media (min-width: 48em) {
+				.ui-content-small {
+				  display: none;	
 				}
-				#large-target {
+				.ui-content-large, .ui-content-large .ui-grid-a .ui-box-a .ui-bar {
 				  display: block;
-				}
-				#large-view {
-				  display: block;
+				  height: 100%;
 				}
 
 				.activity-header { margin-top:-7px!important; }
 				.bar-header-item { font-weight:normal; margin-bottom:9px; }
 				.ui-content { padding:0; }
-				.ui-page, .ui-content, .ui-panel-content-wrap, .bento-box-grid, .bento-box-grid > .ui-block-a, .bento-box-grid > .ui-block-a .ui-bar { height:100%; } /* Left column 100% */
+				.ui-page, .ui-content, .ui-panel-content-wrap, .ui-content-large .ui-grid-a { height:100%; } /* Left column 100% */
 				.ui-bar h1 { display:block!important; } /* override .ui-bar hX settings */
 				img {  max-width: 100%; }
 				.ui-content .ui-listview, .ui-panel-inner > .ui-listview {margin-top:-6px;}
 				.pic-container { text-align:center; }
 
-				.bento-box-grid > .ui-block-a {
+				.ui-content-large .ui-grid-a .ui-box-a { 
 				    float: left;
+				    height: 100%;
 				    width: 22em; /* left block is fixed */
 				    overflow: hidden;
 				    min-height: 100%;
 				}
-				.bento-box-grid > .ui-block-b {
+				.ui-content-large .ui-grid-a .ui-box-b {
 					background: #fff;
 				    display: block;
 				    float: none;
@@ -72,8 +68,8 @@
 		<script type="text/javascript" src="libs/appendAround.js"></script>
 		<script type="text/javascript" src="libs/picturefill.js"></script>
 		<script type="text/javascript">
-		$(document).on("pageinit", "#wellbeing-page", function() {
-			$( "#source" ).appendAround();
+		$(document).on("pageinit", "#wellness-page", function() {
+			$( "#appendable" ).appendAround();
 
 			$("#nav-panel a").on("click", function(e) {
 				$( "#nav-panel" ).panel( "close" );
@@ -83,13 +79,13 @@
 		<script type="text/javascript" src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 	</head>
 <body>
-<div data-role="page" id="wellbeing-page" data-theme="c">
+<div data-role="page" id="wellness-page" data-theme="c">
 	<div data-role="header" data-theme="a">
 		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
 		<h1>Wellness</h1>
 	</div>
-	<div id="small-target" data-role="content" data-set="target" data-theme="c">
-	  <div id="source">
+	<div class="ui-content-small" data-role="content" data-set="target" data-theme="c">
+	  <div id="appendable">
 		<ul data-role="listview" data-divider-theme="c" class="activity-header">
 			<li data-role="list-divider"><h1>my Steps</h1></li>
 		</ul>
@@ -119,21 +115,16 @@
 		</ul>
 	  </div>
 	</div>
-	<div id="large-view" data-role="content" data-theme="c">
-		<div class="ui-grid-a bento-box-grid">
-			<div class="ui-block-a">
-				<div id="large-target" data-set="target" class="ui-bar ui-bar-c"></div>
+	<div class="ui-content-large" data-role="content" data-theme="c">
+		<div class="ui-grid-a">
+			<div class="ui-block-a ui-box-a">
+				<div data-set="target" class="ui-bar ui-bar-c"></div>
 			</div>
-			<div class="ui-block-b">
-
+			<div class="ui-block-b ui-box-b">
 				<div data-picture data-alt="my Steps" class="pic-container">
 			        <div data-src="//chart.googleapis.com/chart?chxl=0:|Jan|Feb|Mar|Apr|May|1:|0|100|200|300|400|500&chxr=0,-5,500|1,6.667,500&chxs=0,000000,14,0.5,l,676767|1,676767,14,0,lt,676767&chxt=x,y&chs=384x300&cht=lc&chco=008000&chds=0,903&chd=t:100,300,344,455,644,566,644,488,666,777,844,776,777,677,877,877,888&chdl=my+Steps&chg=24,20&chls=3,7,5&chma=|2,4&chtt=my+Steps&chts=000000,16" data-media="(min-width: 48em)"></div>
 
 			        <div data-src="//chart.googleapis.com/chart?chxl=0:|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Oct|Nov|Dec|1:|0|100|200|300|400|500&chxr=0,-5,500|1,6.667,500&chxs=0,000000,14,0.5,l,676767|1,676767,14,0,lt,676767&chxt=x,y&chs=540x450&cht=lc&chco=008000&chds=0,903&chd=t:100,300,344,455,644,566,644,488,666,777,794,776,677,547,677,577,508&chdl=my+Steps&chg=9,20&chls=3,7,5&chma=|2,4&chtt=my+Steps&chts=000000,16" data-media="(min-width: 58em)"></div>
-
-			        <!-- Load an HD (retina) image when supported
-			        <div data-src="images/large_x2.jpg"   data-media="(min-width: 800px) and (min-device-pixel-ratio: 2.0)"></div>
-			    	-->
 	    		</div>
 			</div>
 		</div>
