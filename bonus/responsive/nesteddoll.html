@@ -52,6 +52,10 @@
 		$(document).on("pageinit", "#nested-doll-page", function() {
 			$( "#appendable" ).appendAround();
 
+			$("#nav-panel a").on("click", function(e) {
+				$( "#nav-panel" ).panel( "close" );
+			});
+
 			$("#appendable a").on("click", function(e) {
 				$.mobile.loading( 'show' );
 				var mailId = $( this ).jqmData( "mail-id" );
@@ -74,10 +78,6 @@
 					$.mobile.changePage("includes/mail-page"+mailId+".html");
 					e.preventDefault();
 				}
-
-				$("#nav-panel a").on("click", function(e) {
-					$( "#nav-panel" ).panel( "close" );
-				});	
 			});
 
 			/*
