@@ -10,7 +10,8 @@ define([ "jquery", "backbone", "models/TwitterModel" ], function( $, Backbone, T
         // Sets the Collection model property to be a Category Model
         model: TwitterModel,
 
-		url: "http://search.twitter.com/search.json?q=xmen",  // Twitter rest API: https://dev.twitter.com/docs/api/1/get/search
+		// url: "http://search.twitter.com/search.json?q=xmen",  // This Twitter rest API is now deprecated.  1.1 API requires authentication.
+		url: "response.json",
 
 		initialize : function() {
 		},		
@@ -43,9 +44,9 @@ define([ "jquery", "backbone", "models/TwitterModel" ], function( $, Backbone, T
 		loadTweets : function(options) {
 			var self = this;
 			$.ajax( {
-				url: self.url,
-			  	dataType: "jsonp",
-				jsonp: "callback",
+				url: self.url,   
+			  	// dataType: "jsonp",
+				// jsonp: "callback",
 			  	success: function( data ) {
 					self.reset(data.results);
 					self.localSave(data);

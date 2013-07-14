@@ -11,9 +11,10 @@
 
 	$( document ).on("pagebeforecreate", "#twitterPage", function() {
 		$.ajax({
-		  	url: "http://search.twitter.com/search.json?q=xmen",  // Twitter rest API: https://dev.twitter.com/docs/api/1/get/search
-		  	dataType: "jsonp",
-			jsonp: "callback",
+		  	// url: "http://search.twitter.com/search.json?q=xmen",  // This Twitter rest API is now deprecated.  1.1 API requires authentication.
+		  	url: "response.json",
+		  	//dataType: "jsonp",
+			//jsonp: "callback",
 		  	success: function( response ) {
 				var markup = "";
 				$.each(response.results, function(index, result) { 
