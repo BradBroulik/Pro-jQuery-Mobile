@@ -14,7 +14,7 @@ $( document ).on("pagebeforecreate", "#rssPage", function() {
 				markup += $template.html();
 			});
 			$( "#rss-list" ).append(markup).listview( "refresh", true ); // The true parameter indicates we want to refresh the entire list, not just the list items. 
-			$.mobile.changePage( $("#rssPage") );
+			$( "body" ).pagecontainer( "change", "#rssPage" );
 	  	},
 		timeout: 6000,  // Timeout after 6 seconds
 		error: function(jqXHR, textStatus, errorThrown) {

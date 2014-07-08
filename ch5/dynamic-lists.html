@@ -4,26 +4,26 @@
 	<meta charset="utf-8">
 	<title>Lists</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head> 
 <body> 
 
-<div data-role="page" data-theme="b">
-	<div data-role="header">
+<div data-role="page">
+	<div data-role="header" data-theme="b">
 		<h1>Dynamic Lists</h1>
 	</div>
 
-	<div data-role="content">
-		  <a href="#" id="create-list1" data-role="button">Create list1</a>
-		  <a href="#" id="create-list2" data-role="button">Create list2</a>
+	<div class="ui-content">
+		  <a href="#" id="create-list1" class="ui-btn ui-corner-all ui-mini">Create list1</a>
+		  <a href="#" id="create-list2" class="ui-btn ui-corner-all ui-mini">Create list2</a>
 		  <br>
-		  <a href="#" id="update-list1" data-role="button" data-theme="a">Update list1</a>
+		  <a href="#" id="update-list1" class="ui-btn ui-corner-all ui-mini" data-theme="b">Update list1</a>
 	</div>
 	<script type="text/javascript">
 		$( "#create-list1" ).on( "click", function() {
-			$( '<ul data-inset="true" id="list1" data-theme="c"><li data-role="list-divider">Genres</li><li><a href="#">Action</a></li><li><a href="#">Comedy</a></li></ul>' )
+			$( '<ul data-inset="true" id="list1" ><li data-role="list-divider">Genres</li><li><a href="#">Action</a></li><li><a href="#">Comedy</a></li></ul>' )
 				.insertAfter( "#create-list1" )
 				.listview();
 		});

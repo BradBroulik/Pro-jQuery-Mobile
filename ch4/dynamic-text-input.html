@@ -4,29 +4,29 @@
 	<meta charset="utf-8">
 	<title>Forms</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head> 
 <body> 
 
-<div data-role="page" data-theme="b">
-	<div data-role="header">
+<div data-role="page">
+	<div data-role="header" data-theme="b">
 		<h1>Text Inputs</h1>
 	</div>
 
-	<div data-role="content">
+	<div class="ui-content">
 	  <form id="test" action="#" method="post">		  	
-		<a href="#" data-role="button" id="create-text1">Create text input1</a>
-		<a href="#" data-role="button" id="create-text2">Create text input2</a>
+		<a href="#" class="ui-btn ui-corner-all ui-mini" id="create-text1">Create text input1</a>
+		<a href="#" class="ui-btn ui-corner-all ui-mini" id="create-text2">Create text input2</a>
 		<br><br>
-		<a href="#" data-role="button" id="disable-text1" data-theme="a">Disable text input1</a>
-		<a href="#" data-role="button" id="enable-text1" data-theme="a">Enable text input1</a>
+		<a href="#" class="ui-btn ui-corner-all ui-mini" id="disable-text1" data-theme="b">Disable text input1</a>
+		<a href="#" class="ui-btn ui-corner-all ui-mini" id="enable-text1" data-theme="b">Enable text input1</a>
 	  </form>			 			 		 			 
 	</div>
 		<script type="text/javascript">		
 		$( "#create-text1" ).on( "click", function() {
-			$( '<input type="text" name="text1" id="text1" value="" placeholder="text1" data-theme="c" />' )
+			$( '<input type="text" name="text1" id="text1" value="" placeholder="text1"  />' )
 				.insertAfter( "#create-text1" )
 				.textinput();
 		});

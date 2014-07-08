@@ -3,7 +3,8 @@
 .profile { width:28px; height:28px; }	
 
 .ui-li-heading { overflow: visible; }
+.ui-li-icon { max-width:16px; max-height:16px; }
 .ui-li-thumb { top: 1em; }
 .ui-li-rating { font-size: 32px; }
 		
-#twitterBtn .ui-icon { background: url(../images/twitterIcon.png) 50% 50% no-repeat; background-size: 22px 22px; }
+.ui-icon-twitter:after { background: url(../images/twitterIcon.png); background-size: 22px 22px; }

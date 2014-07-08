@@ -4,24 +4,24 @@
 	<meta charset="utf-8">
 	<title>Forms</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head> 
 <body> 
 
-<div data-role="page" data-theme="b">
-	<div data-role="header">
+<div data-role="page">
+	<div data-role="header" data-theme="b">
 		<h1>Custom Select</h1>
 	</div>
 
-	<div data-role="content">
+	<div class="ui-content">
 	  <form id="test" id="test" action="#" method="post">	
 	  
 	  <br><br> 	  
 		<p>
 			<label for="genre">Genre:</label>
-			<select name="genre" id="genre" data-native-menu="false" data-theme="a" multiple="multiple">
+			<select name="genre" id="genre" data-native-menu="false" data-theme="b" multiple="multiple">
 				<option value="null" data-placeholder="true">Select one...</option>
 				<!-- Alternate placeholder options:
 				<option value="">Select one...</option>
@@ -36,7 +36,7 @@
 		<br><br><br><br><br>
 		<p>	
 			<label for="delivery">Ticket Delivery:</label>
-			<select name="delivery" id="delivery" data-native-menu="false" data-theme="d">
+			<select name="delivery" id="delivery" data-native-menu="false" >
 				<option value="">Select one...</option>
 				<optgroup label="Digital">
 					<option value="barcode">E-Ticket</option>

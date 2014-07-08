@@ -4,30 +4,30 @@
 	<meta charset="utf-8">
 	<title>Header Example</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 </head> 
 <body> 
 
-<div data-role="page" data-theme="b">
-	<div data-role="header">
-		<a href="#" data-icon="delete">Cancel</a>
+<div data-role="page">
+	<div data-role="header" data-theme="b">
+		<a href="#" class="ui-btn ui-corner-all ui-btn-icon-left ui-icon-delete">Cancel</a>
 		<h1>Add Review</h1>
-		<a href="#" data-icon="check">Done</a>
+		<a href="#" class="ui-btn ui-corner-all ui-btn-icon-left ui-icon-check">Done</a>
 	</div>
 	
-	<div data-role="content">
-	    <fieldset data-role="controlgroup" data-theme="c">
+	<div class="ui-content">
+	    <fieldset data-role="controlgroup">
     		<legend>Rating:</legend>
-         	<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" data-theme="c"/>
+         	<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1"/>
          	<label for="radio-choice-1">Go see it!</label>
 			
-         	<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2" data-theme="c" />
+         	<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"/>
          	<label for="radio-choice-2">Don't waste your time.</label><br>
 			
-			<label for="comments">Comments:</label>
-			<textarea cols="40" rows="8" name="comments" id="comments" data-theme="d"></textarea>
+			<label for="comments">Comments:</label><br/>
+			<textarea cols="40" rows="8" name="comments" id="comments"></textarea>
     	</fieldset>
 
 	</div>

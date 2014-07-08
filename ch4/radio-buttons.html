@@ -4,24 +4,24 @@
 	<meta charset="utf-8">
 	<title>Forms</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
 	<style>
 		.ui-controlgroup-horizontal .ui-radio label {
 			/* Reduce font size to prevent horizontal buttons from wrapping */
 		    font-size: 13px !important;
 		}
 	</style>
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head> 
 <body> 
 
 <div data-role="page">
-	<div data-role="header">
+	<div data-role="header" data-theme="b">
 		<h1>Radio Buttons</h1>
 	</div>
 
-	<div data-role="content">
+	<div class="ui-content">
 	  <form id="test" id="test" action="#" method="post">	
 
 		<fieldset data-role="controlgroup">
@@ -35,17 +35,19 @@
          	<input type="radio" name="map" id="map3" value="Hybrid"  />
          	<label for="map3" data-theme="b">Hybrid</label>
 	    </fieldset>
+	    
+	    <br/><br/><br/>
 
 	    <fieldset data-role="controlgroup" data-type="horizontal">
     		<legend>Map view:</legend>
-  			<input type="radio" name="map" id="map1" value="Map" checked="checked" />
-         	<label for="map1">Map</label>
+  			<input type="radio" name="map" id="map4" value="Map" checked="checked" />
+         	<label for="map4">Map</label>
 
-         	<input type="radio" name="map" id="map2" value="Satellite" />
-         	<label for="map2">Satellite</label>
+         	<input type="radio" name="map" id="map5" value="Satellite" />
+         	<label for="map5">Satellite</label>
 
-         	<input type="radio" name="map" id="map3" value="Hybrid"  />
-         	<label for="map3">Hybrid</label>
+         	<input type="radio" name="map" id="map6" value="Hybrid"  />
+         	<label for="map6">Hybrid</label>
 	    </fieldset>
 		
 	  </form>			 			 		 			 

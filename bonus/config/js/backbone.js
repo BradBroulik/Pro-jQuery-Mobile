@@ -6,7 +6,7 @@ $( document ).on( "mobileinit", function() {
 	$.mobile.pushStateEnabled = false;
 	
 	// Must manually remove pages from DOM when JQM isn't handling page navigation
-	$( document ).on('pagehide', "div:jqmData(role='page')",
+	$( document ).on('pagecontainerhide', "div:jqmData(role='page')",
 	function (event, ui) {
 			$(event.currentTarget).remove();
 	});

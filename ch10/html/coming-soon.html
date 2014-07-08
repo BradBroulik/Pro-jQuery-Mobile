@@ -4,30 +4,30 @@
 		<meta charset="utf-8">
 		<title>Segmented Control Example</title> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-	    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
+	    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
 		<link rel="stylesheet" type="text/css" href="../custom.css" />
-		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	    <script type="text/javascript" src="../custom.js"></script>
-		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
     </head>
 <body> 
 
 <div data-role="page">
-	<div data-role="header" data-position="fixed">
-		<a href="../index.html" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right"></a>
+	<div data-role="header" data-position="fixed" data-theme="b">
+		<a href="../index.html" data-iconpos="notext" data-direction="reverse" class="ui-btn ui-corner-all ui-mini ui-btn-icon-right ui-icon-home ui-btn-icon-notext"></a>
 		<h1>Movies</h1>
-		<div class="segmented-control ui-bar-d">
+		<div class="segmented-control ui-bar-a">
 			<div data-role="controlgroup" data-type="horizontal">
-				<a href="now-playing.html" data-role="button" data-transition="none" class="ui-control-inactive">Now Playing</a>
-				<a href="coming-soon.html" data-role="button" data-transition="none" class="ui-control-active">Coming Soon</a>
-				<a href="top-rated.html" data-role="button" data-transition="none" class="ui-control-inactive">Top Rated</a>
+				<a href="now-playing.html" class="ui-btn ui-corner-all ui-mini" data-transition="none" class="ui-control-inactive">Now Playing</a>
+				<a href="coming-soon.html" class="ui-btn ui-corner-all ui-mini" data-transition="none" class="ui-control-active">Coming Soon</a>
+				<a href="top-rated.html" class="ui-btn ui-corner-all ui-mini" data-transition="none" class="ui-control-inactive">Top Rated</a>
 			</div>
 		</div>
 	</div>
 	
-	<div data-role="content">	
+	<div class="ui-content">	
 		<ul data-role="listview">
-			<li>
+			<li class="ui-li-has-thumb">
 			  <a href="#">
 				<img src="../images/kungfupanda2.jpg" />
 				<h3>Kung Fu Panda</h3>
@@ -35,7 +35,7 @@
 				<p>Runtime: 95 min.</p>
 			  </a>
 			</li>
-			<li>
+			<li class="ui-li-has-thumb">
 			  <a href="#">
 				<img src="../images/pirates.jpg" />
 				<h3>Pirates of the Caribbean</h3>
@@ -43,7 +43,7 @@
 				<p>Runtime: 137 min.</p>
 			  </a>
 			</li>	
-			<li>
+			<li class="ui-li-has-thumb">
 			  <a href="#">
 				<img src="../images/X-MenFirstClass.jpg" />
 				<h3>X-Men</h3>
@@ -51,7 +51,7 @@
 				<p>Runtime: 131 min.</p>
 			  </a>
 			</li>	
-			<li>
+			<li class="ui-li-has-thumb">
 			  <a href="#">
 				<img src="../images/kungfupanda2.jpg" />
 				<h3>Kung Fu Panda 3D</h3>

@@ -3,6 +3,12 @@ a:link,	a:visited, a:hover, a:active { text-decoration:none; }
 .ui-grid-a { text-align: center; }
 .icon-label { color: #FFF; display: block; font-size:12px; }
 .icon-springboard { position: absolute; bottom: 0; width: 100%; }
+.ui-li-icon {
+    max-height: 32px!important;
+    max-width: 32px!important;
+    top: 10px!important;
+}
+
 
 .background-gradient {
 	background-image: -webkit-gradient(

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Forms</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
 	<style>
 		label {
             float: left;
@@ -19,21 +19,21 @@
 			margin:1px;
 		}
 	</style>
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head> 
 <body> 
 
-<div data-role="page" data-theme="d">
-	<div data-role="header">
+<div data-role="page" >
+	<div data-role="header" data-theme="b">
 		<h1>Input Swatches</h1>
 	</div>
 
-	<div data-role="content">
+	<div class="ui-content">
 	  <form id="test" id="test" action="#" method="post">
 		<p>
         <label for="tel">Tel:</label>
-        <input type="tel" name="tel" id="tel" value="" placeholder="data-theme='a'" data-theme="a" />
+        <input type="tel" name="tel" id="tel" value="" placeholder="data-theme='a'" data-theme="b" />
 		</p>	  	
 		<p>
 	    <label for="text">Text:</label>
@@ -41,15 +41,15 @@
 	    </p>
 		<p>   
 		<label for="number">Number:</label>
-        <input type="number" name="number" id="number" value="" placeholder="data-theme='c'" data-theme="c" />
+        <input type="number" name="number" id="number" value="" placeholder="data-theme='c'"  />
 		</p> 
 		<p>
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email" value="" placeholder="data-theme='d'" data-theme="d" />
+        <input type="email" name="email" id="email" value="" placeholder="data-theme='d'"  />
 		</p> 
 		<p> 
         <label for="url">Url:</label>
-        <input type="url" name="url" id="url" value="" placeholder="data-theme='e'" data-theme="e" />	
+        <input type="url" name="url" id="url" value="" placeholder="data-theme='e'"  />	
 		</p>
     			
 	  </form>	

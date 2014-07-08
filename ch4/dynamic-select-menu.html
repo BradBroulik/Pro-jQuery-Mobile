@@ -4,34 +4,34 @@
 	<meta charset="utf-8">
 	<title>Forms</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head> 
 <body> 
 
-<div data-role="page" data-theme="b">
-	<div data-role="header">
+<div data-role="page">
+	<div data-role="header" data-theme="b">
 		<h1>Select Menu</h1>
 	</div>
 
-	<div data-role="content">
+	<div class="ui-content">
 	  <form id="test" id="test" action="#" method="post">	
-		  <a href="#" id="create-select1" data-role="button">Create select1</a>
-		  <a href="#" id="create-select2" data-role="button">Create select2</a>
+		  <a href="#" id="create-select1" class="ui-btn ui-corner-all ui-mini">Create select1</a>
+		  <a href="#" id="create-select2" class="ui-btn ui-corner-all ui-mini">Create select2</a>
 		  <br>
 		  
 		  <p style="text-align:center;"><strong>Invoke methods:</strong></p>
-		  <a href="#" id="auto-select1" data-role="button" data-theme="a">Refresh select1</a>
-		  <a href="#" id="disable-select1" data-role="button" data-theme="a">Disable select1</a>
-		  <a href="#" id="enable-select1" data-role="button" data-theme="a">Enable select1</a>
-		  <a href="#" id="open-select2" data-role="button" data-theme="a">Open select2</a>
-		  <a href="#" id="close-select2" data-role="button" data-theme="a">Close select2</a>
+		  <a href="#" id="auto-select1" class="ui-btn ui-corner-all ui-mini" data-theme="b">Refresh select1</a>
+		  <a href="#" id="disable-select1" class="ui-btn ui-corner-all ui-mini" data-theme="b">Disable select1</a>
+		  <a href="#" id="enable-select1" class="ui-btn ui-corner-all ui-mini" data-theme="b">Enable select1</a>
+		  <a href="#" id="open-select2" class="ui-btn ui-corner-all ui-mini" data-theme="b">Open select2</a>
+		  <a href="#" id="close-select2" class="ui-btn ui-corner-all ui-mini" data-theme="b">Close select2</a>
 	  </form>			 			 		 			 
 	</div>
 	<script type="text/javascript">
 		$( "#create-select1" ).on( "click", function() {
-			$( '<select name="select1" id="select1" data-theme="e"><option value="action">Action</option><option value="comedy">Comedy</option><option value="drama">Drama</option><option value="romance">Romance</option></select>' )
+			$( '<select name="select1" id="select1" ><option value="action">Action</option><option value="comedy">Comedy</option><option value="drama">Drama</option><option value="romance">Romance</option></select>' )
 				.insertAfter( "#create-select1" )
 				.selectmenu();
 		});
@@ -45,7 +45,6 @@
 					hidePlaceholderMenuItems: true,
 					icon: "plus",
 					iconpos: "right",
-					iconshadow: true,
 					inline: true,
 					menuPageTheme: "a", // Not working
 					nativeMenu: false,

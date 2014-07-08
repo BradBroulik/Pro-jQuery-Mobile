@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pie Chart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+  <style>
+    .legend { float:left; width:13px; height:13px; }
+    .legend-have { background-color:#77b800; border:2px solid #588701; }
+    .legend-used { background-color:#000; border:2px solid #000; }
+    .legend-text { float:left; margin-left: 8px; }
+    .ui-controlgroup { margin-left:20%; }
+    #piechart > div { margin: 0 auto; }
+  </style>
+  </head>
+<body>
+
+<div data-role="page">
+  <div data-role="header" data-theme="b">
+    <h1>Pie Chart</h1>
+  </div>
+
+  <div class="ui-content">
+    <div class="ui-grid-solo">
+        <div class="ui-block-a"><div id="piechart"></div></div>
+    </div>
+    <div data-role="controlgroup"><div class="legend legend-used"></div><div class="legend-text">Android</div></div><br>
+    <div data-role="controlgroup"><div class="legend legend-have"></div><div class="legend-text">iOS</div></div></div>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>  
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Total'],
+          ['Have',      48.62],
+          ['Used',      251.38]
+        ]);
+
+        var formatter = new google.visualization.NumberFormat({
+            prefix: '$'
+        });
+        formatter.format(data, 1);
+
+        var options = {
+        enableInteractivity: false,
+        fontSize: 16,
+        legend: 'none',
+        pieSliceText: 'value',
+        height: 275,
+        width: 280,
+        is3D: true,
+        chartArea:{left:0,top:0,width:"100%",height:"100%"},
+        slices: {
+        0: { color: 'black' },
+        1: { color: 'green' }
+          }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+    </script>
+</div>
+
+</body>
+</html>

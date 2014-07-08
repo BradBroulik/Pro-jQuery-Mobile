@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Themes</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
 	<style>
 		label {
             float: left;
@@ -19,44 +19,44 @@
 			margin:1px;
 		}		
 	</style>
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 	</head> 
 <body> 
 
-<div data-role="page" data-theme="e">
+<div data-role="page">
 	<div data-role="header" data-theme="b">
-		<h1>Theme = "b"</h1>
+		<h1>Theme = 'b'</h1>
 	</div>
 
-	<div data-role="content" data-theme="d" style="text-align:center; margin-top:5px;">
-		Theme = "d"
+	<div class="ui-content"  style="text-align:center; margin-top:5px;" data-theme="b">
+		Theme = 'a'
 
-		<ul data-role="listview" data-inset="true" data-theme="e" data-divider-theme="e">
-			<li data-role="list-divider">Theme = "e"</li>
-			<li>Inherits "e" from list</li>
-			<li data-theme="b">Theme = "b"</li>
+		<ul data-role="listview" data-inset="true"  data-divider-theme="a">
+			<li data-role="list-divider">Theme = 'a'</li>
+			<li>Inherits 'a' from page</li>
+			<li data-theme="b">Theme = 'b'</li>
 		</ul>
 						
 		<form id="test" id="test" action="#" method="post">
 			<p>	
-		    	<label for="text">Theme "d"</label>
-		    	<input type="text" name="text" id="text" value="" data-theme="d" placeholder="Text input"/>
+		    	<label for="text" class="ui-hidden-accessible">Theme 'a'</label>
+		    	<input type="text" name="text" id="text" value=""  placeholder="Theme 'a'"/>
 		    </p>
 			<p>
-			    <label for="sound">Theme "b"</label>
-				<select name="slider" id="sound" data-role="slider" data-theme="b">
+			    <label for="sound">Theme 'b'</label>
+				<select name="slider" id="sound" data-role="flipswitch" data-theme="b">
 					<option value="off">Off</option>
 					<option value="on">On</option>
 				</select>
 			</p>
 			  
-			<a href="#" data-role="button" data-theme="a">Button (Theme = "a")</a>
+			<a href="#" class="ui-btn ui-corner-all ui-mini" data-theme="b">Button (Theme = 'a')</a>
 		</form>
 	</div>	
 	
 	<div data-role="footer" data-position="fixed" data-theme="b">
-		<h3>Theme = "b"</h3>
+		<h3>Theme = 'b'</h3>
 	</div>		
 </div>
 </body>

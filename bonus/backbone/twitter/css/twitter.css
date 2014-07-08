@@ -6,4 +6,4 @@
 .ui-li-thumb { top: 1em; }
 .ui-li-rating { font-size: 32px; }
 		
-#twitterBtn .ui-icon { background: url(../images/twitterIcon.png) 50% 50% no-repeat; background-size: 22px 22px; }
+.ui-icon-twitter:after { background: url(../images/twitterIcon.png); background-size: 22px 22px; }

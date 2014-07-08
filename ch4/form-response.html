@@ -4,28 +4,28 @@
         <meta charset="utf-8">
         <title>Forms</title>
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript">
 			$.urlParam = function(name) { 
 				var results = RegExp('[\?&]' + name + '=([^&#]*)').exec(top.window.location.href);  
 				return (results !== null) ? results[1] : 0;  
 			}
 			
-			$( document ).on("pageinit", "#response-page", function() {
+			$( document ).on("pagecreate", "#response-page", function() {
 				var email = $.urlParam("email");
 				var decodedEmail = decodeURIComponent(email.replace(/\+/g, ' '));
 				$( ".email" ).append(decodedEmail);
 			});
 		</script>
-        <script type="text/javascript" src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
     </head>
     <body>
-        <div data-role="page" id="response-page" data-theme="b">
-            <div data-role="header">
+        <div data-role="page" id="response-page">
+            <div data-role="header" data-theme="b">
                 <h1>Submiting Forms</h1>
             </div>
-            <div data-role="content">
+            <div class="ui-content">
                 Thanks for submitting email address: <span class="email"></span>
             </div>
         </div>

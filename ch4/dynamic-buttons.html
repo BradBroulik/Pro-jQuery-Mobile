@@ -4,32 +4,32 @@
 	<meta charset="utf-8">
 	<title>Buttons</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head> 
 <body> 
 
-<div data-role="page" data-theme="b">
-	<div data-role="header">
+<div data-role="page">
+	<div data-role="header" data-theme="b">
 		<h1>Dynamic Buttons</h1>
 	</div>
 
-	<div data-role="content">	
-		<a href="#" data-role="button" id="create-button1">Create Button1</a>
-		<a href="#" data-role="button" id="create-button2">Create Button2</a>
+	<div class="ui-content">	
+		<a href="#" class="ui-btn ui-corner-all ui-mini" id="create-button1">Create Button1</a>
+		<a href="#" class="ui-btn ui-corner-all ui-mini" id="create-button2">Create Button2</a>
 		
 		<br><br>
-		<a href="#" data-role="button" id="create-multiple-buttons">Create Multiple Buttons</a>
-		<a href="#" data-role="button" id="create-button5">Create Button5</a>
-		<a href="#" data-role="button" id="create-button6">Create Button6</a>
-		<a href="#" data-role="button" id="disable-button3" data-theme="d">Disable Button3</a>
-		<a href="#" data-role="button" id="enable-button3" data-theme="d">Enable Button3</a>
+		<a href="#" class="ui-btn ui-corner-all ui-mini" id="create-multiple-buttons">Create Multiple Buttons</a>
+		<a href="#" class="ui-btn ui-corner-all ui-mini" id="create-button5">Create Button5</a>
+		<a href="#" class="ui-btn ui-corner-all ui-mini" id="create-button6">Create Button6</a>
+		<a href="#" class="ui-btn ui-corner-all ui-mini" id="disable-button1" >Disable Button1</a>
+		<a href="#" class="ui-btn ui-corner-all ui-mini" id="enable-button1" >Enable Button1</a>
 	</div>
 	
 	<script type="text/javascript"><!--
 		$( "#create-button1" ).on( "click", function() {
-			$( '<a href="http://jquerymobile.com" id="button1" data-role="button" data-icon="star" data-inline="true" data-theme="a">Button1</a>' )
+			$( '<a href="http://jquerymobile.com" id="button1" class="ui-btn ui-corner-all ui-mini ui-btn-inline ui-icon-star ui-btn-b">Button1</a>' )
 				.appendTo( ".ui-content" )
 				.button();
 		});
@@ -53,7 +53,7 @@
 		});
 		
 		$( "#create-button5" ).on( "click", function() {
-			$( '<input type="submit" id="button5" value="Button5" data-theme="a" />' )
+			$( '<input type="submit" id="button5" value="Button5" data-theme="b" />' )
 				.insertAfter( "#create-button5" )
 				.button();
 		});
@@ -70,17 +70,16 @@
 		});
 				
 		$( "#create-multiple-buttons" ).on( "click", function() {
-			$( '<button id="button3" data-theme="a">Button3</button>' ).insertAfter( "#create-multiple-buttons" );
-			$( '<button id="button4" data-theme="a">Button4</button>' ).insertAfter( "#button3" );
-			$.mobile.pageContainer.trigger( "create" );
+			$( '<button id="button3" class="ui-btn ui-shadow ui-btn-a ui-corner-all">Button3</button>' ).insertAfter( "#create-multiple-buttons" );
+			$( '<button id="button4" class="ui-btn ui-shadow ui-btn-a ui-corner-all">Button4</button>' ).insertAfter( "#button3" );
 		});
 		
-		$( "#disable-button3" ).on( "click", function() {
-			$( "#button3" ).button( "disable" );
+		$( "#disable-button1" ).on( "click", function() {
+			$( "#button1" ).button( "disable" );
 		});	
 			
-		$( "#enable-button3" ).on( "click", function() {
-			$( "#button3" ).button( "enable" );
+		$( "#enable-button1" ).on( "click", function() {
+			$( "#button1" ).button( "enable" );
 		});			
 	--></script>
 </div>

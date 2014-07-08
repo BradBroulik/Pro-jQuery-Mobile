@@ -4,31 +4,30 @@
 		<meta charset="utf-8">
 		<title>Action Sheet Example #1</title> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 	</head> 
 <body> 
 
 <div data-role="page" id="home">
-	<div data-role="header">
+	<div data-role="header" data-theme="b">
 		<h1>Action Sheet</h1>
 	</div>
 
-	<div data-role="content">
+	<div class="ui-content">
 		<a href="#logout" data-rel="popup" data-transition="slidedown">Logout</a>  	
 	</div>
 	
-	<div data-role="popup" id="logout" data-overlay-theme="d" data-theme="c" style="min-width:275px;" class="ui-corner-all">
-		<div data-role="header" data-theme="a" class="ui-corner-top">
+	<div data-role="popup" id="logout" data-overlay-theme="a"  style="min-width:275px;" class="ui-corner-all">
+		<div data-role="header" data-theme="b" class="ui-corner-top">
 			<h1>Are you sure?</h1>
 		</div>
-		<div data-role="content" data-theme="d" style="padding:15px;" class="ui-corner-bottom">
-			<a href="#home" data-role="button" data-theme="b">Yes, I'm Sure!</a>
-			<a href="#home" data-role="button" data-theme="c" data-rel="back">No Way!</a>  
+		<div class="ui-content"  style="padding:15px;" class="ui-corner-bottom">
+			<a href="#home" class="ui-btn ui-corner-all ui-mini" data-theme="b">Yes, I'm Sure!</a>
+			<a href="#home" class="ui-btn ui-corner-all ui-mini"  data-rel="back">No Way!</a>  
 		</div>
 	</div>	
 </div>
 </body>
 </html>
-

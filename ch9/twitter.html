@@ -4,22 +4,22 @@
 	<meta charset="utf-8">
 	<title>Twitter</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
 	<link rel="stylesheet" type="text/css" href="twitter.css" />
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="twitter.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 </head> 
 <body>
 
 <div data-role="page" id="twitterPage">
-	<div data-role="header">
-		<a href="reviews.html" data-icon="home" data-iconpos="notext" data-direction="reverse"></a>
+	<div data-role="header" data-theme="b">
+		<a href="reviews.html" class="ui-btn ui-corner-all ui-btn-icon-notext ui-icon-home" data-direction="reverse"></a>
 		<h1>X-Men</h1>
 	</div>
 	
-	<div data-role="content">
-		<ul id="tweet-list" data-role="listview" data-inset="true" data-theme="d">
+	<div class="ui-content">
+		<ul id="tweet-list" data-role="listview" data-inset="true" >
 			<li data-role="list-divider">Tweets</li>									
 		</ul>
 	</div>

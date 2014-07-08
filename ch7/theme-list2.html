@@ -4,12 +4,12 @@
 	<meta charset="utf-8">
 	<title>jMovies</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
 	<style>
-		.ui-li-heading { overflow: auto; white-space:normal; }
+		ul li h3 { overflow:auto!important; white-space:normal!important; }
 	</style>	
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 	</head> 
 <body> 
 
@@ -18,10 +18,10 @@
 		<h1>jMovies</h1>
 	</div>
 
-	<div data-role="content">
-		<ul data-role="listview" data-inset="true" data-theme="a">
+	<div class="ui-content">
+		<ul data-role="listview" data-inset="true" data-theme="b">
 			<li data-role="list-divider">Now Playing</li>
-			<li>
+			<li class="ui-li-has-thumb">
 			  <a href="#">
 				<img src="../images/kungfupanda2.jpg" />
 				<h3>Kung Fu Panda</h3>
@@ -29,7 +29,7 @@
 				<p>Runtime: 95 min.</p>
 			  </a>
 			</li>
-			<li>
+			<li class="ui-li-has-thumb">
 			  <a href="#">
 				<img src="../images/pirates.jpg" />
 				<h3>Pirates of the Caribbean</h3>
@@ -37,7 +37,7 @@
 				<p>Runtime: 137 min.</p>
 			  </a>
 			</li>	
-			<li>
+			<li class="ui-li-has-thumb">
 			  <a href="#">
 				<img src="../images/X-MenFirstClass.jpg" />
 				<h3>X-Men</h3>

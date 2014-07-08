@@ -4,29 +4,29 @@
 	<meta charset="utf-8">
 	<title>Forms</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head> 
 <body> 
 
-<div data-role="page" data-theme="b">
-	<div data-role="header">
+<div data-role="page">
+	<div data-role="header" data-theme="b">
 		<h1>Slider</h1>
 	</div>
 
-	<div data-role="content">
+	<div class="ui-content">
 	  <form id="test" id="test" action="#" method="post">	
 	   <p>
 		<label for="volume">Volume:</label>
-	 	<input type="range" name="volume" id="volume" value="5" min="0" max="10"  />
+	 	<input type="range" name="volume" id="volume" value="5" min="0" max="10" />
 	   </p>
 	   <p>
 		<label for="brightness">Brightness:</label>
-	 	<input type="range" name="brightness" id="brightness" min="0" max="10" data-track-theme="d" data-highlight="true" data-mini="true" class="ui-hidden-accessible" />
+	 	<input type="range" name="brightness" id="brightness" min="0" max="10" data-track-theme="a" data-highlight="true" data-mini="true" class="ui-hidden-accessible" />
 	   </p>
 	   <p>
-		<div data-role="rangeslider" data-mini="true" data-track-theme="d">
+		<div data-role="rangeslider" data-mini="true" data-track-theme="a">
             <label for="range-1a">Rangeslider:</label>
             <input type="range" name="range-1a" id="range-1a" min="0" max="100" value="0">
             <label for="range-1b">Rangeslider:</label>

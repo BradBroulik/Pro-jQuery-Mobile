@@ -4,22 +4,22 @@
 	<meta charset="utf-8">
 	<title>RSS</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
 	<style type="text/css">
-		.ui-li-heading { white-space:normal }/*wraps text*/
+		ul li h1 { white-space:normal!important; }/*wraps text*/
 	</style>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="rss.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 </head> 
 <body>
 
 <div data-role="page" id="rssPage">
-	<div data-role="header">
+	<div data-role="header" data-theme="b">
 		<h1>MN Twins</h1>
 	</div>
-	<div data-role="content">
-		<ul id="rss-list" data-role="listview" data-inset="true" data-theme="d">
+	<div class="ui-content">
+		<ul id="rss-list" data-role="listview" data-inset="true" >
 			<li data-role="list-divider">RSS Feed</li>									
 		</ul>
 	</div>

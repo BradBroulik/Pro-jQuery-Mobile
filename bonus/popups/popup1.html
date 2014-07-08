@@ -4,37 +4,37 @@
 		<meta charset="utf-8">
 		<title>Popup Example</title> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
-		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript">
-		$( document ).on("pageinit", "#popupPage", function() {
+		$( document ).on("pagecreate", "#popupPage", function() {
 			$( "#button1" ).on( "click", function() {
 				// Dynamically open popup
 				$('#popupWarning').popup( "open" );
 			});	
 		});
 		</script>
-		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 	</head>
 <body> 
 
 <div data-role="page" id="popupPage">
-	<div data-role="header">
+	<div data-role="header" data-theme="b">
 		<h1>Popup</h1>
 	</div>
 	
-	<div data-role="content">	
+	<div class="ui-content">
 		<br/><br/>
-		<a href="#popupWarning" data-rel="popup" data-role="button" data-inline="true">Popup</a>
-		<a href="#" id="button1" data-role="button" data-inline="true">Dynamic popup</a>
+		<a href="#popupWarning" data-rel="popup" class="ui-btn ui-corner-all ui-mini ui-btn-inline">Popup</a>
+		<a href="#" id="button1" class="ui-btn ui-corner-all ui-mini ui-btn-inline">Dynamic popup</a>
 		
-		<div data-role="popup" id="popupWarning" data-overlay-theme="d" data-theme="c">
-			<div data-role="header" data-theme="d">
+		<div data-role="popup" id="popupWarning" data-overlay-theme="a" >
+			<div data-role="header" >
 				<h1>Warning</h1>
 			</div>
-			<div data-role="content" data-theme="d">
+			<div class="ui-content" >
 				<p style="text-align:center">No internet connection.  Please try again later.</p>
-				<a href="#" data-role="button" data-rel="back" data-theme="c">OK</a>    
+				<a href="#" class="ui-btn ui-corner-all ui-mini" data-rel="back" >OK</a>    
 			</div>
 		</div>
 	</div>

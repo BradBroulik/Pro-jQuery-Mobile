@@ -4,54 +4,54 @@
 	<meta charset="utf-8">
 	<title>Forms</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head> 
 <body> 
 
-<div data-role="page" data-theme="b">
-	<div data-role="header">
+<div data-role="page">
+	<div data-role="header" data-theme="b">
 		<h1>Radio Buttons</h1>
 	</div>
 
-	<div data-role="content">
+	<div class="ui-content">
 	  <form id="test" id="test" action="#" method="post">	
-		  <a href="#" id="create-radio1" data-role="button">Create radio1</a>
-		  <a href="#" id="create-radio2" data-role="button">Create radio2</a>
+		  <a href="#" id="create-radio1" class="ui-btn ui-corner-all ui-mini">Create radio1</a>
+		  <a href="#" id="create-radio2" class="ui-btn ui-corner-all ui-mini">Create radio2</a>
 		  <br>
 		  
 		  <p style="text-align:center;"><strong>Invoke methods:</strong></p>
-		  <a href="#" id="auto" data-role="button" data-theme="a">Select Satellite</a>
-		  <a href="#" id="disable" data-role="button" data-theme="a">Disable Satellite</a>
-		  <a href="#" id="enable" data-role="button" data-theme="a">Enable Satellite</a>
+		  <a href="#" id="auto" class="ui-btn ui-corner-all ui-mini" data-theme="b">Select Satellite</a>
+		  <a href="#" id="disable" class="ui-btn ui-corner-all ui-mini" data-theme="b">Disable Satellite</a>
+		  <a href="#" id="enable" class="ui-btn ui-corner-all ui-mini" data-theme="b">Enable Satellite</a>
 	  </form>			 			 		 			 
 	</div>
 	<script type="text/javascript">
 		$( "#create-radio1" ).on( "click", function() {
-			$( '<fieldset data-role="controlgroup"><legend>Map view:</legend><input type="radio" name="map" id="map1" value="Map" /><label for="map1" data-theme="c">Map</label><input type="radio" name="map" id="map2" value="Satellite"  /><label for="map2" data-theme="c">Satellite</label></fieldset>' )
+			$( '<fieldset data-role="controlgroup" id="cg1"><legend>Map view:</legend><input type="radio" name="map" id="map1" value="Map" /><label for="map1" >Map</label><input type="radio" name="map" id="map2" value="Satellite"  /><label for="map2" >Satellite</label></fieldset>' )
 				.insertAfter( "#create-radio1" );
-			$.mobile.pageContainer.trigger( "create" );
+			$( "#cg1" ).controlgroup();
 		});
 		
 		$( "#create-radio2" ).on( "click", function() {
-			$( '<fieldset data-role="controlgroup"><legend>Map view:</legend><input type="radio" name="map" id="m1" value="Map" checked="checked" /><label for="m1">Map</label><input type="radio" name="map" id="m2" value="Satellite"  /><label for="m2">Satellite</label></fieldset>' )
+			$( '<fieldset data-role="controlgroup" id="cg2"><legend>Map view:</legend><input type="radio" name="map" id="m1" value="Map" checked="checked" /><label for="m1">Map</label><input type="radio" name="map" id="m2" value="Satellite"  /><label for="m2">Satellite</label></fieldset>' )
 				.insertAfter( "#create-radio2" );
 			$( "#m1" )
 				.checkboxradio({
 					theme: "e",
-					create: function(event) { 
+					create: function( event, ui ) { 
 						console.log( "Creating radio buttons..." );
 					}
 				});
 			$( "#m2" )
 				.checkboxradio({
 					theme: "e",
-					create: function(event) { 
+					create: function( event, ui ) { 
 						console.log( "Creating radio buttons..." );
 					}
 				});		
-			$.mobile.pageContainer.trigger( "create" );	
+			$( "#cg2" ).controlgroup();
 		});			
 		
 		$( "#auto" ).on( "click", function() {

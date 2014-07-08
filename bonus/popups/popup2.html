@@ -4,20 +4,20 @@
 	<meta charset="utf-8">
 	<title>jMovies</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
 	<style>
-		.ui-li-heading { overflow: auto; white-space:normal; }
+		ul li h3 { overflow: auto!important; white-space:normal!important; }
 	</style>
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript">
-		$( document ).on("pageinit", "#moviesPage", function() {
+		$( document ).on("pagecreate", "#moviesPage", function() {
 			$( "#movie1, #movie2, #movie3, #movie4" ).on( "click", function() {
 				// Dynamically open popup
 				$('#popupWarning').popup( "open" );
 			});
 		});
 	</script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 	</head> 
 <body> 
 
@@ -26,10 +26,10 @@
 		<h1>jMovies</h1>
 	</div>
 
-	<div data-role="content">
-		<ul data-role="listview" data-inset="true" data-theme="a">
+	<div class="ui-content">
+		<ul data-role="listview" data-inset="true" data-theme="b">
 			<li data-role="list-divider">Now Playing</li>
-			<li>
+			<li class="ui-li-has-thumb">
 			  <a href="#" id="movie1">
 				<img src="../../images/kungfupanda2.jpg" />
 				<h3>Kung Fu Panda</h3>
@@ -37,7 +37,7 @@
 				<p>Runtime: 95 min.</p>
 			  </a>
 			</li>
-			<li>
+			<li class="ui-li-has-thumb">
 			  <a href="#" id="movie2">
 				<img src="../../images/pirates.jpg" />
 				<h3>Pirates of the Caribbean</h3>
@@ -45,7 +45,7 @@
 				<p>Runtime: 137 min.</p>
 			  </a>
 			</li>	
-			<li>
+			<li class="ui-li-has-thumb">
 			  <a href="#" id="movie3">
 				<img src="../../images/X-MenFirstClass.jpg" />
 				<h3>X-Men</h3>
@@ -53,7 +53,7 @@
 				<p>Runtime: 131 min.</p>
 			  </a>
 			</li>
-			<li>
+			<li class="ui-li-has-thumb">
 			  <a href="#" id="movie4">
 				<img src="../../images/kungfupanda2.jpg" />
 				<h3>Kung Fu Panda 3D</h3>
@@ -63,13 +63,13 @@
 			</li>								
 		</ul>
 	</div>
-		<div data-role="popup" id="popupWarning" data-overlay-theme="d" data-theme="c" style="max-width:500px;" class="ui-corner-all">
-			<div data-role="header" data-theme="a">
+		<div data-role="popup" id="popupWarning" data-overlay-theme="a"  style="max-width:500px;" class="ui-corner-all">
+			<div data-role="header" data-theme="b">
 				<h1>Warning</h1>
 			</div>
-			<div data-role="content" data-theme="d" style="padding:15px;">
+			<div class="ui-content"  style="padding:15px;">
 				<p style="text-align:center">No internet connection.  Please try again later.</p>
-				<a href="#" data-role="button" data-rel="back" data-theme="c">OK</a>    
+				<a href="#" class="ui-btn ui-corner-all ui-mini" data-rel="back" >OK</a>    
 			</div>
 		</div>	
 </div>

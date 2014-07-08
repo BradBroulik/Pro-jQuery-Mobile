@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Themes</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
 	<style>
 		label {
             float: left;
@@ -19,44 +19,44 @@
 			margin:1px;
 		}		
 	</style>
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 	</head> 
 <body> 
 
 <div data-role="page">
 	<div data-role="header">
-		<h1>default = "a"</h1>
+		<h1>inherits 'a'</h1>
 	</div>
 
-	<div data-role="content" style="text-align:center; margin-top:5px;">
-		default = "c"
+	<div class="ui-content" style="text-align:center; margin-top:5px;">
+		<strong>All widgets inherit the default page theme 'a'</strong>
 
 		<ul data-role="listview" data-inset="true">
-			<li data-role="list-divider">default = "b"</li>
-			<li>default = "c"</li>
-			<li>default = "c"</li>
+			<li data-role="list-divider">inherits</li>
+			<li>inherits 'a'</li>
+			<li>inherits 'a'</li>
 		</ul>
 
 		<form id="test" id="test" action="#" method="post">
-			<p>	
-		    	<label for="text">inherits "c":</label>
-		    	<input type="text" name="text" id="text" value="" placeholder="Text input"/>
-		    </p>
-			<p>
-			    <label for="sound">inherits "c":</label>
-				<select name="slider" id="sound" data-role="slider">
+			<div class="ui-field-contain">
+		    	<label for="text" class="ui-hidden-accessible">inherits 'a':</label>
+		    	<input type="text" name="text" id="text" value="" placeholder="inherits 'a'"/>
+		    </div>
+			<div class="ui-field-contain">
+			    <label for="sound">inherits 'a':</label>
+				<select name="slider" id="sound" data-role="flipswitch">
 					<option value="off">Off</option>
 					<option value="on">On</option>
 				</select>
-			</p>		  
+			</div>		  
 			  
-			<a href="#" data-role="button">Button (inherits "c")</a>
+			<a href="#" class="ui-btn ui-corner-all ui-mini">Button (inherits 'a')</a>
 		</form>
 	</div>	
 	
 	<div data-role="footer" data-position="fixed">
-		<h3>default = "a"</h3>
+		<h3>inherits 'a'</h3>
 	</div>		
 </div>
 </body>

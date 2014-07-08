@@ -1,5 +1,5 @@
 
-$( document ).on("pageinit", "#registrationPage", function() {
+$( document ).on("pagecreate", "#registrationPage", function() {
 
 	$( "form" ).submit(function () {
 		$.mobile.loading( 'show' );
@@ -11,7 +11,7 @@ $( document ).on("pageinit", "#registrationPage", function() {
 		  	jsonp: "jsoncallback",
 			data: $("form#register").serialize(),
 		  	success: function( response ) {
-				$.mobile.changePage( "register-thanks.html", { data: {"email": response.email}} );
+				$( "body" ).pagecontainer( "change", "register-thanks.html", { data: {"email": response.email} });
 		  	},
 			error: function( jqXHR, textStatus, errorThrown ) {
 				$.mobile.loading( 'hide' );

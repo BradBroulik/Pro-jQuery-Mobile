@@ -15,18 +15,18 @@
 
 <div data-role="page">
 	<div data-role="header" data-position="fixed">
-		<a href="/jqm-webapp/ch9/springboard.html" data-icon="home" data-iconpos="notext" data-rel="back"></a>
+		<a href="/jqm-webapp/ch9/springboard.html" class="ui-btn ui-corner-all ui-btn-icon-notext ui-icon-home" data-rel="back"></a>
 		<h1>Movies</h1>
-		<div data-role="header" data-theme="d" class="segmented-control">
+		<div data-role="header"  class="segmented-control">
 			<div data-role="controlgroup" data-type="horizontal">
-				<a href="/jqm-webapp/mvc/movies"" data-role="button" class="ui-control-active">In Theatres</a>
-				<a href="/jqm-webapp/mvc/movies"" data-role="button" class="ui-control-inactive">Coming Soon</a>
-				<a href="/jqm-webapp/mvc/movies"" data-role="button" class="ui-control-inactive">Top Rated</a>
+				<a href="/jqm-webapp/mvc/movies"" class="ui-btn ui-corner-all ui-mini" class="ui-control-active">In Theatres</a>
+				<a href="/jqm-webapp/mvc/movies"" class="ui-btn ui-corner-all ui-mini" class="ui-control-inactive">Coming Soon</a>
+				<a href="/jqm-webapp/mvc/movies"" class="ui-btn ui-corner-all ui-mini" class="ui-control-inactive">Top Rated</a>
 			</div>
 		</div>
 	</div>
 	
-	<div data-role="content">	
+	<div class="ui-content">	
 		<ul data-role="listview">
 		<c:forEach var="movie" items="${movies}">
 			<li>

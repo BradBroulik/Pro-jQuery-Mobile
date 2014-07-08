@@ -4,55 +4,55 @@
 	<meta charset="utf-8">
 	<title>Forms</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head> 
 <body> 
 
-<div data-role="page" data-theme="b">
-	<div data-role="header">
+<div data-role="page">
+	<div data-role="header" data-theme="b">
 		<h1>Text Inputs</h1>
 	</div>
 
-	<div data-role="content">
+	<div class="ui-content">
 	  <form id="test" id="test" action="#" method="post">
 	  	<p style="margin-bottom:8px;">
 		<label for="search" class="ui-hidden-accessible">Search</label>
-    	<input type="search" name="search" id="search" value="" placeholder="Search" data-theme="d" />
+    	<input type="search" name="search" id="search" value="" placeholder="Search"  />
 		</p>
 		<p>	
 	    <label for="text" class="ui-hidden-accessible">Text:</label>
-	    <input type="text" name="text" id="text" value="" placeholder="Text" data-theme="d"/>
+	    <input type="text" name="text" id="text" value="" placeholder="Text" />
 	    </p>
 		<p>   
 		<label for="number" class="ui-hidden-accessible">Number:</label>
-        <input type="number" name="number" id="number" value="" placeholder="Number" data-theme="d" />
+        <input type="number" name="number" id="number" value="" placeholder="Number"  />
 		</p> 
 		<p>
         <label for="email" class="ui-hidden-accessible">Email:</label>
-        <input type="email" name="email" id="email" value="" placeholder="Email" data-theme="d" />
+        <input type="email" name="email" id="email" value="" placeholder="Email"  />
 		</p> 
 		<p> 
         <label for="url" class="ui-hidden-accessible">Url:</label>
-        <input type="url" name="url" id="url" value="" placeholder="URL" data-theme="d" />	
+        <input type="url" name="url" id="url" value="" placeholder="URL"  />	
 		</p>
 		<p>
         <label for="tel" class="ui-hidden-accessible">Tel:</label>
-        <input type="tel" name="tel" id="tel" value="" placeholder="Telephone" data-theme="d" />
+        <input type="tel" name="tel" id="tel" value="" placeholder="Telephone"  />
 		</p>
     	
 		<!-- Future: http://www.w3.org/2011/02/mobile-web-app-state.html -->
         <!-- 
 		<p>
         <label for="date" class="ui-hidden-accessible">date:</label>
-        <input type="date" name="date" id="date" value="" placeholder="Date" data-theme="d" />
+        <input type="date" name="date" id="date" value="" placeholder="Date"  />
         <p>
 		-->
 
 		<p>				 
 		<label for="textarea" class="ui-hidden-accessible">Textarea:</label>
-		<textarea cols="40" rows="8" name="textarea" id="textarea" placeholder="Textarea" data-theme="d"></textarea>	
+		<textarea cols="40" rows="8" name="textarea" id="textarea" placeholder="Textarea" ></textarea>	
 		</p>			
 	  </form>	
 	</div>

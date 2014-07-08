@@ -1,9 +1,9 @@
-	$( document ).on("pageinit", "#reviewsPage", function() {
+	$( document ).on("pagecreate", "#reviewsPage", function() {
 		// When the twitter button is clicked, load our twitter results page.
 		// The twitter results will get loaded in #twitterPage's "pagebeforecreate" event.
 		$( "#twitterBtn" ).on( "click", function(e) {
 			$.mobile.loading( 'show' );
-			$.mobile.loadPage("twitter.html", { reloadPage: true }); // Reload page even if it's already in the DOM
+			$( "body" ).pagecontainer( "load", "twitter.html", { reloadPage: true }); // Reload page even if it's already in the DOM
 			return false;  // Prevent default click behavior
 		});
 
@@ -25,7 +25,7 @@
 					markup += $template.html();
 				});
 				$( "#tweet-list" ).append(markup).listview( "refresh", true ); // The true parameter indicates we want to refresh the entire list, not just the list items. 
-				$.mobile.changePage( $("#twitterPage") );
+				$( "body" ).pagecontainer( "change", "#twitterPage", { transition: "slide" });
 		  	},
 			timeout: 6000,  // Timeout after 6 seconds
 			error: function(jqXHR, textStatus, errorThrown) {

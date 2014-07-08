@@ -4,25 +4,28 @@
 	<meta charset="utf-8">
 	<title>Auto-complete</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script>
-		$( document ).on( "pageinit", "#contactsPage", function() {
+		$( document ).on( "pagecreate", "#contactsPage", function() {
 			$( "#contacts" ).on( "click", "li", function() {
 				$( ".ui-input-text" ).val( $( this ).text() );
 				$("ul li").addClass("ui-screen-hidden");
 			});
 		});
     </script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head> 
 <body>
 		<div data-role="page" id="contactsPage">
-			<div data-role="header">
+			<div data-role="header" data-theme="b">
 				<h1>Contacts</h1>
 			</div>
-			<div data-role="content">
-				<ul id="contacts" data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search contacts..." data-inset="true">
+			<div class="ui-content">
+				<form class="ui-filterable">
+					<input id="filter-input" data-type="search" placeholder="Search contacts...">
+				</form>
+				<ul id="contacts" data-role="listview" data-filter="true" data-input="#filter-input" data-filter-reveal="true" data-inset="true">
 				    <li><a href="#">Adam Sandler</a></li>
 					<li><a href="#">Alec Baldwin</a></li>
 					<li><a href="#">Angelina Jolie</a></li>

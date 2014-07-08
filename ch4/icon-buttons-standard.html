@@ -4,29 +4,29 @@
 	<meta charset="utf-8">
 	<title>Buttons</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head> 
 <body> 
 
 <div data-role="page">
-	<div data-role="header">
+	<div data-role="header" data-theme="b">
 		<h1>Buttons with Icons</h1>
 	</div>
 
-	<div data-role="content">
+	<div class="ui-content">
 	  <p style="text-align:center;">	
 		<em>&lt;input type="button" value="delete" <strong>data-icon="delete"</strong>/&gt;</em>
-		<input type="button" value="Button input" data-icon="delete" data-theme="b" data-inline="true" />
+		<input type="button" value="Button input" data-theme="b" data-mini="true" data-inline="true" data-icon="delete" />
 	  </p>
 	  <p style="text-align:center;">
-		<em>&lt;a href="#" data-role="button" <strong>data-icon="plus"</strong>&gt;Link&lt;/a&gt;</em>
-		<a href="#" data-role="button" data-icon="plus" data-theme="b" data-inline="true">Button link</a>
+		<em>&lt;a href="#" class="ui-btn ui-corner-all ui-mini <strong>ui-icon-plus</strong> ui-btn-inline ui-btn-icon-left"&gt;Link&lt;/a&gt;</em>
+		<a href="#" class="ui-btn ui-corner-all ui-mini ui-icon-plus ui-btn-b ui-btn-inline ui-btn-icon-left">Button link</a>
 	  </p>
 	  <p style="text-align:center;">
-		<em>&lt;button <strong>data-icon="minus"</strong>&gt;Button element&lt;/button&gt;</em>
-		<button data-icon="minus" data-theme="b" data-inline="true">Button element</button>
+		<em>&lt;button class="ui-btn ui-corner-all ui-mini ui-btn-b <strong>ui-icon-minus</strong> ui-btn-inline ui-btn-icon-left"&gt;Button element&lt;/button&gt;</em>
+		<button class="ui-btn ui-corner-all ui-mini ui-btn-b ui-icon-minus ui-btn-inline ui-btn-icon-left">Button element</button>
 	  </p>
 	</div>
 </div>

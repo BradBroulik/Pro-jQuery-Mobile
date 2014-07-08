@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Forms</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
 	<style>
 		div.ui-slider { 
 			width: 45%; 
@@ -19,28 +19,28 @@
 			margin:1px;
 		}
 	</style>	
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head> 
 <body> 
 
-<div data-role="page" data-theme="b">
-	<div data-role="header">
+<div data-role="page">
+	<div data-role="header" data-theme="b">
 		<h1>Switch Control</h1>
 	</div>
 
-	<div data-role="content">
+	<div class="ui-content">
 	  <form id="test" id="test" action="#" method="post">	
 		  <p>
 		    <label for="sound">Sound:</label>
-			<select name="slider" id="sound" data-role="slider">
+			<select name="slider" id="sound" data-role="flipswitch">
 				<option value="off">Off</option>
 				<option value="on">On</option>
 			</select>
 		  </p>	
 		  <p>
 		    <label for="alerts">Alerts:</label>
-			<select name="slider" id="alerts" data-role="slider" data-track-theme="c" data-theme="b">
+			<select name="slider" id="alerts" data-role="flipswitch" data-track-theme="a" data-theme="b">
 				<option value="off">Off</option>
 				<option value="on">On</option>
 			</select>

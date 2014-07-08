@@ -4,27 +4,27 @@
 	<meta charset="utf-8">
 	<title>Header Example</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
 	<style>
-		.ui-li-heading { overflow: visible; }
-		.ui-li-thumb { top: 1em; }
 		.ui-li-rating { font-size: 32px; }
+		.ui-li-icon { max-width:16px; max-height:16px; }
+		img { margin-top:1em; }
 	</style>
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 </head> 
 <body> 
 
-<div data-role="page" data-theme="b">
-	<div data-role="header">
+<div data-role="page">
+	<div data-role="header" data-theme="b">
 		<h1>Reviews</h1>
-		<a href="#" data-icon="plus" data-iconpos="notext" class="ui-btn-right"></a>
+		<a href="#" class="ui-btn ui-corner-all ui-btn-right ui-icon-plus ui-btn-icon-notext"></a>
 	</div>
 	
-	<div data-role="content">
-		<ul data-role="listview" data-inset="true" data-theme="e">
+	<div class="ui-content">
+		<ul data-role="listview" data-inset="true">
 			<li data-role="list-divider">Average Review</li>
-			<li>
+			<li class="ui-li-has-thumb">
 				<img src="../images/X-MenFirstClass.jpg">
 				<h3>X-Men</h3>
 				<p><span class="ui-li-rating">90%</span><strong> liked it!</strong></p>
@@ -32,23 +32,23 @@
 			</li>
 		</ul>
 		
-		<ul data-role="listview" data-inset="true" data-theme="d">
+		<ul data-role="listview" data-inset="true">
 			<li data-role="list-divider">User Reviews</li>
-			<li>
+			<li class="ui-li-has-thumb">
 			  <a href="#">
 				<img src="../images/111-user.png" class="ui-li-icon">
 				<p><strong>Go See It!</strong></p>
 				<p>This movie had a strong script and powerful performances from its well-rounded cast.  X-Men is a welcome return to form for the franchise.</p>
 			  </a>
 			</li>
-			<li>
+			<li class="ui-li-has-thumb">
 			  <a href="#">
 				<img src="../images/111-user.png" class="ui-li-icon">
 				<p><strong>Go See It!</strong></p>
 				<p>Best X-Men movie of the series.</p>
 			  </a>
 			</li>	
-			<li>
+			<li class="ui-li-has-thumb">
 			  <a href="#">
 				<img src="../images/111-user.png" class="ui-li-icon">
 				<p><strong>Go See It!</strong></p>

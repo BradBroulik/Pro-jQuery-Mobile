@@ -4,24 +4,24 @@
 	<meta charset="utf-8">
 	<title>Progressive Enhancement Example</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
 	<style>
 		.ui-header .ui-title, .ui-footer .ui-title { margin-right: 0 !important; margin-left: 0 !important; }
 	</style>	
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 	</head> 
 <body> 
 
 <div data-role="page">
-	<div data-role="header">
+	<div data-role="header" data-theme="b">
 		<h1>Progressive Enhancement</h1>
 	</div>
 
-	<div data-role="content">
+	<div class="ui-content">
 		
 		<label for="slider">Switch:</label>
-		<select name="slider" id="slider" data-role="slider">
+		<select name="slider" id="slider" data-role="flipswitch">
 			<option value="off">Off</option>
 			<option value="on">On</option>
 		</select> 
@@ -31,7 +31,7 @@
 	 	<input type="range" name="slider" id="slider" value="0" min="0" max="100"  />
 		<br><br>
 		
-		<a href="#" data-role="button" data-theme="b">Submit</a>
+		<a href="#" class="ui-btn ui-corner-all ui-mini" data-theme="b">Submit</a>
 	</div>
 </div>
 </body>

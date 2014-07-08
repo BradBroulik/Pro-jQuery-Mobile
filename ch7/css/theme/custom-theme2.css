@@ -620,7 +620,7 @@
 /* E
 -----------------------------------------------------------------------------------------------------------*/
 
-.ui-bar-e {
+.ui-bar-a {
 	border: 1px solid #ed1c24 /*{e-bar-border}*/;
 	background: #ed1c24 /*{e-bar-background-color}*/;
 	color: #ffffff /*{e-bar-color}*/;
@@ -633,32 +633,32 @@
 	background-image:      -o-linear-gradient( #FF1e27 /*{e-bar-background-start}*/, #d51920 /*{e-bar-background-end}*/); /* Opera 11.10+ */
 	background-image:         linear-gradient( #FF1e27 /*{e-bar-background-start}*/, #d51920 /*{e-bar-background-end}*/);
 }
-.ui-bar-e .ui-link-inherit {
+.ui-bar-a .ui-link-inherit {
 	color: #ffffff /*{e-bar-color}*/;
 }
 
-.ui-bar-e a.ui-link {
+.ui-bar-a a.ui-link {
 	color: #2489ce /*{e-bar-link-color}*/;
 	font-weight: bold;
 }
 
-.ui-bar-e a.ui-link:visited {
+.ui-bar-a a.ui-link:visited {
     color: #2489ce /*{e-bar-link-visited}*/;
 }
 
-.ui-bar-e a.ui-link:hover {
+.ui-bar-a a.ui-link:hover {
 	color: #2489ce /*{e-bar-link-hover}*/;
 }
 
-.ui-bar-e a.ui-link:active {
+.ui-bar-a a.ui-link:active {
 	color: #2489ce /*{e-bar-link-active}*/;
 }
 
-.ui-bar-e,
-.ui-bar-e input,
-.ui-bar-e select,
-.ui-bar-e textarea,
-.ui-bar-e button {
+.ui-bar-a,
+.ui-bar-a input,
+.ui-bar-a select,
+.ui-bar-a textarea,
+.ui-bar-a button {
 	 font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
 }
 .ui-body-e,

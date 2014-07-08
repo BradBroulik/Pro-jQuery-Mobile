@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Themes</title> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
 	<style>
 		label {
             float: left;
@@ -19,44 +19,44 @@
 			margin:1px;
 		}		
 	</style>
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 	</head> 
 <body> 
 
-<div data-role="page" data-theme="e">
+<div data-role="page" data-theme="b">
 	<div data-role="header">
-		<h1>No inheritance</h1>
+		<h1>Inherits 'b'</h1>
 	</div>
 
-	<div data-role="content" style="text-align:center; margin-top:5px;">
-		Inherits "e"
+	<div class="ui-content" style="text-align:center; margin-top:5px;">
+		Inherits 'b'
 
 		<ul data-role="listview" data-inset="true">
-			<li data-role="list-divider">No inheritance</li>
-			<li>Inherits "e"</li>
-			<li>Inherits "e"</li>
+			<li data-role="list-divider">Inherits 'b'</li>
+			<li>Inherits 'b'</li>
+			<li>Inherits 'b'</li>
 		</ul>
 						
 		<form id="test" id="test" action="#" method="post">
 			<p>	
-		    	<label for="text">Inherits "e"</label>
-		    	<input type="text" name="text" id="text" value="" placeholder="Text input"/>
+		    	<label for="text" class="ui-hidden-accessible">Inherits 'b'</label>
+		    	<input type="text" name="text" id="text" value="" placeholder="Inherits 'b'"/>
 		    </p>
 			<p>
-			    <label for="sound">Inherits "e"</label>
-				<select name="slider" id="sound" data-role="slider">
+			    <label for="sound">Inherits 'a'</label>
+				<select name="slider" id="sound" data-role="flipswitch">
 					<option value="off">Off</option>
 					<option value="on">On</option>
 				</select>
 			</p>
 			  
-			<a href="#" data-role="button">Button (Inherits "e")</a>
+			<a href="#" class="ui-btn ui-corner-all ui-mini">Button (Inherits 'b')</a>
 		</form>
 	</div>	
 	
 	<div data-role="footer" data-position="fixed">
-		<h3>No inheritance</h3>
+		<h3>Inherits 'b'</h3>
 	</div>		
 </div>
 </body>

@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>Nested doll</title> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
 		<style>
 		/* Mobile first display */
 		.ui-content-small {
@@ -13,6 +13,7 @@
 		.ui-content-large, .ui-content-large .ui-grid-a .ui-box-a .ui-bar {
 		  display: none;
 		}
+		.ui-li-count { background-color: CornflowerBlue!important; color:white; border:none; border-radius: 1em; text-shadow:none; }
 
 		@media (min-width: 35em) {
 			.ui-content-small {
@@ -26,14 +27,14 @@
 			.ui-content { padding:0; }
 			.ui-content .ui-listview { padding-top:8px; }
 		    .ui-bar h1 { margin:.6em 0!important; }
-			.ui-page, .ui-content, .ui-panel-content-wrap, .ui-content-large .ui-grid-a { height:100%; } /* Left column 100% */
+			.ui-page, .ui-panel-wrapper, .ui-content, .ui-content-large .ui-grid-a { height:100%; } /* Left column 100% */
 
 			.ui-content-large .ui-grid-a .ui-box-a { 
 			    float: left;
 			    height: 100%;
 			    width: 20em; /* left block is fixed */
 			    overflow: hidden;
-			    min-height: 100px;
+			    min-height: 100%;
 			}
 			.ui-content-large .ui-grid-a .ui-box-b {
 				background: #fff;
@@ -45,11 +46,11 @@
 			}
 		}
 		</style>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="libs/matchmedia.js"></script>
 		<script type="text/javascript" src="libs/appendAround.js"></script>
 		<script type="text/javascript">
-		$(document).on("pageinit", "#nested-doll-page", function() {
+		$(document).on("pagecreate", "#nested-doll-page", function() {
 			$( "#appendable" ).appendAround();
 
 			$("#nav-panel a").on("click", function(e) {
@@ -75,7 +76,7 @@
 					});
 					e.preventDefault();
 				} else {
-					$.mobile.changePage("includes/mail-page"+mailId+".html");
+					$( "body" ).pagecontainer( "change", "includes/mail-page"+mailId+".html" );
 					e.preventDefault();
 				}
 			});
@@ -94,30 +95,30 @@
 			*/		
 		});
 		</script>
-		<script type="text/javascript" src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 	</head>
 <body>
-<div data-role="page" id="nested-doll-page" data-theme="c">
-	<div data-role="header" data-theme="a">
-		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<div data-role="page" id="nested-doll-page" >
+	<div data-role="header" data-theme="b">
+		<a href="#nav-panel" class="ui-btn ui-icon-bars ui-corner-all ui-btn-icon-notext">Menu</a>
 		<h1>Inbox</h1>
 	</div>
-	<div class="ui-content-small" data-role="content" data-set="target">
+	<div class="ui-content ui-content-small" data-set="target">
 	  <div id="appendable">
-		<ul data-role="listview" data-count-theme="b">		
+		<ul data-role="listview">		
 			<li>
 				<a href="#" data-mail-id="1">
 					<h1>Jon Snow</h1>
 					<p>Your new Apple TV is ready for pickup</p>
+					<span class="ui-li-count">&nbsp;</span>
 				</a>
-				<span class="ui-li-count">&nbsp;</span>
 			</li>
 			<li>
 				<a href="#" data-mail-id="2">
 					<h1>Brandon Stark</h1>
 					<p>Hello</p>
+					<span class="ui-li-count">&nbsp;</span>
 				</a>
-				<span class="ui-li-count">&nbsp;</span>
 			</li>
 			<li>
 				<a href="#" data-mail-id="3">
@@ -146,17 +147,20 @@
 		</ul>
 	  </div>
 	</div>
-	<div class="ui-content-large" data-role="content">
+	<div class="ui-content ui-content-large">
 		<div class="ui-grid-a"> 
 			<div class="ui-block-a ui-box-a">
-				<div data-set="target" class="ui-bar ui-bar-c"></div>
+				<div data-set="target" class="ui-bar ui-bar-a"></div>
 			</div>
 			<div class="ui-block-b ui-box-b"></div>
 		</div>
 	</div>
-	<div data-role="panel" data-position="left" data-display="reveal" id="nav-panel" data-theme="a">
-		<ul data-role="listview" data-theme="a" data-filter="true" data-filter-placeholder="Search..." data-filter-theme="a" data-divider-theme="a" style="margin-top:-16px;" data-count-theme="b">
-			<li><a href="#">Inbox</a><span class="ui-li-count">2</span></li>
+	<div data-role="panel" data-position="left" data-display="reveal" id="nav-panel" data-theme="b">
+		<form class="ui-filterable">
+			<input id="filter-input" data-type="search" placeholder="Search...">
+		</form>
+		<ul data-role="listview" data-theme="b" data-filter="true" data-input="#filter-input">
+			<li><a href="#">Inbox<span class="ui-li-count">2</span></a></li>
 			<li><a href="#">Drafts</a></li>
 			<li><a href="#">Sent</a></li>
 			<li><a href="#">Junk</a></li>

@@ -29,7 +29,7 @@ define([ "jquery", "backbone", "../models/TwitterModel", "../collections/Twitter
 
         // Home method
         home: function() {
-            $.mobile.changePage( "#homePage", { changeHash: false } );
+            $( "body" ).pagecontainer( "change", "#homePage", { changeHash: false });
         },
 
         // showPage method that passes in the pageID that is appended to the url hash
@@ -42,7 +42,7 @@ define([ "jquery", "backbone", "../models/TwitterModel", "../collections/Twitter
             // Fetches the Collection of Models for the current View
 			currentView.collection.fetch({success:function(){
 			    // Programatically changes to the current page
-                $.mobile.changePage( "#" + pageId + "Page", { changeHash: false } );
+                $( "body" ).pagecontainer( "change", "#" + pageId + "Page", { changeHash: false });
    	        }});
         }
 

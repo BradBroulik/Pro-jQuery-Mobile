@@ -1,4 +1,4 @@
-$( document ).on("pageinit", "#map-page", function() {
+$( document ).on("pagecreate", "#map-page", function() {
 	var $mapSwitch = $( "#map-switch" ),
 	    $listSwitch = $( "#list-switch" ),
 		$map = $("#map-canvas"),

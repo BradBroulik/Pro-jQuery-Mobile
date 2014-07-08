@@ -29,7 +29,8 @@ define([ "jquery", "backbone","models/TwitterModel" ], function( $, Backbone, Tw
         },
 
         events: {
-            'pagebeforeshow': 'refreshList'
+            //'pagebeforeshow': 'refreshList'  // 'pagebeforeshow' was deprecated in v1.4
+            'pagecontainerbeforeshow': 'refreshList'
         },
 
         refreshList: function(e) {

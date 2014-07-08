@@ -1,11 +1,11 @@
 // Sets the require.js configuration for your application.
 require.config( {
 
-      // 3rd party script alias names (Easier to type "jquery" than "libs/jquery-1.8.2.min")
+      // 3rd party script alias names (Easier to type "jquery" than "libs/jquery-1.11.1.min")
       paths: {
             // Core Libraries
-            "jquery": ["//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", "libs/jquery-1.9.1.min"],
-			"jquerymobile": ["//ajax.aspnetcdn.com/ajax/jquery.mobile/1.3.0/jquery.mobile-1.3.0.min.js", "libs/jquery.mobile-1.3.0.min"],
+            "jquery": ["//code.jquery.com/jquery-1.11.1.min.js", "libs/jquery-1.11.1.min"],
+			"jquerymobile": ["//code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js", "libs/jquery.mobile-1.4.3.min"],
             "underscore": "libs/lodash",	
             "backbone": "libs/backbone"
       },
@@ -32,7 +32,7 @@ require([ "jquery", "backbone", "routers/mobileRouter" ], function( $, Backbone,
 		
 		// Must manually remove pages from DOM when JQM isn't handling page navigation 
 		// Not removing pages in multi-page template...
-		// $( document ).on('pagehide', "div:jqmData(role='page')",
+		// $( document ).on('pagecontainerhide', "div:jqmData(role='page')",
 		// function (event, ui) {
 		// 		$(event.currentTarget).remove();
 		// });

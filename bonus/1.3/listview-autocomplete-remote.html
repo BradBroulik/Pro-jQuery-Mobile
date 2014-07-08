@@ -4,11 +4,11 @@
 	<meta charset="utf-8">
 	<title>Auto-complete</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script>
     	/* API docs: http://www.geobytes.com/free-ajax-cities-jsonp-api.htm */
-		$( document ).on( "pageinit", "#cityPage", function() {
+		$( document ).on( "pagecreate", "#cityPage", function() {
 			$( "#autocomplete" ).on( "listviewbeforefilter", function ( e, data ) {
 				var $ul = $( this ),
 					value = $( data.input ).val(),
@@ -37,15 +37,18 @@
 			});
 		});
     </script>	
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head> 
 <body>
 		<div data-role="page" id="cityPage">
-			<div data-role="header">
+			<div data-role="header" data-theme="b">
 				<h1>Location</h1>
 			</div>
-			<div data-role="content">
-				<ul id="autocomplete" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Find a city..." data-filter-theme="d"></ul>
+			<div class="ui-content">
+				<form class="ui-filterable">
+					<input id="filter-input" data-type="search" placeholder="Find a city...">
+				</form>
+				<ul id="autocomplete" data-role="listview" data-inset="true" data-filter="true" data-input="#filter-input" data-filter-theme="a"></ul>
 		</div>
 	</body>
 </html>

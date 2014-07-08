@@ -4,27 +4,27 @@
 	<meta charset="utf-8">
 	<title>Panel (sliding drawer)</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head> 
 <body>
 		<div data-role="page" class="ui-responsive-panel">
 			<div data-role="header" data-theme="b">
 				<h1>Pro jQuery Mobile</h1>
-				<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
-				<a href="#add-form" data-icon="plus" data-iconpos="notext">Add</a>
+				<a href="#nav-panel" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+				<a href="#add-form" class="ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext">Add</a>
 			</div>
-			<div data-role="content">
+			<div class="ui-content">
 				<h2>Panel: Menu + form</h2>
 				<p>This is a typical page that has two buttons in the header bar that open panels. The left button opens a left menu with the reveal display mode. The right button opens a form in a right overlay panel.</p>
 				<p>Since the panel links are in the top bar, there really isn't a need for the fixed positioning feature on the panel since you will always be scrolled to the top of the page. The fixed positioning impacts animation smoothness so it's off in this demo (<code>data-position-fixed="false"</code>) and the panel will scroll with the page.</p>
 				<p>To make this responsive, the left panel stays open and causes the page to re-flow at wider widths. This allows both the menu and page to be used together when more space is available. This behavior is controlled by CSS media queries. You can create a custom one for a specific breakpoint or use the breakpoint preset by adding the <code> class="ui-responsive-panel"</code> to the page container.</p>
 			</div>
-				<div data-role="panel" data-position="left" data-display="reveal" id="nav-panel" data-theme="a">
+				<div data-role="panel" data-position="left" data-display="reveal" id="nav-panel" data-theme="b">
 
-					<ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
-						<li data-icon="delete" style="background-color:#111;">
+					<ul data-role="listview" data-theme="b" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+						<li class="ui-btn ui-btn-icon-right ui-icon-delete" style="background-color:#111;">
 							<a href="#" data-rel="close">Close menu</a>
 						</li>
 						<li>
@@ -76,7 +76,7 @@
 					.ui-grid-a { margin-top:1em; padding-top:.8em; margin-top:1.4em; border-top:1px solid rgba(0,0,0,.1); }
                 </style>
 
-				<div data-role="panel" data-position="right" data-display="overlay" id="add-form" data-theme="b">
+				<div data-role="panel" data-position="right" data-display="overlay" id="add-form" data-theme="a">
 
 					<form class="userform">
 						<h2>Add review</h2>
@@ -97,8 +97,8 @@
 						</select>
 
 						<div class="ui-grid-a">
-						    <div class="ui-block-a"><a href="#" data-rel="close" data-role="button" data-theme="c" data-mini="true">Cancel</a></div>
-						    <div class="ui-block-b"><a href="#" data-rel="close" data-role="button" data-theme="b" data-mini="true">Save</a></div>
+						    <div class="ui-block-a"><a href="#" data-rel="close" class="ui-btn ui-corner-all ui-mini"  data-mini="true">Cancel</a></div>
+						    <div class="ui-block-b"><a href="#" data-rel="close" class="ui-btn ui-corner-all ui-mini" data-theme="b" data-mini="true">Save</a></div>
 						</div>
 					</form>
 				</div>
