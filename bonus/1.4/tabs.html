@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Tabs</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+	<style>
+	table {
+		border-collapse: collapse;
+		color: #000;
+		font-size: 12px;
+		margin: 0px 0px 10px;
+		width: 100%;
+	}
+	th, td {
+		padding: 5px 4%;
+		text-align: left;
+		width: 50%;
+	}
+	th {
+		font-weight: normal;
+	}
+	tr:first-child > th {
+		font-weight: bold;
+	}
+	ul {
+		color: #000;
+		font-size: 12px;
+	}
+	ul li.heading {
+		font-weight: bold;
+	}
+	ul li {
+		list-style: none outside none;
+	}
+	ul {
+		color: #000;
+		font-size: 12px;
+	}
+	</style>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>	
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="header" data-theme="b">
+			<h1>Tabs</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<h2>My Quick Clinic</h2>
+
+			<div data-role="tabs">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#hours" class="ui-btn-active">Hours</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#specialties">Specialties</a></li>
+					</ul>
+				</div>
+				<div id="hours">
+					<table class="hours">
+						<tr><th> Regular Hours</th></tr>
+						<tr>
+							<th>Monday</th>
+							<td>8:00 AM to 5:00 PM</td>
+						</tr>
+						<tr>
+							<th>Tuesday</th>
+							<td>8:00 AM to 5:00 PM</td>
+						</tr>
+						<tr>
+							<th>Wednesday</th>
+							<td>8:00 AM to 5:00 PM</td>
+						</tr>
+						<tr>
+							<th>Thursday</th>
+							<td>8:00 AM to 5:00 PM</td>
+						</tr>
+						<tr>
+							<th>Friday</th>
+							<td>8:00 AM to 5:00 PM</td>
+						</tr>
+						<tr>
+							<th>Saturday</th>
+							<td>Closed</td>
+						</tr>
+						<tr>
+							<th>Sunday</th>
+							<td>Closed</td>
+						</tr>
+					</table>
+				</div>
+				<div id="services">
+					<ul>
+						<li class="heading">General Clinic Services</li>
+						<li>After Hours Care</li>
+						<li>E-Prescribing</li>
+						<li>E-Visits</li>
+						<li>Electronic Health Records</li>
+						<li>Free Parking</li>
+						<li>Nationally Accredited Diabetes Education</li>
+						<li>On Bus Line</li>
+						<li>Patient Services On Site</li>
+						<li>Pharmacy Refill Line</li>		
+					</ul>
+				</div>
+				<div id="specialties">
+					<ul>
+						<li class="heading">Family Medicine</li>
+						<li>John H. Rany</li>
+						<li>Jim M. Deul</li>					
+						<li>Rheaan S. Chevy</li>
+						<li>George M. Queen</li>					
+						<li>Joe L. Kennedy</li>
+						<li>Rain L. Time</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
