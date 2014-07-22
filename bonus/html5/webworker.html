@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="utf-8">
+		<title>Web Worker</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script>
+		$( document ).on("pagecreate", "#webWorker", function() {
+			var w;
+
+	       	$( "#start" ).on( "click", function() {
+				console.log("starting...");
+				w = new Worker("worker.js");
+
+				w.onmessage = function(event) {
+		            $("#result").html(event.data);
+		        };
+			});	
+
+	       	$( "#stop" ).on( "click", function() {
+				console.log("stoping...");
+				w.terminate();
+			});	
+		});
+		</script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>	
+	</head>
+<body> 
+
+<div data-role="page" id="webWorker">
+	<div data-role="header" data-theme="b">
+		<h1>Web Worker</h1>
+	</div>
+
+	<div class="ui-content">	
+		
+		<a href="#" id="start" class="ui-btn ui-corner-all ui-mini">Start</a>
+		<a href="#" id="stop" class="ui-btn ui-corner-all ui-mini">Stop</a>
+
+		<p>Web worker response: <span id="result"></span></p>
+	</div>
+
+</div>
+
+</body>
+</html>

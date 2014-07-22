@@ -711,7 +711,7 @@
                     }
                 });
 
-                $('.dwwl').on('DOMMouseScroll mousewheel', function (e) {
+                $('.dwwl').live('DOMMouseScroll mousewheel', function (e) {
                     var delta = 0;
                     if (e.wheelDelta) delta = e.wheelDelta / 120;
                     if (e.detail) delta = -e.detail / 3;
@@ -723,7 +723,7 @@
                     e.stopPropagation();
                 });
 
-                $('.dwwl').on(START_EVENT, function (e) {
+                $('.dwwl').live(START_EVENT, function (e) {
                     if (!move) {
                         var x1 = touch ? e.originalEvent.changedTouches[0].pageX : e.pageX;
                         var x2 = $(this).offset().left;
