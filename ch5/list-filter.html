@@ -8,9 +8,6 @@
 	<style>
 		.segmented-control { text-align:center;}
 		.segmented-control .ui-controlgroup { margin: 0.2em; }
-		.ui-control-active, .ui-control-inactive { border-style: solid; border-color: gray; }
-		.ui-control-active { background: #BBB; }
-		.ui-control-inactive { background: #DDD; }
 	</style>
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script>
@@ -63,9 +60,9 @@
 	<!-- Toolbar with a segmented control -->
 	<div data-role="footer" data-position="fixed"  class="segmented-control">
 		<div data-role="controlgroup" data-type="horizontal">
-			<a href="#" class="ui-btn ui-corner-all ui-mini" class="ui-control-active">List</a>
-			<a href="#" class="ui-btn ui-corner-all ui-mini" class="ui-control-inactive">Day</a>
-			<a href="#" class="ui-btn ui-corner-all ui-mini" class="ui-control-inactive">Month</a>
+			<a href="#" class="ui-btn ui-corner-all ui-mini ui-btn-b">List</a>
+			<a href="#" class="ui-btn ui-corner-all ui-mini">Day</a>
+			<a href="#" class="ui-btn ui-corner-all ui-mini">Month</a>
 		</div>
 	</div>
 </div>

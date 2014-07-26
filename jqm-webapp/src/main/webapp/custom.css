@@ -42,9 +42,6 @@ a:link,	a:visited, a:hover, a:active { text-decoration:none; }
 
 .segmented-control { text-align:center;}
 .segmented-control .ui-controlgroup { margin: 0.2em; }
-.ui-control-active, .ui-control-inactive { border-style: solid; border-color: gray; }
-.ui-control-active { background: #BBB; }
-.ui-control-inactive { background: #DDD; }
 		
 .thanks { margin-top: 25px; text-align: center; }
 .thanks img { width:100px; height:100px; }
