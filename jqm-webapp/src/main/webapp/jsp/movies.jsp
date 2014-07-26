@@ -19,9 +19,9 @@
 		<h1>Movies</h1>
 		<div data-role="header"  class="segmented-control">
 			<div data-role="controlgroup" data-type="horizontal">
-				<a href="/jqm-webapp/mvc/movies" class="ui-btn ui-corner-all ui-mini ui-btn-b">In Theatres</a>
-				<a href="/jqm-webapp/mvc/movies" class="ui-btn ui-corner-all ui-mini ui-btn-a">Coming Soon</a>
-				<a href="/jqm-webapp/mvc/movies" class="ui-btn ui-corner-all ui-mini ui-btn-a">Top Rated</a>
+				<a href="/jqm-webapp/mvc/movies" class="ui-btn ui-corner-all ui-mini ui-btn-active">In Theatres</a>
+				<a href="/jqm-webapp/mvc/movies" class="ui-btn ui-corner-all ui-mini">Coming Soon</a>
+				<a href="/jqm-webapp/mvc/movies" class="ui-btn ui-corner-all ui-mini">Top Rated</a>
 			</div>
 		</div>
 	</div>
