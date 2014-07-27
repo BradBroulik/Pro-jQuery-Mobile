@@ -8,8 +8,8 @@
 .ui-gmap-canvas { width:100%; height:100%; }
 .ui-gmap-infobox { display:none; }
 
-#show-more .ui-li-heading { text-align:center; }
-#show-more .ui-icon { visibility:hidden; }
+#show-more h1 { text-align:center; }
+#show-more .ui-btn-icon-right:after { visibility:hidden; }
 
 .ui-li-has-count .ui-li-count { border-color:transparent; }
 

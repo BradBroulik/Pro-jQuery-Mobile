@@ -14,8 +14,8 @@
 			
 			$( document ).on("pagecreate", "#response-page", function() {
 				var email = $.urlParam("email");
-				var decodedEmail = decodeURIComponent(email.replace(/\+/g, ' '));
-				$( ".email" ).append(decodedEmail);
+                var decodedEmail = decodeURIComponent(email); 
+				$( ".email" ).html(decodedEmail);
 			});
 		</script>
         <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>

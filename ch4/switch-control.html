@@ -6,13 +6,10 @@
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" /> 
 	<style>
-		div.ui-slider { 
-			width: 45%; 
-		}
-		label.ui-slider { 
-			margin-top: 10px;
+		label { 
+			margin-top: 12px!important;
 			float: left;
-            width: 5em; 
+            width: 5em;
 		}
 		form p {
 			clear:left;
@@ -30,7 +27,7 @@
 	</div>
 
 	<div class="ui-content">
-	  <form id="test" id="test" action="#" method="post">	
+	  <form id="test" action="#" method="post">	
 		  <p>
 		    <label for="sound">Sound:</label>
 			<select name="slider" id="sound" data-role="flipswitch">
@@ -44,16 +41,15 @@
 				<option value="off">Off</option>
 				<option value="on">On</option>
 			</select>
-		  </p>	
-		</div>
-	  </form>			 			 		 			 
+		  </p>
+	  </form>		 			 		 			 
 	</div>
 	<script type="text/javascript">
 		var alertSwitch = $("select#alerts");
 
 		// Set alert switch to 'on'
 		alertSwitch[0].selectedIndex = 1;
-		alertSwitch .slider("refresh");
+		alertSwitch.slider("refresh");
 	</script>
 </div>
 
