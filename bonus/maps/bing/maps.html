@@ -3,11 +3,11 @@ Bing Maps Tutorial (Getting a Bing Maps Key): https://code.google.com/p/jquery-b
 Bing Maps plugin for jQuery Mobile: http://code.google.com/p/jquery-bing-maps/
 Bing Maps API: http://www.bingmapsportal.com/ISDK/AjaxV7#GetUserLocation1
 -->
-<!DOCTYPE html> 
-<html> 
-  <head> 
+<!DOCTYPE html>
+<html>
+  <head>
 	<meta charset="utf-8">
-	<title>Bing Maps</title> 
+	<title>Bing Maps</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
 	<style>
@@ -20,31 +20,31 @@ Bing Maps API: http://www.bingmapsportal.com/ISDK/AjaxV7#GetUserLocation1
 	<script type="text/javascript">
 	$( document ).on("pagecreate", "#map_page", function() {
 		var defaultLatLng = new Microsoft.Maps.Location(34.0983425, -118.3267434);  // Default to Hollywood, CA when no geolocation support
-		
+
 		if ( navigator.geolocation ) {
 			function success(pos) {
 				// Location found, show map with these coordinates
 				drawMap(new Microsoft.Maps.Location(pos.coords.latitude, pos.coords.longitude));
 			}
-			
+
 			function fail(error) {
 				console.log(error);
 				drawMap(defaultLatLng);  // Failed to find location, show default map
 			}
-			
+
 			// Find the users current position.  Cache the location for 5 minutes, timeout after 6 seconds
 			navigator.geolocation.getCurrentPosition(success, fail, {maximumAge: 500000, enableHighAccuracy:true, timeout: 6000});
 		} else {
-			drawMap(defaultLatLng);  // No geolocation support, show default map	
+			drawMap(defaultLatLng);  // No geolocation support, show default map
 		}
 
 		function drawMap(latlng) {
 			$('#map_canvas').gmap({'credentials': '<YOUR_BING_MAP_CREDENTIALS>', 'center': latlng});
 			$('#map_canvas').gmap('addMarker', {'location':latlng, 'bounds':true});
 		}
-		
+
 	});
-	</script>	   
+	</script>
   </head>
   <body>
    	<div data-role="page" id="map_page">
