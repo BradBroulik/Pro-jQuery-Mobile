@@ -1,8 +1,8 @@
-<!DOCTYPE html> 
-<html manifest="cache.appcache"> 
-	<head> 
+<!DOCTYPE html>
+<html manifest="cache.appcache">
+	<head>
 		<meta charset="utf-8">
-		<title>Application Cache</title> CACHE_CODES[
+		<title>Application Cache</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
 		<link rel="stylesheet" href="cache.css" />
@@ -17,16 +17,16 @@
 			$("#status").html(CACHE_CODES[window.applicationCache.status]);
 		});
 		</script>
-		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>	
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 	</head>
-<body> 
+<body>
 
 <div data-role="page" id="appCache">
 	<div data-role="header" data-theme="b">
 		<h1>App Cache</h1>
 	</div>
 
-	<div class="ui-content">	
+	<div class="ui-content">
 		<p>App Cache status is '<span id="status"></span>'</p>
 		<p><img src="cache-no.png" alt="no cache image" /></p>
 	</div>

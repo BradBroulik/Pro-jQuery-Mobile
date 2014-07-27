@@ -1,43 +1,43 @@
-<!DOCTYPE html> 
-<html> 
-	<head> 
+<!DOCTYPE html>
+<html>
+	<head>
 		<meta charset="utf-8">
-		<title>Web Storage</title> 
+		<title>Web Storage</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script>
 		$( document ).on("pagecreate", "#webStorage", function() {
 			// Store
-			localStorage.setItem("lastName", "Peterson");
+			localStorage.setItem("name", "Adrian Peterson");
 
 			// Retrieve
-			$("#lastName").html(localStorage.getItem("lastName")); 
+			$("#name").html(localStorage.getItem("name"));
 
 			// Remove
-			localStorage.removeItem("lastName");
+			localStorage.removeItem("name");
 
 			// Store
-			sessionStorage.setItem("username", "user123");
+			sessionStorage.setItem("username", "user28");
 
 			// Retrieve
-			$("#username").html(sessionStorage.getItem("username")); 
+			$("#username").html(sessionStorage.getItem("username"));
 
 			// Remove
-			//sessionStorage.removeItem("username");	
+			//sessionStorage.removeItem("username");
 		});
 		</script>
-		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>	
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 	</head>
-<body> 
+<body>
 
 <div data-role="page" id="webStorage">
 	<div data-role="header" data-theme="b">
 		<h1>Web Storage</h1>
 	</div>
 
-	<div class="ui-content">	
-		<p>Last name from <em>localStorage</em> is '<span id="lastName"></span>'</p>
+	<div class="ui-content">
+		<p>Name from <em>localStorage</em> is '<span id="name"></span>'</p>
 		<p>Username from <em>sessionStorage</em> is '<span id="username"></span>'</p>
 	</div>
 
