@@ -1,21 +1,21 @@
-<!DOCTYPE html> 
-<html> 
-	<head> 
+<!DOCTYPE html>
+<html>
+	<head>
 	<meta charset="utf-8">
-	<title>Auto-complete</title> 
+	<title>Auto-complete</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script>
 		$( document ).on( "pagecreate", "#contactsPage", function() {
 			$( "#contacts" ).on( "click", "li", function() {
-				$( ".ui-input-text" ).val( $( this ).text() );
+				$( "#filter-input" ).val( $( this ).text() );
 				$("ul li").addClass("ui-screen-hidden");
 			});
 		});
     </script>
-	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
-</head> 
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+</head>
 <body>
 		<div data-role="page" id="contactsPage">
 			<div data-role="header" data-theme="b">
@@ -34,9 +34,9 @@
 					<li><a href="#">Brad Pitt</a></li>
 					<li><a href="#">Burt Reynolds</a></li>
 					<li><a href="#">Christian Bale</a></li>
-					<li><a href="#">Clint Eastwood</a></li>					
+					<li><a href="#">Clint Eastwood</a></li>
 				</ul>
-			</div>	
+			</div>
 		</div>
 </body>
 </html>

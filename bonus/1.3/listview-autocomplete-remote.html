@@ -1,8 +1,8 @@
-<!DOCTYPE html> 
-<html> 
-	<head> 
+<!DOCTYPE html>
+<html>
+	<head>
 	<meta charset="utf-8">
-	<title>Auto-complete</title> 
+	<title>Auto-complete</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -25,20 +25,20 @@
 								html += "<li>" + val + "</li>";
 							});
 							$ul.html( html );
-							$ul.listview( "refresh" );						
+							$ul.listview( "refresh" );
 						}
 					});
 				}
 			});
-			
+
 			$( "#autocomplete" ).on( "click", "li", function() {
-				$( ".ui-input-text" ).val( $( this ).text() );
+				$( "#filter-input" ).val( $( this ).text() );
 				$( "#autocomplete" ).html( "" );
 			});
 		});
-    </script>	
-	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
-</head> 
+    </script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+</head>
 <body>
 		<div data-role="page" id="cityPage">
 			<div data-role="header" data-theme="b">
@@ -49,7 +49,7 @@
 					<input id="filter-input" data-type="search" placeholder="Find a city...">
 				</form>
 				<ul id="autocomplete" data-role="listview" data-inset="true" data-filter="true" data-input="#filter-input" data-filter-theme="a"></ul>
-			</div>	
+			</div>
 		</div>
 	</body>
 </html>
